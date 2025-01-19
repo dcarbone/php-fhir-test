@@ -12,6 +12,7 @@ import (
 	"fmt"
 	"io"
 	"log/slog"
+	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
@@ -54,7 +55,6 @@ func (r *Resource) UnmarshalJSON(b []byte) error {
 	}
 	r.ResourceType, _ = tmp["resourceType"].(string)
 	r.ID, _ = tmp["id"].(string)
-	delete(tmp, "resourceType")
 	r.Fields = tmp
 	return nil
 }
@@ -84,6 +84,21 @@ func main() {
 			os.Exit(0)
 		}
 		log.Error("Error extracting resources", "err", err)
+		os.Exit(1)
+	}
+
+	ch := make(chan error)
+
+	go func() {
+		ch <- runWebserver(log)
+	}()
+
+	select {
+	case <-ctx.Done():
+		log.Info("Shutting down...")
+		os.Exit(0)
+	case err := <-ch:
+		log.Error("Server stopped", "err", err)
 		os.Exit(1)
 	}
 }
@@ -158,4 +173,68 @@ func extractResources(ctx context.Context, log *slog.Logger) error {
 			log.Warn("Found unexpected file type", "type", string(th.Typeflag))
 		}
 	}
+}
+
+func runWebserver(log *slog.Logger) error {
+	mux := http.NewServeMux()
+
+	mux.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		enc := json.NewEncoder(w)
+		if err := enc.Encode(versionList()); err != nil {
+			log.Error("Error encoding version list", "err", err)
+			http.Error(w, "Error encoding version list", http.StatusInternalServerError)
+		}
+	})
+
+	for fv, resourceTypes := range resourceMap {
+		mux.HandleFunc(fmt.Sprintf("GET /%s", fv), func(w http.ResponseWriter, r *http.Request) {
+			w.Header().Set("Content-Type", "application/json; charset=utf-8")
+			enc := json.NewEncoder(w)
+			if err := enc.Encode(versionResourceList(fv)); err != nil {
+				log.Error("Error encoding version resource list", "version", fv, "err", err)
+				http.Error(w, fmt.Sprintf("Error encoding version %q resource list", fv), http.StatusInternalServerError)
+			}
+		})
+
+		for resType, resources := range resourceTypes {
+			mux.HandleFunc(
+				fmt.Sprintf("GET /%s/%s", fv, resType), func(w http.ResponseWriter, r *http.Request) {
+					w.Header().Set("Content-Type", "application/json; charset=utf-8")
+					out := map[string]any{
+						"resourceType": "Bundle",
+						"entry":        make([]map[string]any, 0),
+					}
+					for _, res := range resources {
+						out["entry"] = append(out["entry"].([]map[string]any), map[string]any{
+
+							"resource": res,
+						})
+					}
+					enc := json.NewEncoder(w)
+					if err := enc.Encode(out); err != nil {
+						log.Error("Error encoding version resource bundle", "version", fv, "resourceType", resType, "err", err)
+						http.Error(w, fmt.Sprintf("error encoding version %q resource %q bundle", fv, resType), http.StatusInternalServerError)
+					}
+				})
+
+			for _, res := range resources {
+				if res.ID == "" {
+					continue
+				}
+				mux.HandleFunc(fmt.Sprintf("GET /%s/%s/%s", fv, resType, res.ID), func(w http.ResponseWriter, r *http.Request) {
+					w.Header().Set("Content-Type", "application/json; charset=utf-8")
+					enc := json.NewEncoder(w)
+					if err := enc.Encode(res); err != nil {
+						log.Error("Error encoding version resource", "version", fv, "resourceType", resType, "resourceID", res.ID, "err", err)
+						http.Error(w, fmt.Sprintf("error encoding version %q resource %q id %q", fv, resType, res.ID), http.StatusInternalServerError)
+					}
+				})
+			}
+		}
+	}
+
+	log.Info("Webserver running", "addr", bindAddr)
+
+	return http.ListenAndServe(bindAddr, mux)
 }
