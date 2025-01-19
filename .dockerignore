@@ -1,0 +1,9 @@
+.idea
+.git
+.github
+bin
+docker
+LICENSE
+README.md
+.gitignore
+resources.tar.gz

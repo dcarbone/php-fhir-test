@@ -5,5 +5,12 @@ clean:
 	rm resources.tar.gz
 	rm bin/php-fhir-test
 
-build: clean tar
+build: tar
 	go build -o bin/php-fhir-test
+
+docker-local:
+	docker buildx build \
+		--load \
+		-t dancarbone/php-fhir-test \
+		-f docker/Dockerfile \
+		.
