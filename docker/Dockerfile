@@ -1,5 +1,11 @@
 FROM golang:1.23-alpine AS build
 
+LABEL org.opencontainers.image.authors="Daniel Carbone<daniel.p.carbone@gmail.com>"
+LABEL org.opencontainers.image.url="https://github.com/dcarbone/php-fhir-test"
+LABEL org.opencontainers.image.source="https://github.com/dcarbone/php-fhir-test"
+LABEL org.opencontainers.image.licenses="Apache-2.0"
+LABEL org.opencontainers.image.title="PHP FHIR Test Server Build Image"
+
 RUN apk add --update make
 
 WORKDIR /app
@@ -14,6 +20,12 @@ RUN ls -l bin
 
 FROM alpine:3
 
+LABEL org.opencontainers.image.authors="Daniel Carbone<daniel.p.carbone@gmail.com>"
+LABEL org.opencontainers.image.url="https://github.com/dcarbone/php-fhir-test"
+LABEL org.opencontainers.image.source="https://github.com/dcarbone/php-fhir-test"
+LABEL org.opencontainers.image.licenses="Apache-2.0"
+LABEL org.opencontainers.image.title="PHP FHIR Test Server Image"
+
 COPY --from=build /app/bin/php-fhir-test-server /php-fhir-test-server
 
-ENTRYPOINT [ "/php-fhir-test-server" ]
+ENTRYPOINT [ "/php-fhir-test-server", "-bind", "0.0.0.0:8080" ]

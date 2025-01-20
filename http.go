@@ -97,6 +97,8 @@ func resourceHandler(log *slog.Logger, fv, resType string, i int) http.HandlerFu
 }
 
 func runWebserver(log *slog.Logger) error {
+	log.Info("Building routes...")
+
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("GET /", versionListHandler(log))
