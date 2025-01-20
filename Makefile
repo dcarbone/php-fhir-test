@@ -6,11 +6,11 @@ clean:
 	rm bin/php-fhir-test
 
 build: tar
-	go build -o bin/php-fhir-test
+	go build -o bin/php-fhir-test-server
 
 docker-local:
 	docker buildx build \
 		--load \
-		-t dancarbone/php-fhir-test \
+		-t dancarbone/php-fhir-test-server \
 		-f docker/Dockerfile \
 		.

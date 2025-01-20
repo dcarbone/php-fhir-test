@@ -14,6 +14,6 @@ RUN ls -l bin
 
 FROM alpine:3
 
-COPY --from=build /app/bin/php-fhir-test /php-fhir-test
+COPY --from=build /app/bin/php-fhir-test-server /php-fhir-test-server
 
-ENTRYPOINT [ "/php-fhir-test" ]
+ENTRYPOINT [ "/php-fhir-test-server" ]
