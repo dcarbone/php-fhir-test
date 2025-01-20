@@ -8,16 +8,19 @@ import (
 )
 
 func resourceTypeListHandler(log *slog.Logger, fv, resType string) http.HandlerFunc {
+	type bundle struct {
+		ResourceType string      `json:"resourceType"`
+		Entry        []*Resource `json:"entry"`
+	}
+
 	return func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		out := map[string]any{
-			"resourceType": "Bundle",
-			"entry":        make([]map[string]any, 0),
+		out := bundle{
+			ResourceType: "Bundle",
+			Entry:        make([]*Resource, len(resourceMap[fv][resType])),
 		}
-		for _, res := range resourceMap[fv][resType] {
-			out["entry"] = append(out["entry"].([]map[string]any), map[string]any{
-				"resource": res,
-			})
+		for i, res := range resourceMap[fv][resType] {
+			out.Entry[i] = res
 		}
 		enc := json.NewEncoder(w)
 		if err := enc.Encode(out); err != nil {

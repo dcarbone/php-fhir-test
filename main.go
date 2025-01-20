@@ -42,24 +42,29 @@ var (
 )
 
 type Resource struct {
-	ResourceType string         `json:"resourceType"`
-	ID           string         `json:"-"`
-	Fields       map[string]any `json:"-"`
+	ResourceType string
+	ID           string
+	Data         []byte
 }
 
 func (r *Resource) UnmarshalJSON(b []byte) error {
-	tmp := make(map[string]any)
+	type miniRes struct {
+		ResourceType string `json:"resourceType"`
+		ID           string `json:"id"`
+	}
+	tmp := new(miniRes)
 	if err := json.Unmarshal(b, &tmp); err != nil {
 		return fmt.Errorf("error unmarshalling resource: %w", err)
 	}
-	r.ResourceType, _ = tmp["resourceType"].(string)
-	r.ID, _ = tmp["id"].(string)
-	r.Fields = tmp
+	r.ResourceType = tmp.ResourceType
+	r.ID = tmp.ID
+	r.Data = make([]byte, len(b))
+	copy(r.Data, b)
 	return nil
 }
 
 func (r Resource) MarshalJSON() ([]byte, error) {
-	return json.Marshal(r.Fields)
+	return r.Data, nil
 }
 
 func main() {
