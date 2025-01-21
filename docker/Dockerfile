@@ -28,4 +28,7 @@ LABEL org.opencontainers.image.title="PHP FHIR Test Server Image"
 
 COPY --from=build /app/bin/php-fhir-test-server /php-fhir-test-server
 
+HEALTHCHECK --interval=1s --timeout=1s --start-period=5s \
+    CMD nc -z 127.0.0.1:8080
+
 ENTRYPOINT [ "/php-fhir-test-server", "-bind", "0.0.0.0:8080" ]
