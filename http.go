@@ -48,9 +48,12 @@ func versionResourceListHandler(log *slog.Logger, fv string) http.HandlerFunc {
 }
 
 func resourceTypeListHandler(log *slog.Logger, fv, resType string) http.HandlerFunc {
+	type bundleEntry struct {
+		Resource *Resource `json:"resource"`
+	}
 	type bundle struct {
-		ResourceType string      `json:"resourceType"`
-		Entry        []*Resource `json:"entry"`
+		ResourceType string        `json:"resourceType"`
+		Entry        []bundleEntry `json:"entry"`
 	}
 
 	return logMiddlewareHandler(log, func(w http.ResponseWriter, r *http.Request) {
@@ -73,10 +76,10 @@ func resourceTypeListHandler(log *slog.Logger, fv, resType string) http.HandlerF
 
 		out := bundle{
 			ResourceType: "Bundle",
-			Entry:        make([]*Resource, cnt),
+			Entry:        make([]bundleEntry, cnt),
 		}
 		for i := 0; i < cnt; i++ {
-			out.Entry[i] = resourceMap[fv][resType][i]
+			out.Entry[i] = bundleEntry{Resource: resourceMap[fv][resType][i]}
 		}
 
 		if err := json.NewEncoder(w).Encode(out); err != nil {
