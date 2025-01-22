@@ -26,8 +26,7 @@ func versionListHandler(log *slog.Logger) http.HandlerFunc {
 			return
 		}
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		enc := json.NewEncoder(w)
-		if err := enc.Encode(versionList()); err != nil {
+		if err := json.NewEncoder(w).Encode(versionList()); err != nil {
 			log.Error("Error encoding version list", "err", err)
 			http.Error(w, "Error encoding version list", http.StatusInternalServerError)
 		}
@@ -41,8 +40,7 @@ func versionResourceListHandler(log *slog.Logger, fv string) http.HandlerFunc {
 			return
 		}
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		enc := json.NewEncoder(w)
-		if err := enc.Encode(versionResourceList(fv)); err != nil {
+		if err := json.NewEncoder(w).Encode(versionResourceList(fv)); err != nil {
 			log.Error("Error encoding version resource list", "version", fv, "err", err)
 			http.Error(w, fmt.Sprintf("Error encoding version %q resource list", fv), http.StatusInternalServerError)
 		}
@@ -72,16 +70,16 @@ func resourceTypeListHandler(log *slog.Logger, fv, resType string) http.HandlerF
 		}
 
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+
 		out := bundle{
 			ResourceType: "Bundle",
 			Entry:        make([]*Resource, cnt),
 		}
-
 		for i := 0; i < cnt; i++ {
 			out.Entry[i] = resourceMap[fv][resType][i]
 		}
-		enc := json.NewEncoder(w)
-		if err := enc.Encode(out); err != nil {
+
+		if err := json.NewEncoder(w).Encode(out); err != nil {
 			log.Error("Error encoding version resource bundle", "version", fv, "resourceType", resType, "err", err)
 			http.Error(w, fmt.Sprintf("error encoding version %q resource %q bundle", fv, resType), http.StatusInternalServerError)
 		}
@@ -102,9 +100,9 @@ func resourceHandler(log *slog.Logger, fv, resType string, i int) http.HandlerFu
 		}
 
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		enc := json.NewEncoder(w)
+
 		res := resourceMap[fv][resType][i]
-		if err := enc.Encode(resourceMap[fv][resType][i]); err != nil {
+		if err := json.NewEncoder(w).Encode(res); err != nil {
 			log.Error("Error encoding version resource", "version", fv, "resourceType", resType, "resourceID", res.ID, "err", err)
 			http.Error(w, fmt.Sprintf("error encoding version %q resource %q id %q", fv, resType, res.ID), http.StatusInternalServerError)
 		}
