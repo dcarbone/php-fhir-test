@@ -12,10 +12,17 @@ type RequestParams struct {
 	Count  int
 }
 
-func versionListHandler(log *slog.Logger) http.HandlerFunc {
+func logMiddlewareHandler(log *slog.Logger, hdl http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		log.Info("Processing request...", "method", r.Method, "url", r.URL)
+		hdl(w, r)
+	}
+}
+
+func versionListHandler(log *slog.Logger) http.HandlerFunc {
+	return logMiddlewareHandler(log, func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path != "" && r.URL.Path != "/" {
-			http.Error(w, "Not found", http.StatusNotFound)
+			http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
 			return
 		}
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
@@ -24,18 +31,22 @@ func versionListHandler(log *slog.Logger) http.HandlerFunc {
 			log.Error("Error encoding version list", "err", err)
 			http.Error(w, "Error encoding version list", http.StatusInternalServerError)
 		}
-	}
+	})
 }
 
 func versionResourceListHandler(log *slog.Logger, fv string) http.HandlerFunc {
-	return func(w http.ResponseWriter, r *http.Request) {
+	return logMiddlewareHandler(log, func(w http.ResponseWriter, r *http.Request) {
+		if r.URL.Path != fmt.Sprintf("/%s", fv) && r.URL.Path != fmt.Sprintf("/%s/", fv) {
+			http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
+			return
+		}
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
 		enc := json.NewEncoder(w)
 		if err := enc.Encode(versionResourceList(fv)); err != nil {
 			log.Error("Error encoding version resource list", "version", fv, "err", err)
 			http.Error(w, fmt.Sprintf("Error encoding version %q resource list", fv), http.StatusInternalServerError)
 		}
-	}
+	})
 }
 
 func resourceTypeListHandler(log *slog.Logger, fv, resType string) http.HandlerFunc {
@@ -44,7 +55,7 @@ func resourceTypeListHandler(log *slog.Logger, fv, resType string) http.HandlerF
 		Entry        []*Resource `json:"entry"`
 	}
 
-	return func(w http.ResponseWriter, r *http.Request) {
+	return logMiddlewareHandler(log, func(w http.ResponseWriter, r *http.Request) {
 		rp, err := parseRequestParams(r)
 		if err != nil {
 			log.Error("Error parsing query params", "err", err)
@@ -74,11 +85,11 @@ func resourceTypeListHandler(log *slog.Logger, fv, resType string) http.HandlerF
 			log.Error("Error encoding version resource bundle", "version", fv, "resourceType", resType, "err", err)
 			http.Error(w, fmt.Sprintf("error encoding version %q resource %q bundle", fv, resType), http.StatusInternalServerError)
 		}
-	}
+	})
 }
 
 func resourceHandler(log *slog.Logger, fv, resType string, i int) http.HandlerFunc {
-	return func(w http.ResponseWriter, r *http.Request) {
+	return logMiddlewareHandler(log, func(w http.ResponseWriter, r *http.Request) {
 		rp, err := parseRequestParams(r)
 		if err != nil {
 			log.Error("Error parsing query params", "err", err)
@@ -97,7 +108,7 @@ func resourceHandler(log *slog.Logger, fv, resType string, i int) http.HandlerFu
 			log.Error("Error encoding version resource", "version", fv, "resourceType", resType, "resourceID", res.ID, "err", err)
 			http.Error(w, fmt.Sprintf("error encoding version %q resource %q id %q", fv, resType, res.ID), http.StatusInternalServerError)
 		}
-	}
+	})
 }
 
 func runWebserver(log *slog.Logger) error {
