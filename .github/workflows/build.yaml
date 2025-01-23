@@ -6,7 +6,7 @@ on:
       - '.github/workflows/build.yaml'
       - 'resources/**'
       - 'docker/**'
-      - `'.dockerignore'
+      - '.dockerignore'
       - '**.go'
       - 'go.mod'
       - 'go.sum'
