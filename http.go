@@ -12,6 +12,40 @@ type RequestParams struct {
 	Count  int
 }
 
+func respondInKind(log *slog.Logger, rp RequestParams, w http.ResponseWriter, data any) {
+	jsonData, err := json.Marshal(data)
+	if err != nil {
+		log.Error("Error during JSON encode stage", "data", fmt.Sprintf("%T", data), "err", err)
+		http.Error(w, "error during json encode stage", http.StatusInternalServerError)
+		return
+	}
+
+	fmt.Println(string(jsonData))
+
+	switch rp.Format {
+	case "", "json":
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		_, _ = w.Write(jsonData)
+
+	case "xml":
+		w.Header().Set("Content-Type", "application/xml; charset=utf-8")
+		stack, err := buildXMLEncodingStackFromJSON(jsonData)
+		if err != nil {
+			log.Error("Error building XML encoding stack", "data", fmt.Sprintf("%T", data), "err", err)
+			http.Error(w, "error building xml encoding stack", http.StatusInternalServerError)
+			return
+		}
+		if err = encodeXMLStack(w, stack); err != nil {
+			log.Error("Error encoding XML stack", "data", fmt.Sprintf("%T", data), "err", err)
+			http.Error(w, "error encoding xml stack", http.StatusInternalServerError)
+		}
+
+	default:
+		log.Error("Unknown format specified", "format", rp.Format)
+		http.Error(w, "unknown format specified", http.StatusBadRequest)
+	}
+}
+
 func logMiddlewareHandler(log *slog.Logger, hdl http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		log.Info("Processing request...", "method", r.Method, "url", r.URL)
@@ -47,15 +81,7 @@ func versionResourceListHandler(log *slog.Logger, fv string) http.HandlerFunc {
 	})
 }
 
-func resourceTypeListHandler(log *slog.Logger, fv, resType string) http.HandlerFunc {
-	type bundleEntry struct {
-		Resource *Resource `json:"resource"`
-	}
-	type bundle struct {
-		ResourceType string        `json:"resourceType"`
-		Entry        []bundleEntry `json:"entry"`
-	}
-
+func resourceBundleHandler(log *slog.Logger, fv, resType string) http.HandlerFunc {
 	return logMiddlewareHandler(log, func(w http.ResponseWriter, r *http.Request) {
 		rp, err := parseRequestParams(r)
 		if err != nil {
@@ -72,20 +98,15 @@ func resourceTypeListHandler(log *slog.Logger, fv, resType string) http.HandlerF
 			cnt = len(resourceMap[fv][resType])
 		}
 
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-
-		out := bundle{
+		out := Bundle{
 			ResourceType: "Bundle",
-			Entry:        make([]bundleEntry, cnt),
+			Entry:        make([]BundleEntry, cnt),
 		}
 		for i := 0; i < cnt; i++ {
-			out.Entry[i] = bundleEntry{Resource: resourceMap[fv][resType][i]}
+			out.Entry[i] = BundleEntry{Resource: resourceMap[fv][resType][i]}
 		}
 
-		if err := json.NewEncoder(w).Encode(out); err != nil {
-			log.Error("Error encoding version resource bundle", "version", fv, "resourceType", resType, "err", err)
-			http.Error(w, fmt.Sprintf("error encoding version %q resource %q bundle", fv, resType), http.StatusInternalServerError)
-		}
+		respondInKind(log, rp, w, out)
 	})
 }
 
@@ -102,13 +123,7 @@ func resourceHandler(log *slog.Logger, fv, resType string, i int) http.HandlerFu
 			return
 		}
 
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-
-		res := resourceMap[fv][resType][i]
-		if err := json.NewEncoder(w).Encode(res); err != nil {
-			log.Error("Error encoding version resource", "version", fv, "resourceType", resType, "resourceID", res.ID, "err", err)
-			http.Error(w, fmt.Sprintf("error encoding version %q resource %q id %q", fv, resType, res.ID), http.StatusInternalServerError)
-		}
+		respondInKind(log, rp, w, resourceMap[fv][resType][i])
 	})
 }
 
@@ -124,8 +139,8 @@ func runWebserver(log *slog.Logger) error {
 		mux.HandleFunc(fmt.Sprintf("GET /%s/", fv), versionResourceListHandler(log, fv))
 
 		for resType, resources := range resourceTypes {
-			mux.HandleFunc(fmt.Sprintf("GET /%s/%s", fv, resType), resourceTypeListHandler(log, fv, resType))
-			mux.HandleFunc(fmt.Sprintf("GET /%s/%s/", fv, resType), resourceTypeListHandler(log, fv, resType))
+			mux.HandleFunc(fmt.Sprintf("GET /%s/%s", fv, resType), resourceBundleHandler(log, fv, resType))
+			mux.HandleFunc(fmt.Sprintf("GET /%s/%s/", fv, resType), resourceBundleHandler(log, fv, resType))
 
 			for i, res := range resources {
 				if res.ID == "" {
