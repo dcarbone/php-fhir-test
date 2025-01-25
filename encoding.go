@@ -3,9 +3,56 @@ package main
 import (
 	"encoding/json"
 	"encoding/xml"
+	"errors"
 	"fmt"
+	"io"
 	"strconv"
+	"strings"
 )
+
+func buildXHTMLStack(xhtml string) ([]any, error) {
+	var (
+		tok   xml.Token
+		stack []any
+		err   error
+	)
+	xd := xml.NewDecoder(strings.NewReader(xhtml))
+	for {
+		tok, err = xd.Token()
+		if err != nil {
+			if errors.Is(err, io.EOF) {
+				return stack, nil
+			}
+			return nil, fmt.Errorf("error decoding xhtml: %w", err)
+		}
+
+		switch tt := tok.(type) {
+		case xml.StartElement:
+			el := tt.Copy()
+			el.Name = xml.Name{Local: el.Name.Local}
+			stack = append(stack, el)
+
+		case xml.EndElement:
+			el := xml.EndElement{
+				Name: xml.Name{Local: tt.Name.Local},
+			}
+			stack = append(stack, el)
+
+		case xml.CharData:
+			stack = append(stack, tt.Copy())
+
+		case xml.Comment:
+			stack = append(stack, tt.Copy())
+
+		case xml.ProcInst:
+			stack = append(stack, tt.Copy())
+
+		case xml.Directive:
+			stack = append(stack, tt.Copy())
+		}
+		fmt.Println()
+	}
+}
 
 func encodeValueToString(v any) (string, error) {
 	switch vt := v.(type) {
@@ -131,11 +178,24 @@ func buildObjectXMLStack(jd *json.Decoder, el *xml.StartElement) ([]any, error) 
 			case "resourceType":
 				// skip
 
+			case "div":
+				subStack, err := buildXHTMLStack(strVal)
+				if err != nil {
+					return nil, err
+				}
+				stack = append(stack, subStack...)
+
 			default:
-				el.Attr = append(el.Attr, xml.Attr{
-					Name:  xml.Name{Local: lastKey},
-					Value: strVal,
-				})
+				el := xml.StartElement{
+					Name: xml.Name{Local: lastKey},
+					Attr: []xml.Attr{
+						{
+							Name:  xml.Name{Local: "value"},
+							Value: strVal,
+						},
+					},
+				}
+				stack = append(stack, el, el.End())
 			}
 			lastKey = ""
 
