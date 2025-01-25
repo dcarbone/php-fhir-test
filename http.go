@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"encoding/xml"
 	"fmt"
 	"log/slog"
 	"net/http"
@@ -13,31 +14,32 @@ type RequestParams struct {
 }
 
 func respondInKind(log *slog.Logger, rp RequestParams, w http.ResponseWriter, data any) {
-	jsonData, err := json.Marshal(data)
-	if err != nil {
-		log.Error("Error during JSON encode stage", "data", fmt.Sprintf("%T", data), "err", err)
-		http.Error(w, "error during json encode stage", http.StatusInternalServerError)
-		return
-	}
-
-	fmt.Println(string(jsonData))
+	var err error
 
 	switch rp.Format {
 	case "", "json":
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
-		_, _ = w.Write(jsonData)
+		if err = json.NewEncoder(w).Encode(data); err != nil {
+			log.Error("Error during JSON encode", "data", fmt.Sprintf("%T", data), "error", err)
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+		}
 
 	case "xml":
 		w.Header().Set("Content-Type", "application/xml; charset=utf-8")
-		stack, err := buildXMLEncodingStackFromJSON(jsonData)
-		if err != nil {
-			log.Error("Error building XML encoding stack", "data", fmt.Sprintf("%T", data), "err", err)
-			http.Error(w, "error building xml encoding stack", http.StatusInternalServerError)
+
+		// write header
+		if _, err = w.Write([]byte(xml.Header)); err != nil {
+			log.Error("Error writing XML lead in", "err", err)
+			http.Error(w, "error writing XML lead in", http.StatusInternalServerError)
 			return
 		}
-		if err = encodeXMLStack(w, stack); err != nil {
-			log.Error("Error encoding XML stack", "data", fmt.Sprintf("%T", data), "err", err)
-			http.Error(w, "error encoding xml stack", http.StatusInternalServerError)
+
+		// init xml encoder
+		xe := xml.NewEncoder(w)
+
+		if err = xe.Encode(data); err != nil {
+			log.Error("Error during XML encode", "data", fmt.Sprintf("%T", data), "error", err)
+			http.Error(w, err.Error(), http.StatusInternalServerError)
 		}
 
 	default:
