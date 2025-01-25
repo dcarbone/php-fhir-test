@@ -50,7 +50,6 @@ func buildXHTMLStack(xhtml string) ([]any, error) {
 		case xml.Directive:
 			stack = append(stack, tt.Copy())
 		}
-		fmt.Println()
 	}
 }
 

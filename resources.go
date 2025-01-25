@@ -65,6 +65,8 @@ func (r Resource) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
 	}
 
 	jd := json.NewDecoder(bytes.NewReader(r.Data))
+	jd.UseNumber()
+
 	// skip past first token
 	_, _ = jd.Token()
 	stack, err := buildObjectXMLStack(jd, el)
