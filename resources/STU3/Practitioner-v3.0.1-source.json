@@ -1,0 +1,37 @@
+{
+  "resourceType": "Bundle",
+  "id": "332cb299-cf72-491b-8cb9-b4ae486a6a11",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:04:30.456+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Practitioner?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=332cb299-cf72-491b-8cb9-b4ae486a6a11&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Practitioner/clinFhiroLzJxoS73EgVWo9iXwY1E1YncEH2",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "clinFhiroLzJxoS73EgVWo9iXwY1E1YncEH2",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-01T03:21:22.311+00:00"
+      },
+      "identifier": [ {
+        "system": "http://clinfhir.com/fhir/NamingSystem/practitioner",
+        "value": "oLzJxoS73EgVWo9iXwY1E1YncEH2"
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "kevin.olbrich@mckesson.com"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

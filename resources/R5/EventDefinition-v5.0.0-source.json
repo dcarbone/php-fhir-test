@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "7bf54630-fbaa-4a1f-8280-ee01ebdb2d40",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:28:57.628+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/EventDefinition?_count=1&_format=json"
+  } ]
+}

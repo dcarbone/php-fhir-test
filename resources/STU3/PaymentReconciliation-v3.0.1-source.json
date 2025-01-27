@@ -1,0 +1,38 @@
+{
+  "resourceType": "Bundle",
+  "id": "f10ce339-4344-4406-8ad4-f7d7397fe0c8",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:04:14.454+00:00"
+  },
+  "type": "searchset",
+  "total": 3,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/PaymentReconciliation?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=f10ce339-4344-4406-8ad4-f7d7397fe0c8&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/PaymentReconciliation/cf-1569809717138",
+    "resource": {
+      "resourceType": "PaymentReconciliation",
+      "id": "cf-1569809717138",
+      "meta": {
+        "extension": [ {
+          "url": "http://hapifhir.io/fhir/StructureDefinition/resource-meta-source",
+          "valueUri": "#a213ceced0a7343f"
+        } ],
+        "versionId": "1",
+        "lastUpdated": "2019-10-01T08:13:41.118+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"mm\"></a></div>"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,44 @@
+{
+  "resourceType": "Bundle",
+  "id": "1498c9f0-727d-409e-a37b-da7b87fbccbe",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:39:06.603+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ActivityDefinition?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=1498c9f0-727d-409e-a37b-da7b87fbccbe&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ActivityDefinition/JXP0000308141939I2-A",
+    "resource": {
+      "resourceType": "ActivityDefinition",
+      "id": "JXP0000308141939I2-A",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-28T22:01:09.742+00:00"
+      },
+      "status": "active",
+      "topic": [ {
+        "coding": [ {
+          "system": "http://hl7.org/fhir",
+          "code": "JXP0000308141939A",
+          "display": "Patient Id"
+        } ],
+        "text": "Treatment"
+      } ],
+      "relatedArtifact": [ {
+        "type": "depends-on",
+        "resource": {
+          "reference": "Device/JXP0000308141939I2"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,198 @@
+{
+  "resourceType": "Bundle",
+  "id": "351b44d3-f9eb-4fc0-91ab-47a0a0d5340b",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:20:37.771+00:00"
+  },
+  "type": "searchset",
+  "total": 9,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/ProcedureRequest?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=351b44d3-f9eb-4fc0-91ab-47a0a0d5340b&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ProcedureRequest/178444",
+    "resource": {
+      "resourceType": "ProcedureRequest",
+      "id": "178444",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-07-22T19:40:42.189+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Request for Routine Appendectomy</div>"
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/procedurerequest-authorizedBy",
+        "valueReference": {
+          "reference": "Practitioner/clinFhirHhcFkJYwOpV3RnTBuS0DxKKG2sL2"
+        }
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/identifier-type",
+            "code": "PLAC"
+          } ],
+          "text": "Placer"
+        },
+        "system": "urn:oid:1.3.4.5.6.7",
+        "value": "2345234234234"
+      } ],
+      "subject": {
+        "reference": "Patient/130"
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "80146002",
+          "display": "Appendectomy (Procedure)"
+        } ],
+        "text": "Appendectomy"
+      },
+      "bodySite": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "66754008",
+          "display": "Appendix structure"
+        } ]
+      } ],
+      "reasonCodeableConcept": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "163220003",
+          "display": "On examination - abdominal pain - right iliac"
+        } ]
+      },
+      "scheduledTiming": {
+        "repeat": {
+          "frequency": 3,
+          "period": 1,
+          "periodUnits": "d"
+        }
+      },
+      "encounter": {
+        "reference": "Encounter/96447"
+      },
+      "performer": {
+        "reference": "Practitioner/clinFhirHhcFkJYwOpV3RnTBuS0DxKKG2sL2"
+      },
+      "status": "completed",
+      "asNeededCodeableConcept": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "163220003",
+          "display": "On examination - abdominal pain - right iliac"
+        } ]
+      },
+      "orderedOn": "2013-04-04",
+      "orderer": {
+        "reference": "Practitioner/clinFhirHhcFkJYwOpV3RnTBuS0DxKKG2sL2"
+      },
+      "priority": "urgent"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ProcedureRequest/f1514ec6-bf42-4d2d-8fda-ab636c142f37",
+    "resource": {
+      "resourceType": "ProcedureRequest",
+      "id": "f1514ec6-bf42-4d2d-8fda-ab636c142f37",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-10-23T21:16:34.540+00:00"
+      },
+      "subject": {
+        "reference": "Patient/82234"
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "104177005",
+          "display": "Blood culture for bacteria, including anaerobic screen"
+        } ]
+      },
+      "status": "completed"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ProcedureRequest/1832137c-5a29-4cc5-a1c3-ae1f7d81569e",
+    "resource": {
+      "resourceType": "ProcedureRequest",
+      "id": "1832137c-5a29-4cc5-a1c3-ae1f7d81569e",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-10-23T21:28:14.380+00:00"
+      },
+      "subject": {
+        "reference": "Patient/ec58fc0f-928f-4752-b873-7a48a0edbac2"
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "104177005",
+          "display": "Blood culture for bacteria, including anaerobic screen"
+        } ]
+      },
+      "status": "completed"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ProcedureRequest/28e5da7e-6075-4e66-ad06-a9cfd49d7602",
+    "resource": {
+      "resourceType": "ProcedureRequest",
+      "id": "28e5da7e-6075-4e66-ad06-a9cfd49d7602",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-11-05T11:02:57.294+00:00"
+      },
+      "subject": {
+        "reference": "Patient/dbb6ed9f-8c8c-4f66-a2ff-979d41466c58"
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "104177005",
+          "display": "Blood culture for bacteria, including anaerobic screen"
+        } ]
+      },
+      "status": "completed"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ProcedureRequest/afb2ecda-fa26-4841-bd51-0bbc1b629387",
+    "resource": {
+      "resourceType": "ProcedureRequest",
+      "id": "afb2ecda-fa26-4841-bd51-0bbc1b629387",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2019-12-12T10:07:24.482+00:00"
+      },
+      "subject": {
+        "reference": "Patient/73de4066-9529-4d97-ad9b-cbb01cf692c3"
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "104177005",
+          "display": "Blood culture for bacteria, including anaerobic screen LCD"
+        } ]
+      },
+      "status": "completed"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

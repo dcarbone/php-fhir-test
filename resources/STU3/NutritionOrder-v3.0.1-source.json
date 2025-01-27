@@ -1,0 +1,96 @@
+{
+  "resourceType": "Bundle",
+  "id": "976e49fe-b365-4e84-b28c-ef1852c18203",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:03:46.455+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/NutritionOrder?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=976e49fe-b365-4e84-b28c-ef1852c18203&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/NutritionOrder/cc-betsy-diet-ckd",
+    "resource": {
+      "resourceType": "NutritionOrder",
+      "id": "cc-betsy-diet-ckd",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-01-13T16:59:58.623+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Renal Diet</div>"
+      },
+      "extension": [ {
+        "url": "http://clinicalcloud.solutions/fhir/StructureDefinition/NutritionOrder-code",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "33489005",
+            "display": "Renal disease diet"
+          } ]
+        }
+      }, {
+        "url": "http://hl7.org/fhir/StructureDefinition/goal-pertainsToGoal",
+        "valueReference": {
+          "reference": "Goal/cc-goal-betsy-a1c"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/StructureDefinition/goal-pertainsToGoal",
+        "valueReference": {
+          "reference": "Goal/cc-goal-betsy-lab-phos"
+        }
+      } ],
+      "status": "planned",
+      "patient": {
+        "reference": "Patient/1157010"
+      },
+      "dateTime": "2018-01-28",
+      "orderer": {
+        "reference": "Practitioner/cc-prac-gonzalez-maria"
+      },
+      "excludeFoodModifier": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "43738112124100",
+          "display": "Decreased Phosphorus"
+        } ]
+      } ],
+      "oralDiet": {
+        "type": [ {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "43738112124100",
+            "display": "Decreased Phosphorus"
+          } ]
+        }, {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "43579112124107",
+            "display": "protein modified diet"
+          } ]
+        } ],
+        "nutrient": [ {
+          "modifier": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "43576112124104",
+              "display": "Fluid Modified Diet"
+            } ]
+          },
+          "amount": {
+            "value": 40,
+            "unit": "gm"
+          }
+        } ]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

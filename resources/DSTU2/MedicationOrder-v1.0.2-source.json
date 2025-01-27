@@ -1,0 +1,297 @@
+{
+  "resourceType": "Bundle",
+  "id": "32dfe8e5-a200-4c82-8619-2d619807d85d",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:18:55.769+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/MedicationOrder?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=32dfe8e5-a200-4c82-8619-2d619807d85d&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/MedicationOrder/490",
+    "resource": {
+      "resourceType": "MedicationOrder",
+      "id": "490",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-10T18:46:12.334+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f002</p><p><b>identifier</b>: order9837343 (OFFICIAL)</p><p><b>dateWritten</b>: 08/04/2013</p><p><b>status</b>: active</p><p><b>patient</b>: <a>P. van den Heuvel</a></p><p><b>prescriber</b>: <a>R.A. van den Berk</a></p><p><b>encounter</b>: <a>encounter who leads to this priscription</a></p><p><b>reason</b>: High density lipoprotein cholesterol level <span>(Details : {SNOMED CT code '28036006' = '28036006', given as 'High density lipoprotein cholesterol level'})</span></p><p><b>medication</b>: <a>prescribed medication</a></p><h3>DosageInstructions</h3><table><tr><td>-</td><td><b>Timing</b></td><td><b>Site[x]</b></td><td><b>Route</b></td><td><b>Dose[x]</b></td></tr><tr><td>*</td><td>Starting 04/08/2013, Do Once per 1 days</td><td>Entire oral cavity <span>(Details : {SNOMED CT code '181220002' = '181220002', given as 'Entire oral cavity'})</span></td><td>Administration of drug or medicament via oral route <span>(Details : {SNOMED CT code '386359008' = '386359008', given as 'Administration of drug or medicament via oral route'})</span></td><td>10 mg<span> (Details: http://unitsofmeasure.org code mg = '??')</span></td></tr></table><h3>DispenseRequests</h3><table><tr><td>-</td><td><b>ValidityPeriod</b></td><td><b>Quantity</b></td></tr><tr><td>*</td><td>08/04/2013 --&gt; (ongoing)</td><td>90 46992007<span> (Details: SNOMED CT code 46992007 = '46992007')</span></td></tr></table></div>"
+      },
+      "identifier": [ {
+        "use": "official",
+        "system": "http://www.bmc.nl/portal/prescriptions",
+        "value": "order9837343"
+      } ],
+      "dateWritten": "2013-04-08",
+      "status": "active",
+      "patient": {
+        "reference": "Patient/130",
+        "display": "P. van den Heuvel"
+      },
+      "prescriber": {
+        "reference": "Practitioner/208",
+        "display": "R.A. van den Berk"
+      },
+      "encounter": {
+        "reference": "Encounter/225",
+        "display": "encounter who leads to this priscription"
+      },
+      "reasonCodeableConcept": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "28036006",
+          "display": "High density lipoprotein cholesterol level"
+        } ]
+      },
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "9631",
+          "display": "Sectral",
+          "userSelected": false
+        } ],
+        "text": "acebutolol (Sectral)"
+      },
+      "dosageInstruction": [ {
+        "timing": {
+          "repeat": {
+            "boundsPeriod": {
+              "start": "2013-08-04"
+            },
+            "frequency": 1,
+            "period": 1,
+            "periodUnits": "d"
+          }
+        },
+        "siteCodeableConcept": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "181220002",
+            "display": "Entire oral cavity"
+          } ]
+        },
+        "route": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "386359008",
+            "display": "Administration of drug or medicament via oral route"
+          } ]
+        },
+        "doseQuantity": {
+          "value": 10,
+          "unit": "mg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg"
+        }
+      } ],
+      "dispenseRequest": {
+        "validityPeriod": {
+          "start": "2013-04-08"
+        },
+        "quantity": {
+          "value": 90,
+          "system": "http://snomed.info/sct",
+          "code": "46992007"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/MedicationOrder/491",
+    "resource": {
+      "resourceType": "MedicationOrder",
+      "id": "491",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-10T18:51:46.183+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f002</p><p><b>identifier</b>: order9837343 (OFFICIAL)</p><p><b>dateWritten</b>: 08/04/2013</p><p><b>status</b>: active</p><p><b>patient</b>: <a>P. van den Heuvel</a></p><p><b>prescriber</b>: <a>R.A. van den Berk</a></p><p><b>encounter</b>: <a>encounter who leads to this priscription</a></p><p><b>reason</b>: High density lipoprotein cholesterol level <span>(Details : {SNOMED CT code '28036006' = '28036006', given as 'High density lipoprotein cholesterol level'})</span></p><p><b>medication</b>: <a>prescribed medication</a></p><h3>DosageInstructions</h3><table><tr><td>-</td><td><b>Timing</b></td><td><b>Site[x]</b></td><td><b>Route</b></td><td><b>Dose[x]</b></td></tr><tr><td>*</td><td>Starting 04/08/2013, Do Once per 1 days</td><td>Entire oral cavity <span>(Details : {SNOMED CT code '181220002' = '181220002', given as 'Entire oral cavity'})</span></td><td>Administration of drug or medicament via oral route <span>(Details : {SNOMED CT code '386359008' = '386359008', given as 'Administration of drug or medicament via oral route'})</span></td><td>10 mg<span> (Details: http://unitsofmeasure.org code mg = '??')</span></td></tr></table><h3>DispenseRequests</h3><table><tr><td>-</td><td><b>ValidityPeriod</b></td><td><b>Quantity</b></td></tr><tr><td>*</td><td>08/04/2013 --&gt; (ongoing)</td><td>90 46992007<span> (Details: SNOMED CT code 46992007 = '46992007')</span></td></tr></table></div>"
+      },
+      "identifier": [ {
+        "use": "official",
+        "system": "http://www.bmc.nl/portal/prescriptions",
+        "value": "order9837343"
+      } ],
+      "dateWritten": "2013-04-08",
+      "status": "completed",
+      "patient": {
+        "reference": "Patient/130",
+        "display": "P. van den Heuvel"
+      },
+      "prescriber": {
+        "reference": "Practitioner/208",
+        "display": "R.A. van den Berk"
+      },
+      "encounter": {
+        "reference": "Encounter/225",
+        "display": "encounter who leads to this priscription"
+      },
+      "reasonCodeableConcept": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "28036006",
+          "display": "High density lipoprotein cholesterol level"
+        } ]
+      },
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "9631",
+          "display": "Sectral",
+          "userSelected": false
+        } ],
+        "text": "acebutolol (Sectral)"
+      },
+      "dosageInstruction": [ {
+        "timing": {
+          "repeat": {
+            "boundsPeriod": {
+              "start": "2013-08-04"
+            },
+            "frequency": 1,
+            "period": 1,
+            "periodUnits": "d"
+          }
+        },
+        "siteCodeableConcept": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "181220002",
+            "display": "Entire oral cavity"
+          } ]
+        },
+        "route": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "386359008",
+            "display": "Administration of drug or medicament via oral route"
+          } ]
+        },
+        "doseQuantity": {
+          "value": 10,
+          "unit": "mg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg"
+        }
+      } ],
+      "dispenseRequest": {
+        "validityPeriod": {
+          "start": "2013-04-08"
+        },
+        "quantity": {
+          "value": 90,
+          "system": "http://snomed.info/sct",
+          "code": "46992007"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/MedicationOrder/663",
+    "resource": {
+      "resourceType": "MedicationOrder",
+      "id": "663",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-17T17:49:05.762+00:00"
+      },
+      "dateWritten": "1955-03-19",
+      "status": "active",
+      "patient": {
+        "reference": "Patient/642"
+      },
+      "encounter": {
+        "reference": "Encounter/643"
+      },
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "834060",
+          "display": "Penicillin V Potassium 250 MG"
+        } ],
+        "text": "Penicillin V Potassium 250 MG"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/MedicationOrder/664",
+    "resource": {
+      "resourceType": "MedicationOrder",
+      "id": "664",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-17T17:49:05.762+00:00"
+      },
+      "dateWritten": "1983-10-15",
+      "status": "active",
+      "patient": {
+        "reference": "Patient/642"
+      },
+      "encounter": {
+        "reference": "Encounter/643"
+      },
+      "reasonReference": {
+        "reference": "Condition/646"
+      },
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "860975",
+          "display": "24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet"
+        } ],
+        "text": "24 HR Metformin hydrochloride 500 MG Extended Release Oral Tablet"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/MedicationOrder/665",
+    "resource": {
+      "resourceType": "MedicationOrder",
+      "id": "665",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-17T17:49:05.762+00:00"
+      },
+      "dateWritten": "1994-08-11",
+      "status": "active",
+      "patient": {
+        "reference": "Patient/642"
+      },
+      "encounter": {
+        "reference": "Encounter/643"
+      },
+      "reasonReference": {
+        "reference": "Condition/648"
+      },
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "312961",
+          "display": "Simvastatin 20 MG Oral Tablet"
+        } ],
+        "text": "Simvastatin 20 MG Oral Tablet"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

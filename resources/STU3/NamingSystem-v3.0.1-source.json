@@ -1,0 +1,53 @@
+{
+  "resourceType": "Bundle",
+  "id": "e239842f-13f4-4f9c-87d8-3ba2216699e5",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:03:42.455+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/NamingSystem?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=e239842f-13f4-4f9c-87d8-3ba2216699e5&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/NamingSystem/1283396",
+    "resource": {
+      "resourceType": "NamingSystem",
+      "id": "1283396",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-01-31T10:15:26.465+00:00"
+      },
+      "name": "Danish civil registration system - CPR",
+      "status": "active",
+      "kind": "identifier",
+      "date": "1968-04-02",
+      "publisher": "Sundhedsdatastyrelsen?",
+      "contact": [ {
+        "name": "Thor Schliemann"
+      } ],
+      "responsible": "CPR-kontoret, Økonomi- og Indenrigsministeriets departement",
+      "type": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/identifier-type",
+          "code": "SB",
+          "display": "Social Beneficiary Identifier"
+        } ]
+      },
+      "description": "The Danish civil registration system (\"CPR\") encompasses basic personal data about anyone with a civil registration number. A civil registration number shall be allocated to anyone who: 1) is registered in the national register in Denmark on the grounds of birth or relocation from abroad; 2) is included under Arbejdsmarkedets TillægsPension (ATP); 3) according to the tax authorities, is required to have a civil registration number for the purpose of tax processing in Denmark.",
+      "uniqueId": [ {
+        "type": "oid",
+        "value": "1.2.208.176.1.2"
+      }, {
+        "type": "uri",
+        "value": "http://www.cpr.dk/cpr-systemet"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

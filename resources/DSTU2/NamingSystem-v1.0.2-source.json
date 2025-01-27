@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "f9f1524c-d6db-43f0-b65e-0f43dbb96750",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:19:19.770+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/NamingSystem?_count=5&_format=json"
+  } ]
+}

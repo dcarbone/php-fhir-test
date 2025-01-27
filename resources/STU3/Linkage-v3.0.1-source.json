@@ -1,0 +1,40 @@
+{
+  "resourceType": "Bundle",
+  "id": "79890ccd-4733-430f-8859-92e9601663fd",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:02:50.453+00:00"
+  },
+  "type": "searchset",
+  "total": 6,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Linkage?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=79890ccd-4733-430f-8859-92e9601663fd&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Linkage/id1539019225481",
+    "resource": {
+      "resourceType": "Linkage",
+      "id": "id1539019225481",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2019-04-28T10:28:37.133+00:00"
+      },
+      "extension": [ {
+        "url": "http://cdip.gehc.com/fhir/extensions/cdip-last-updated",
+        "valueString": "2019-04-28T12:28:36+02:00"
+      }, {
+        "url": "http://cdip.gehc.com/fhir/extensions/cdip-last-updated-origin",
+        "valueString": "hac"
+      } ],
+      "item": [ {
+        "type": "historical"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

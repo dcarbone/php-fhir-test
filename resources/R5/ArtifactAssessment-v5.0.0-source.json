@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "4d82ce73-3d5c-40d2-aee3-4b503d521457",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:27:41.382+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/ArtifactAssessment?_count=1&_format=json"
+  } ]
+}

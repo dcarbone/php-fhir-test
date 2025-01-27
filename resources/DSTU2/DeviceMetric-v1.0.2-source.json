@@ -1,0 +1,212 @@
+{
+  "resourceType": "Bundle",
+  "id": "4359c385-4bfe-4f84-8861-f9d3472a350a",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:15:55.771+00:00"
+  },
+  "type": "searchset",
+  "total": 12,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/DeviceMetric?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=4359c385-4bfe-4f84-8861-f9d3472a350a&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DeviceMetric/165844",
+    "resource": {
+      "resourceType": "DeviceMetric",
+      "id": "165844",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-12T15:32:19.170+00:00"
+      },
+      "type": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "150020",
+          "display": "MDC_PRESS_BLD_NONINV"
+        } ]
+      },
+      "identifier": {
+        "system": "http://www.vanilla.kr",
+        "value": "metric001"
+      },
+      "unit": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "266016",
+          "display": "MDC_DIM_MMHG"
+        } ]
+      },
+      "source": {
+        "reference": "Device/165842"
+      },
+      "parent": {
+        "reference": "DeviceComponent/165843"
+      },
+      "operationalStatus": "on",
+      "category": "measurement"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DeviceMetric/165849",
+    "resource": {
+      "resourceType": "DeviceMetric",
+      "id": "165849",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-12T15:37:44.414+00:00"
+      },
+      "type": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "150020",
+          "display": "MDC_PRESS_BLD_NONINV"
+        } ]
+      },
+      "identifier": {
+        "system": "http://www.vanilla.kr",
+        "value": "metric001"
+      },
+      "unit": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "266016",
+          "display": "MDC_DIM_MMHG"
+        } ]
+      },
+      "source": {
+        "reference": "Device/165847"
+      },
+      "parent": {
+        "reference": "DeviceComponent/165848"
+      },
+      "operationalStatus": "on",
+      "category": "measurement"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DeviceMetric/165854",
+    "resource": {
+      "resourceType": "DeviceMetric",
+      "id": "165854",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-12T15:37:47.632+00:00"
+      },
+      "type": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "150020",
+          "display": "MDC_PRESS_BLD_NONINV"
+        } ]
+      },
+      "identifier": {
+        "system": "http://www.vanilla.kr",
+        "value": "metric001"
+      },
+      "unit": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "266016",
+          "display": "MDC_DIM_MMHG"
+        } ]
+      },
+      "source": {
+        "reference": "Device/165852"
+      },
+      "parent": {
+        "reference": "DeviceComponent/165853"
+      },
+      "operationalStatus": "on",
+      "category": "measurement"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DeviceMetric/165859",
+    "resource": {
+      "resourceType": "DeviceMetric",
+      "id": "165859",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-12T15:38:17.139+00:00"
+      },
+      "type": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "150020",
+          "display": "MDC_PRESS_BLD_NONINV"
+        } ]
+      },
+      "identifier": {
+        "system": "http://www.vanilla.kr",
+        "value": "metric001"
+      },
+      "unit": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "266016",
+          "display": "MDC_DIM_MMHG"
+        } ]
+      },
+      "source": {
+        "reference": "Device/165857"
+      },
+      "parent": {
+        "reference": "DeviceComponent/165858"
+      },
+      "operationalStatus": "on",
+      "category": "measurement"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DeviceMetric/165864",
+    "resource": {
+      "resourceType": "DeviceMetric",
+      "id": "165864",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-12T15:38:19.938+00:00"
+      },
+      "type": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "150020",
+          "display": "MDC_PRESS_BLD_NONINV"
+        } ]
+      },
+      "identifier": {
+        "system": "http://www.vanilla.kr",
+        "value": "metric001"
+      },
+      "unit": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "266016",
+          "display": "MDC_DIM_MMHG"
+        } ]
+      },
+      "source": {
+        "reference": "Device/165862"
+      },
+      "parent": {
+        "reference": "DeviceComponent/165863"
+      },
+      "operationalStatus": "on",
+      "category": "measurement"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

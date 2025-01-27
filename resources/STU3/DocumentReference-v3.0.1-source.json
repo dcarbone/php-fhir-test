@@ -1,0 +1,66 @@
+{
+  "resourceType": "Bundle",
+  "id": "817b813a-dbcf-4577-b7f2-a681f219526c",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:01:14.146+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/DocumentReference?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=817b813a-dbcf-4577-b7f2-a681f219526c&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/DocumentReference/fhirexperience-example",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "fhirexperience-example",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-04T12:13:04.967+00:00",
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference" ]
+      },
+      "identifier": [ {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:2.16.840.1.113883.19.5.99999.1"
+      } ],
+      "status": "current",
+      "type": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "34133-9",
+          "display": "Summary of episode note"
+        } ],
+        "text": "CCD Document"
+      },
+      "subject": {
+        "reference": "Patient/fhirexperience-example",
+        "display": "Dan Burnham"
+      },
+      "created": "2018-09-01",
+      "indexed": "2018-09-01T15:29:46Z",
+      "author": [ {
+        "display": "Eric Haas"
+      } ],
+      "description": "An fhirexperience example binary",
+      "content": [ {
+        "attachment": {
+          "contentType": "image/jpeg",
+          "url": "/Binary/fhirexperience-example",
+          "title": "Uri where the data can be found: [base]/Binary/fhirexperience-example"
+        }
+      } ],
+      "context": {
+        "period": {
+          "start": "2017-12-23T08:00:00+11:00",
+          "end": "2018-12-23T08:01:00+11:00"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

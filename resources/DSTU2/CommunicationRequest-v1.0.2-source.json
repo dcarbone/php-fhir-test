@@ -1,0 +1,96 @@
+{
+  "resourceType": "Bundle",
+  "id": "d4df0f9e-4fc1-42f4-a4da-76085850ce1c",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:14:49.773+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/CommunicationRequest?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=d4df0f9e-4fc1-42f4-a4da-76085850ce1c&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/CommunicationRequest/376",
+    "resource": {
+      "resourceType": "CommunicationRequest",
+      "id": "376",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-08T07:22:32.421+00:00"
+      },
+      "identifier": [ {
+        "use": "official"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/CommunicationRequest/378",
+    "resource": {
+      "resourceType": "CommunicationRequest",
+      "id": "378",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-08T07:24:21.129+00:00"
+      },
+      "identifier": [ {
+        "use": "official"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/CommunicationRequest/456",
+    "resource": {
+      "resourceType": "CommunicationRequest",
+      "id": "456",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-10T06:22:25.130+00:00"
+      },
+      "identifier": [ {
+        "use": "official"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/CommunicationRequest/458",
+    "resource": {
+      "resourceType": "CommunicationRequest",
+      "id": "458",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-10T06:41:03.590+00:00"
+      },
+      "identifier": [ {
+        "use": "official"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/CommunicationRequest/610",
+    "resource": {
+      "resourceType": "CommunicationRequest",
+      "id": "610",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-16T14:43:00.531+00:00"
+      },
+      "identifier": [ {
+        "use": "official"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

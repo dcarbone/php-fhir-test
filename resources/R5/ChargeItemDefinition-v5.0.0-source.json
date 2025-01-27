@@ -1,0 +1,117 @@
+{
+  "resourceType": "Bundle",
+  "id": "3129ed1f-b623-4a15-b4a4-364a793923d2",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:28:37.381+00:00"
+  },
+  "type": "searchset",
+  "total": 5,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/ChargeItemDefinition?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=3129ed1f-b623-4a15-b4a4-364a793923d2&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/ChargeItemDefinition/D30032977-CG",
+    "resource": {
+      "resourceType": "ChargeItemDefinition",
+      "id": "D30032977-CG",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2023-06-15T08:34:16.447+00:00",
+        "source": "#msZDxV7pHk2BQK5A"
+      },
+      "identifier": [ {
+        "system": "http://si.mahidol.ac.th/fhir/Id/sap-code",
+        "value": "30032977"
+      } ],
+      "status": "active",
+      "useContext": [ {
+        "code": {
+          "system": "http://si.mahidol.ac.th/fhir/CodeSystem/cs-usage-context",
+          "code": "benefit-group"
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://si.mahidol.ac.th/fhir/CodeSystem/cs-benefit-group",
+            "code": "CG",
+            "display": "กรมบัญชีกลาง"
+          } ]
+        }
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://terms.sil-th.org/CodeSystem/cs-chi-equipdev",
+          "code": "3012",
+          "display": "3.0.12 เครื่องอัดอากาศขณะหายใจเข้า (Continuous Positive Airway Pressure - CPAP)"
+        } ]
+      },
+      "instance": [ {
+        "reference": "DeviceDefinition/D30032977"
+      } ],
+      "applicability": [ {
+        "condition": {
+          "description": "ผู้ป่วยโควิด",
+          "language": "x-fhir-query",
+          "expression": "Condition?code=http://hl7.org/fhir/sid/icd-10|U07.1&subject={{%patient.id}}&encounter={{%visit.id}}"
+        }
+      }, {
+        "condition": {
+          "description": "ใช้เอกสารประกอบการเบิก",
+          "reference": "<<document-url>>"
+        }
+      } ],
+      "propertyGroup": [ {
+        "priceComponent": [ {
+          "type": "base",
+          "code": {
+            "text": "price"
+          },
+          "amount": {
+            "value": 12191.00,
+            "currency": "THB"
+          }
+        }, {
+          "type": "informational",
+          "code": {
+            "text": "cost"
+          },
+          "amount": {
+            "value": 0.00,
+            "currency": "THB"
+          }
+        } ]
+      }, {
+        "applicability": [ {
+          "condition": {
+            "description": "ผู้ป่วยโควิด"
+          }
+        }, {
+          "condition": {
+            "description": "ใช้เอกสารประกอบการเบิก"
+          }
+        }, {
+          "effectivePeriod": {
+            "start": "2021-11-16T00:00:00+07:00",
+            "end": "9999-12-31T23:59:59+07:00"
+          }
+        } ],
+        "priceComponent": [ {
+          "type": "informational",
+          "code": {
+            "text": "reimbursement"
+          },
+          "amount": {
+            "value": 1000.00,
+            "currency": "THB"
+          }
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

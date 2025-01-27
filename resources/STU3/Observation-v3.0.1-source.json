@@ -1,0 +1,46 @@
+{
+  "resourceType": "Bundle",
+  "id": "43bf3d20-ebdc-4b18-af2f-21b0d475ce19",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:03:50.457+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Observation?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=43bf3d20-ebdc-4b18-af2f-21b0d475ce19&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Observation/18544",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "18544",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-09-30T23:46:21.119+00:00"
+      },
+      "status": "final",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "2339-0",
+          "display": "Glucose"
+        } ]
+      },
+      "subject": {
+        "reference": "http://hapi.fhir.org/baseDstu3/Patient/18516"
+      },
+      "valueQuantity": {
+        "value": 118.0,
+        "unit": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg/dL"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

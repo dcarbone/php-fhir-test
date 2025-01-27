@@ -1,0 +1,221 @@
+{
+  "resourceType": "Bundle",
+  "id": "cbe6f781-2544-45c1-91bd-fb2476a5672f",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:14:31.769+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/ClaimResponse?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=cbe6f781-2544-45c1-91bd-fb2476a5672f&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ClaimResponse/194102",
+    "resource": {
+      "resourceType": "ClaimResponse",
+      "id": "194102",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-27T05:42:56.416+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ClaimResponse</div>"
+      },
+      "identifier": [ {
+        "system": "http://www.BenefitsInc.com/fhir/remittance",
+        "value": "R3500"
+      } ],
+      "created": "2014-08-16",
+      "outcome": "complete",
+      "disposition": "Claim settled as per contract.",
+      "item": [ {
+        "adjudication": [ {
+          "amount": {
+            "value": 135.57
+          }
+        }, {
+          "amount": {
+            "value": 10.00
+          }
+        }, {
+          "value": 80.00
+        }, {
+          "amount": {
+            "value": 90.47
+          }
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ClaimResponse/194103",
+    "resource": {
+      "resourceType": "ClaimResponse",
+      "id": "194103",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-27T05:43:00.426+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ClaimResponse</div>"
+      },
+      "identifier": [ {
+        "system": "http://www.BenefitsInc.com/fhir/remittance",
+        "value": "R3500"
+      } ],
+      "created": "2014-08-16",
+      "outcome": "complete",
+      "disposition": "Claim settled as per contract.",
+      "item": [ {
+        "adjudication": [ {
+          "amount": {
+            "value": 135.57
+          }
+        }, {
+          "amount": {
+            "value": 10.00
+          }
+        }, {
+          "value": 80.00
+        }, {
+          "amount": {
+            "value": 90.47
+          }
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ClaimResponse/194104",
+    "resource": {
+      "resourceType": "ClaimResponse",
+      "id": "194104",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-27T05:43:02.995+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ClaimResponse</div>"
+      },
+      "identifier": [ {
+        "system": "http://www.BenefitsInc.com/fhir/remittance",
+        "value": "R3500"
+      } ],
+      "created": "2014-08-16",
+      "outcome": "complete",
+      "disposition": "Claim settled as per contract.",
+      "item": [ {
+        "adjudication": [ {
+          "amount": {
+            "value": 135.57
+          }
+        }, {
+          "amount": {
+            "value": 10.00
+          }
+        }, {
+          "value": 80.00
+        }, {
+          "amount": {
+            "value": 90.47
+          }
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ClaimResponse/194105",
+    "resource": {
+      "resourceType": "ClaimResponse",
+      "id": "194105",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-27T05:43:06.018+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ClaimResponse</div>"
+      },
+      "identifier": [ {
+        "system": "http://www.BenefitsInc.com/fhir/remittance",
+        "value": "R3500"
+      } ],
+      "created": "2014-08-16",
+      "outcome": "complete",
+      "disposition": "Claim settled as per contract.",
+      "item": [ {
+        "adjudication": [ {
+          "amount": {
+            "value": 135.57
+          }
+        }, {
+          "amount": {
+            "value": 10.00
+          }
+        }, {
+          "value": 80.00
+        }, {
+          "amount": {
+            "value": 90.47
+          }
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ClaimResponse/194106",
+    "resource": {
+      "resourceType": "ClaimResponse",
+      "id": "194106",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-27T05:43:08.340+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ClaimResponse</div>"
+      },
+      "identifier": [ {
+        "system": "http://www.BenefitsInc.com/fhir/remittance",
+        "value": "R3500"
+      } ],
+      "created": "2014-08-16",
+      "outcome": "complete",
+      "disposition": "Claim settled as per contract.",
+      "item": [ {
+        "adjudication": [ {
+          "amount": {
+            "value": 135.57
+          }
+        }, {
+          "amount": {
+            "value": 10.00
+          }
+        }, {
+          "value": 80.00
+        }, {
+          "amount": {
+            "value": 90.47
+          }
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

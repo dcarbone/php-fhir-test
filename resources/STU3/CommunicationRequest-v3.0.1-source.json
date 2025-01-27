@@ -1,0 +1,50 @@
+{
+  "resourceType": "Bundle",
+  "id": "316eff30-0ae7-4194-9866-681939b874d0",
+  "meta": {
+    "lastUpdated": "2024-05-03T15:59:20.686+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/CommunicationRequest?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=316eff30-0ae7-4194-9866-681939b874d0&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/CommunicationRequest/732759",
+    "resource": {
+      "resourceType": "CommunicationRequest",
+      "id": "732759",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-30T06:31:06.524+00:00"
+      },
+      "status": "active",
+      "category": [ {
+        "coding": [ {
+          "system": "1.3.6.1.4.1.19376.1.2.5.1",
+          "code": "alert"
+        } ]
+      } ],
+      "priority": "asap",
+      "payload": [ {
+        "contentAttachment": {
+          "contentType": "text/plain",
+          "language": "en",
+          "title": "DENGUE FEVER OUTBREAK DUE TO RECENT FLOODS IN DEHLI. 400 CASES REPORTED THIS WEEK."
+        }
+      } ],
+      "reasonCode": [ {
+        "coding": [ {
+          "system": "1.3.6.1.4.1.19376.1.2.5.3.2",
+          "code": "present"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "ed16e631-f5af-4420-a6e5-de2a7ef07224",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:28:13.384+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/CompartmentDefinition?_count=1&_format=json"
+  } ]
+}

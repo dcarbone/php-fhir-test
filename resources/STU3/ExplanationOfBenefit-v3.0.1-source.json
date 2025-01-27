@@ -1,0 +1,39 @@
+{
+  "resourceType": "Bundle",
+  "id": "37d9b969-14ef-4f33-bb3b-6657fbcc4b5d",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:01:50.147+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ExplanationOfBenefit?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=37d9b969-14ef-4f33-bb3b-6657fbcc4b5d&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ExplanationOfBenefit/195205",
+    "resource": {
+      "resourceType": "ExplanationOfBenefit",
+      "id": "195205",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-12T03:12:26.561+00:00"
+      },
+      "contained": [ {
+        "resourceType": "Coverage",
+        "id": "1",
+        "subscriberId": "123"
+      } ],
+      "insurance": {
+        "coverage": {
+          "reference": "#1"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

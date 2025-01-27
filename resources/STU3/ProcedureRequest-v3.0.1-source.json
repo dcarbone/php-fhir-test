@@ -1,0 +1,58 @@
+{
+  "resourceType": "Bundle",
+  "id": "44048a0d-132d-4e84-87d4-fbc8cf7e14e8",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:04:34.456+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ProcedureRequest?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=44048a0d-132d-4e84-87d4-fbc8cf7e14e8&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ProcedureRequest/15560",
+    "resource": {
+      "resourceType": "ProcedureRequest",
+      "id": "15560",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-09-30T18:24:45.437+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>HLA-A typing for sample 001-246802468</pre>\n                    </div>"
+      },
+      "identifier": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+          "valueString": "property name=SupplierOrderLineID value=199688.2.1..1.8"
+        } ],
+        "value": "199688.2.1..1.83"
+      } ],
+      "status": "completed",
+      "intent": "order",
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "57290-9",
+          "display": "HLA-A [Type] by High resolution"
+        } ]
+      },
+      "subject": {
+        "identifier": {
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+            "valueString": "sample id=246802468 center-code=001"
+          } ],
+          "value": "001^246802468"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

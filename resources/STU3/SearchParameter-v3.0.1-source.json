@@ -1,0 +1,53 @@
+{
+  "resourceType": "Bundle",
+  "id": "40d65bc4-e89e-4738-ae02-9de6d90e066e",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:05:30.603+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/SearchParameter?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=40d65bc4-e89e-4738-ae02-9de6d90e066e&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/SearchParameter/EXResource-tag",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "EXResource-tag",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-09-30T16:13:09.084+00:00"
+      },
+      "url": "http://hl7.org/fhir/SearchParameter/Resource-tag",
+      "name": "_tag",
+      "status": "draft",
+      "experimental": false,
+      "date": "2017-04-19T07:44:43+10:00",
+      "publisher": "Health Level Seven International (FHIR Infrastructure)",
+      "contact": [ {
+        "telecom": [ {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        } ]
+      }, {
+        "telecom": [ {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg/index.cfm"
+        } ]
+      } ],
+      "code": "_tag",
+      "base": [ "Resource" ],
+      "type": "token",
+      "description": "Tags applied to this resource",
+      "expression": "Resource.meta.tag",
+      "xpath": "f:Resource/f:meta/f:tag",
+      "xpathUsage": "normal"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

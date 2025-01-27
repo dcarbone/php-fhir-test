@@ -1,0 +1,244 @@
+{
+  "resourceType": "Bundle",
+  "id": "d2cf8e16-1a64-4205-97d0-368f9eeae785",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:14:07.771+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/AuditEvent?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=d2cf8e16-1a64-4205-97d0-368f9eeae785&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/AuditEvent/170166",
+    "resource": {
+      "resourceType": "AuditEvent",
+      "id": "170166",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-04-05T12:51:42.562+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">User initiated a collection API request with parameters action=LIST&amp;wt=javabin&amp;version=2</div>"
+      },
+      "event": {
+        "extension": [ {
+          "url": "http://dips.com/X-Correlation-ID",
+          "valueString": "myCorrelationId"
+        } ],
+        "type": {
+          "system": "http://dicom.nema.org/resources/ontology/DCM",
+          "code": "110100",
+          "display": "Application Activity"
+        },
+        "action": "E",
+        "dateTime": "2019-03-27T21:18:32.451+01:00",
+        "outcome": "0",
+        "outcomeDesc": "Completed"
+      },
+      "participant": [ {
+        "role": [ {
+          "coding": [ {
+            "system": "urn:oid:2.16.578.1.12.4.1.4.100",
+            "code": "roleCode",
+            "display": "rolename"
+          } ]
+        }, {
+          "coding": [ {
+            "system": "urn:oid:2.16.578.1.12.4.1.4.101",
+            "code": "orgCode",
+            "display": "orgName"
+          } ]
+        }, {
+          "coding": [ {
+            "system": "urn:oid:2.16.578.1.12.4.1.4.102",
+            "code": "subOrgCode",
+            "display": "SubOrgName"
+          } ]
+        } ],
+        "userId": {
+          "system": "urn:hso:pagaid",
+          "value": "9999"
+        },
+        "name": "Jan User",
+        "requestor": true,
+        "network": {
+          "address": "127.0.0.1",
+          "type": "2"
+        },
+        "purposeOfUse": [ {
+          "system": "http://dips.com/beslutningsmal",
+          "code": "INNELIGGENDE",
+          "display": "Inneliggende pasient"
+        } ]
+      } ],
+      "source": {
+        "site": "OUS Solr Production cluster",
+        "identifier": {
+          "system": "urn:hso:site",
+          "value": "Prod-Ous-2"
+        },
+        "type": [ {
+          "system": "http://hl7.org/fhir/security-source-type",
+          "code": "4",
+          "display": "Application Server"
+        } ]
+      },
+      "object": [ {
+        "identifier": {
+          "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+          "value": "12345612345"
+        },
+        "type": {
+          "system": "http://hl7.org/fhir/object-type",
+          "code": "1",
+          "display": "Person"
+        },
+        "role": {
+          "system": "http://hl7.org/fhir/object-role",
+          "code": "1",
+          "display": "Patient"
+        }
+      }, {
+        "type": {
+          "system": "http://hl7.org/fhir/object-type",
+          "code": "2",
+          "display": "System Object"
+        },
+        "role": {
+          "system": "http://hl7.org/fhir/object-role",
+          "code": "24",
+          "display": "Query"
+        },
+        "query": "aHR0cDovLzEyNy4wLjAuMTo2MzY3NS9zb2xyL2FkbWluL2NvbGxlY3Rpb25z"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/AuditEvent/182009",
+    "resource": {
+      "resourceType": "AuditEvent",
+      "id": "182009",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-08-08T12:59:04.065+00:00"
+      },
+      "source": {
+        "identifier": {
+          "value": "Directory Service"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/AuditEvent/182010",
+    "resource": {
+      "resourceType": "AuditEvent",
+      "id": "182010",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-08-08T13:15:14.686+00:00"
+      },
+      "event": {
+        "type": {
+          "system": "http://nema.org/dicom/dicm",
+          "code": "110100",
+          "display": "Application Activity"
+        },
+        "dateTime": "2019-08-08T14:18:37.6697891+05:30"
+      },
+      "participant": [ {
+        "requestor": true
+      } ],
+      "source": {
+        "identifier": {
+          "value": "Directory Service"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/AuditEvent/182199",
+    "resource": {
+      "resourceType": "AuditEvent",
+      "id": "182199",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-08-09T12:15:45.131+00:00"
+      },
+      "event": {
+        "type": {
+          "code": "110100",
+          "display": "Application Activity"
+        },
+        "action": "C",
+        "dateTime": "2019-08-09T17:11:23.1116545+05:30",
+        "outcome": "0",
+        "outcomeDesc": "Directory Service start."
+      },
+      "participant": [ {
+        "role": [ {
+          "coding": [ {
+            "display": "Role of Participant"
+          } ]
+        } ],
+        "userId": {
+          "value": "UserId"
+        },
+        "name": "Agent1",
+        "requestor": false,
+        "network": {
+          "address": "YY116651",
+          "type": "1"
+        }
+      } ],
+      "source": {
+        "identifier": {
+          "value": "Directory Service"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/AuditEvent/182206",
+    "resource": {
+      "resourceType": "AuditEvent",
+      "id": "182206",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-08-12T05:59:02.786+00:00"
+      },
+      "event": {
+        "type": {
+          "system": "http://nema.org/dicom/dicm",
+          "code": "110100",
+          "display": "Application Activity"
+        },
+        "dateTime": "2019-08-08T14:18:37.6697891+05:30"
+      },
+      "participant": [ {
+        "requestor": true
+      } ],
+      "source": {
+        "identifier": {
+          "value": "Directory Service"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

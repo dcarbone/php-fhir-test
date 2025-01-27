@@ -1,0 +1,196 @@
+{
+  "resourceType": "Bundle",
+  "id": "13a66d6a-0fb3-45ab-a6c0-17a93078e6d2",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:21:37.767+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/Schedule?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=13a66d6a-0fb3-45ab-a6c0-17a93078e6d2&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Schedule/188756",
+    "resource": {
+      "resourceType": "Schedule",
+      "id": "188756",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-12T11:27:08.218+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Schedule</b></p><p><b>Type</b>: Same Day</p><p><b>Practitioner</b>: Song, River</p><p><b>Location</b>: Baseline West</p></div>"
+      },
+      "extension": [ {
+        "url": "https://fhir-ehr.cerner.com/dstu2/StructureDefinition/scheduling-location",
+        "valueReference": {
+          "reference": "Location/633867",
+          "display": "Baseline West"
+        }
+      } ],
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "394581000",
+          "display": "Community medicine"
+        } ],
+        "text": "Same Day"
+      } ],
+      "actor": {
+        "reference": "Practitioner/208",
+        "display": "Doe, John"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Schedule/192250",
+    "resource": {
+      "resourceType": "Schedule",
+      "id": "192250",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-24T09:10:17.132+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Schedule</b></p><p><b>Type</b>: Same Day</p><p><b>Practitioner</b>: Song, River</p><p><b>Location</b>: Baseline West</p></div>"
+      },
+      "extension": [ {
+        "url": "https://fhir-ehr.cerner.com/dstu2/StructureDefinition/scheduling-location",
+        "valueReference": {
+          "reference": "Location/633867",
+          "display": "Baseline West"
+        }
+      } ],
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "394581000",
+          "display": "Community medicine"
+        } ],
+        "text": "Same Day"
+      } ],
+      "actor": {
+        "reference": "Practitioner/208",
+        "display": "Doe, John"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Schedule/193736",
+    "resource": {
+      "resourceType": "Schedule",
+      "id": "193736",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-25T06:02:26.067+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Schedule</b></p><p><b>Type</b>: Same Day</p><p><b>Practitioner</b>: Song, River</p><p><b>Location</b>: Baseline West</p></div>"
+      },
+      "extension": [ {
+        "url": "https://fhir-ehr.cerner.com/dstu2/StructureDefinition/scheduling-location",
+        "valueReference": {
+          "reference": "Location/633867",
+          "display": "Baseline West"
+        }
+      } ],
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "394581000",
+          "display": "Community medicine"
+        } ],
+        "text": "Same Day"
+      } ],
+      "actor": {
+        "reference": "Practitioner/208",
+        "display": "Doe, John"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Schedule/193738",
+    "resource": {
+      "resourceType": "Schedule",
+      "id": "193738",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-09-25T06:05:43.201+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Schedule</b></p><p><b>Type</b>: Same Day</p><p><b>Practitioner</b>: Song, River</p><p><b>Location</b>: Baseline West</p></div>"
+      },
+      "extension": [ {
+        "url": "https://fhir-ehr.cerner.com/dstu2/StructureDefinition/scheduling-location",
+        "valueReference": {
+          "reference": "Location/633867",
+          "display": "Baseline West"
+        }
+      } ],
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "394581000",
+          "display": "Community medicine"
+        } ],
+        "text": "Same Day"
+      } ],
+      "actor": {
+        "reference": "Practitioner/208",
+        "display": "Doe, John"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Schedule/765",
+    "resource": {
+      "resourceType": "Schedule",
+      "id": "765",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2019-09-26T06:57:58.075+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Schedule</b></p><p><b>Type</b>: Same Day</p><p><b>Practitioner</b>: Song, River</p><p><b>Location</b>: Baseline West</p></div>"
+      },
+      "extension": [ {
+        "url": "https://fhir-ehr.cerner.com/dstu2/StructureDefinition/scheduling-location",
+        "valueReference": {
+          "reference": "Location/633867",
+          "display": "Baseline West"
+        }
+      } ],
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "394581000",
+          "display": "Community medicine"
+        } ],
+        "text": "Same Day"
+      } ],
+      "actor": {
+        "reference": "Practitioner/208",
+        "display": "Doe, John"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,506 @@
+{
+  "resourceType": "Bundle",
+  "id": "d1768598-78cb-4930-b9e1-bb7a429036e7",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:18:25.771+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/List?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=d1768598-78cb-4930-b9e1-bb7a429036e7&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/List/211",
+    "resource": {
+      "resourceType": "List",
+      "id": "211",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-06T23:11:48.028+00:00"
+      },
+      "title": "Problems List",
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/list-example-use-codes",
+          "code": "problems"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/207"
+      },
+      "status": "current",
+      "date": "2018-10-06T20:11:43-03:00",
+      "mode": "snapshot",
+      "entry": [ {
+        "date": "2018-10-06T20:11:43-03:00",
+        "item": {
+          "reference": "Condition/212"
+        }
+      }, {
+        "date": "2018-10-06T20:11:43-03:00",
+        "item": {
+          "reference": "Condition/213"
+        }
+      }, {
+        "date": "2018-10-06T20:11:43-03:00",
+        "item": {
+          "reference": "Condition/214"
+        }
+      }, {
+        "date": "2018-10-06T20:11:43-03:00",
+        "item": {
+          "reference": "Condition/215"
+        }
+      }, {
+        "date": "2018-10-06T20:11:43-03:00",
+        "item": {
+          "reference": "Condition/216"
+        }
+      }, {
+        "date": "2018-10-06T20:11:43-03:00",
+        "item": {
+          "reference": "Condition/217"
+        }
+      }, {
+        "date": "2018-10-06T20:11:43-03:00",
+        "item": {
+          "reference": "Condition/218"
+        }
+      }, {
+        "date": "2018-10-06T20:11:43-03:00",
+        "item": {
+          "reference": "Condition/219"
+        }
+      }, {
+        "date": "2018-10-06T20:11:43-03:00",
+        "item": {
+          "reference": "Condition/220"
+        }
+      }, {
+        "date": "2018-10-06T20:11:43-03:00",
+        "item": {
+          "reference": "Condition/221"
+        }
+      }, {
+        "date": "2018-10-06T20:11:43-03:00",
+        "item": {
+          "reference": "Condition/222"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/List/263",
+    "resource": {
+      "resourceType": "List",
+      "id": "263",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-06T23:11:51.994+00:00"
+      },
+      "title": "Medication List",
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/list-example-use-codes",
+          "code": "medications"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/207"
+      },
+      "status": "current",
+      "date": "2018-10-06T20:11:48-03:00",
+      "mode": "snapshot",
+      "entry": [ {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/264"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/265"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/266"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/267"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/268"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/269"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/270"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/271"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/272"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/273"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/274"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/275"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/276"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/277"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/278"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/279"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/280"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/281"
+        }
+      }, {
+        "date": "2018-10-06T20:11:48-03:00",
+        "item": {
+          "reference": "MedicationStatement/282"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/List/859",
+    "resource": {
+      "resourceType": "List",
+      "id": "859",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-05T20:04:25.260+00:00"
+      },
+      "title": "Problems List",
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/list-example-use-codes",
+          "code": "problems"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/857"
+      },
+      "status": "current",
+      "date": "2018-11-05T12:04:24-08:00",
+      "mode": "snapshot",
+      "entry": [ {
+        "date": "2018-11-05T12:04:24-08:00",
+        "item": {
+          "reference": "Condition/860"
+        }
+      }, {
+        "date": "2018-11-05T12:04:24-08:00",
+        "item": {
+          "reference": "Condition/861"
+        }
+      }, {
+        "date": "2018-11-05T12:04:24-08:00",
+        "item": {
+          "reference": "Condition/862"
+        }
+      }, {
+        "date": "2018-11-05T12:04:24-08:00",
+        "item": {
+          "reference": "Condition/863"
+        }
+      }, {
+        "date": "2018-11-05T12:04:24-08:00",
+        "item": {
+          "reference": "Condition/864"
+        }
+      }, {
+        "date": "2018-11-05T12:04:24-08:00",
+        "item": {
+          "reference": "Condition/865"
+        }
+      }, {
+        "date": "2018-11-05T12:04:24-08:00",
+        "item": {
+          "reference": "Condition/866"
+        }
+      }, {
+        "date": "2018-11-05T12:04:24-08:00",
+        "item": {
+          "reference": "Condition/867"
+        }
+      }, {
+        "date": "2018-11-05T12:04:24-08:00",
+        "item": {
+          "reference": "Condition/868"
+        }
+      }, {
+        "date": "2018-11-05T12:04:24-08:00",
+        "item": {
+          "reference": "Condition/869"
+        }
+      }, {
+        "date": "2018-11-05T12:04:24-08:00",
+        "item": {
+          "reference": "Condition/870"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/List/911",
+    "resource": {
+      "resourceType": "List",
+      "id": "911",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-05T20:04:29.471+00:00"
+      },
+      "title": "Medication List",
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/list-example-use-codes",
+          "code": "medications"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/857"
+      },
+      "status": "current",
+      "date": "2018-11-05T12:04:28-08:00",
+      "mode": "snapshot",
+      "entry": [ {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/912"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/913"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/914"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/915"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/916"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/917"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/918"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/919"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/920"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/921"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/922"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/923"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/924"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/925"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/926"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/927"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/928"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/929"
+        }
+      }, {
+        "date": "2018-11-05T12:04:28-08:00",
+        "item": {
+          "reference": "MedicationStatement/930"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/List/934",
+    "resource": {
+      "resourceType": "List",
+      "id": "934",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-05T20:25:14.263+00:00"
+      },
+      "title": "Problems List",
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/list-example-use-codes",
+          "code": "problems"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/933"
+      },
+      "status": "current",
+      "date": "2018-11-05T12:25:12-08:00",
+      "mode": "snapshot",
+      "entry": [ {
+        "date": "2018-11-05T12:25:12-08:00",
+        "item": {
+          "reference": "Condition/935"
+        }
+      }, {
+        "date": "2018-11-05T12:25:12-08:00",
+        "item": {
+          "reference": "Condition/936"
+        }
+      }, {
+        "date": "2018-11-05T12:25:12-08:00",
+        "item": {
+          "reference": "Condition/937"
+        }
+      }, {
+        "date": "2018-11-05T12:25:12-08:00",
+        "item": {
+          "reference": "Condition/938"
+        }
+      }, {
+        "date": "2018-11-05T12:25:12-08:00",
+        "item": {
+          "reference": "Condition/939"
+        }
+      }, {
+        "date": "2018-11-05T12:25:12-08:00",
+        "item": {
+          "reference": "Condition/940"
+        }
+      }, {
+        "date": "2018-11-05T12:25:12-08:00",
+        "item": {
+          "reference": "Condition/941"
+        }
+      }, {
+        "date": "2018-11-05T12:25:12-08:00",
+        "item": {
+          "reference": "Condition/942"
+        }
+      }, {
+        "date": "2018-11-05T12:25:12-08:00",
+        "item": {
+          "reference": "Condition/943"
+        }
+      }, {
+        "date": "2018-11-05T12:25:12-08:00",
+        "item": {
+          "reference": "Condition/944"
+        }
+      }, {
+        "date": "2018-11-05T12:25:12-08:00",
+        "item": {
+          "reference": "Condition/945"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,177 @@
+{
+  "resourceType": "Bundle",
+  "id": "50a82457-6889-4abd-85f4-7388bfec99fd",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:21:25.770+00:00"
+  },
+  "type": "searchset",
+  "total": 10,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/RelatedPerson?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=50a82457-6889-4abd-85f4-7388bfec99fd&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/RelatedPerson/173557",
+    "resource": {
+      "resourceType": "RelatedPerson",
+      "id": "173557",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-05-31T12:39:39.496+00:00"
+      },
+      "patient": {
+        "reference": "Patient/130"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/patient-contact-relationship",
+          "code": "Family"
+        } ]
+      },
+      "name": {
+        "use": "official",
+        "family": [ "Strong" ],
+        "given": [ "Strong" ]
+      },
+      "telecom": [ {
+        "system": "phone"
+      }, {
+        "system": "email"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/RelatedPerson/173558",
+    "resource": {
+      "resourceType": "RelatedPerson",
+      "id": "173558",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-05-31T12:39:39.496+00:00"
+      },
+      "patient": {
+        "reference": "Patient/130"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/patient-contact-relationship",
+          "code": "Friend"
+        } ]
+      },
+      "name": {
+        "use": "official",
+        "family": [ "Illahi" ],
+        "given": [ "Illahi" ]
+      },
+      "telecom": [ {
+        "system": "phone"
+      }, {
+        "system": "email"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/RelatedPerson/173803",
+    "resource": {
+      "resourceType": "RelatedPerson",
+      "id": "173803",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-06-04T06:36:46.067+00:00"
+      },
+      "patient": {
+        "reference": "Patient/9597"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/patient-contact-relationship",
+          "code": "Family"
+        } ]
+      },
+      "name": {
+        "use": "official",
+        "family": [ "Strong" ],
+        "given": [ "Strong" ]
+      },
+      "telecom": [ {
+        "system": "phone"
+      }, {
+        "system": "email"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/RelatedPerson/173804",
+    "resource": {
+      "resourceType": "RelatedPerson",
+      "id": "173804",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-06-04T06:36:46.067+00:00"
+      },
+      "patient": {
+        "reference": "Patient/9597"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/patient-contact-relationship",
+          "code": "Friend"
+        } ]
+      },
+      "name": {
+        "use": "official",
+        "family": [ "Illahi" ],
+        "given": [ "Illahi" ]
+      },
+      "telecom": [ {
+        "system": "phone"
+      }, {
+        "system": "email"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/RelatedPerson/173914",
+    "resource": {
+      "resourceType": "RelatedPerson",
+      "id": "173914",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-06-05T06:26:40.331+00:00"
+      },
+      "patient": {
+        "reference": "Patient/173913"
+      },
+      "relationship": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/patient-contact-relationship",
+          "code": "Family"
+        } ]
+      },
+      "name": {
+        "use": "official",
+        "family": [ "Strong" ],
+        "given": [ "Strong" ]
+      },
+      "telecom": [ {
+        "system": "phone"
+      }, {
+        "system": "email"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

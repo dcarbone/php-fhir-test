@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "a0cfa565-75f6-4eb9-9d44-dea82b45fa8a",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:20:19.769+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/PaymentReconciliation?_count=5&_format=json"
+  } ]
+}

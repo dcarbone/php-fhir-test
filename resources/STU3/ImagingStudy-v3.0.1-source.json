@@ -1,0 +1,146 @@
+{
+  "resourceType": "Bundle",
+  "id": "7c23fa0e-dd40-4d19-a587-34c0ed24435b",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:02:30.454+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ImagingStudy?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=7c23fa0e-dd40-4d19-a587-34c0ed24435b&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ImagingStudy/219226",
+    "resource": {
+      "resourceType": "ImagingStudy",
+      "id": "219226",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-15T14:58:35.911+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">XR Wrist 3+ Views. John Smith (MRN: 09236). Accession: W12342398. Performed: 2017-01-01. 1 series, 2 images.</div>"
+      },
+      "uid": "urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430046",
+      "accession": {
+        "use": "usual",
+        "type": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/v2/0203",
+            "code": "ACSN"
+          } ]
+        },
+        "value": "W12342398",
+        "assigner": {
+          "reference": "Organization/dicom-organization"
+        }
+      },
+      "identifier": [ {
+        "use": "secondary",
+        "value": "55551234",
+        "assigner": {
+          "reference": "Organization/dicom-organization"
+        }
+      } ],
+      "availability": "ONLINE",
+      "modalityList": [ {
+        "system": "http://dicom.nema.org/resources/ontology/DCM",
+        "code": "DX"
+      } ],
+      "patient": {
+        "identifier": {
+          "value": "ipp1",
+          "assigner": {
+            "display": "aa"
+          }
+        }
+      },
+      "context": {
+        "identifier": {
+          "use": "usual",
+          "value": "MONDOSSIER"
+        }
+      },
+      "started": "2017-01-01T11:01:20+03:00",
+      "basedOn": [ {
+        "identifier": {
+          "use": "usual",
+          "value": "MONDOSSIER"
+        }
+      } ],
+      "referrer": {
+        "reference": "Practitioner/provider-34"
+      },
+      "interpreter": [ {
+        "reference": "Practitioner/provider-34"
+      } ],
+      "numberOfSeries": 1,
+      "numberOfInstances": 2,
+      "procedureReference": [ {
+        "identifier": {
+          "system": "usual",
+          "value": "monstudyuid"
+        }
+      } ],
+      "procedureCode": [ {
+        "coding": [ {
+          "system": "http://www.radlex.org",
+          "code": "RPID2589",
+          "display": "XR Wrist 3+ Views"
+        } ],
+        "text": "XR Wrist 3+ Views"
+      } ],
+      "reason": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "357009",
+          "display": "Closed fracture of trapezoidal bone of wrist"
+        } ]
+      },
+      "description": "XR Wrist 3+ Views",
+      "series": [ {
+        "uid": "urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045.1",
+        "number": 3,
+        "modality": {
+          "system": "http://dicom.nema.org/resources/ontology/DCM",
+          "code": "DX"
+        },
+        "description": "XR Wrist 3+ Views",
+        "numberOfInstances": 2,
+        "availability": "ONLINE",
+        "bodySite": {
+          "system": "http://snomed.info/sct",
+          "code": "T-15460",
+          "display": "Wrist Joint"
+        },
+        "laterality": {
+          "system": "http://snomed.info/sct",
+          "code": "419161000",
+          "display": "Unilateral left"
+        },
+        "started": "2011-01-01T11:01:20+03:00",
+        "performer": [ {
+          "reference": "Practitioner/provider-34"
+        } ],
+        "instance": [ {
+          "uid": "urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045.1.1",
+          "number": 1,
+          "sopClass": "urn:oid:1.2.840.10008.5.1.4.1.1.2",
+          "title": "PA VIEW"
+        }, {
+          "uid": "urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045.1.2",
+          "number": 2,
+          "sopClass": "urn:oid:1.2.840.10008.5.1.4.1.1.2",
+          "title": "LL VIEW"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

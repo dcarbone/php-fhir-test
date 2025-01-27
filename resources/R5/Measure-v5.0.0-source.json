@@ -1,0 +1,74 @@
+{
+  "resourceType": "Bundle",
+  "id": "09cb65ef-3fbf-4c75-a018-d8b5f5aeb6fe",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:29:17.625+00:00"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/Measure?_count=1&_format=json"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/Measure/measure-center-accreditation",
+    "resource": {
+      "resourceType": "Measure",
+      "id": "measure-center-accreditation",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-09-19T07:54:40.497+00:00",
+        "source": "#ucNEPbauZtrf6iqk"
+      },
+      "title": "Center Accreditation",
+      "status": "active",
+      "subjectReference": {
+        "reference": "Organization/organization-center"
+      },
+      "date": "2022-12-15",
+      "approvalDate": "2023-12-20",
+      "lastReviewDate": "2022-12-15",
+      "effectivePeriod": {
+        "start": "2023-01-01",
+        "end": "2023-12-31"
+      },
+      "topic": [ {
+        "text": "{{กิจกรรมการตรวจของตรต.}}"
+      } ],
+      "group": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/uv/saner/CodeSystem/MeasureGroupSystem",
+            "code": "Beds",
+            "display": "Beds"
+          } ],
+          "text": "Hospital Bed Reporting"
+        },
+        "population": [ {
+          "code": {
+            "coding": [ {
+              "system": ".../CodeSystem/cs-acred-measured",
+              "code": "numTotBeds",
+              "display": "Total Beds"
+            } ],
+            "text": "จำนวนเตียงทั้งหมด"
+          },
+          "description": "50 เตียง"
+        }, {
+          "code": {
+            "coding": [ {
+              "system": ".../CodeSystem/cs-acred-measured",
+              "code": "numAcredBeds",
+              "display": "Accredited Beds"
+            } ],
+            "text": "จำนวนเตียงที่ขอรับรอง"
+          },
+          "description": "30 เตียง"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

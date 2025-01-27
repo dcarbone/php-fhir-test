@@ -1,0 +1,90 @@
+{
+  "resourceType": "Bundle",
+  "id": "e6b5b7e0-c62f-45c8-bfb4-065f10afc535",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:16:49.769+00:00"
+  },
+  "type": "searchset",
+  "total": 8,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/EligibilityResponse?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=e6b5b7e0-c62f-45c8-bfb4-065f10afc535&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/EligibilityResponse/170178",
+    "resource": {
+      "resourceType": "EligibilityResponse",
+      "id": "170178",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-04-06T08:43:27.008+00:00"
+      },
+      "identifier": [ {
+        "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+        "value": "8003608166690503"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/EligibilityResponse/170182",
+    "resource": {
+      "resourceType": "EligibilityResponse",
+      "id": "170182",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-04-06T11:21:53.222+00:00"
+      },
+      "identifier": [ {
+        "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+        "value": "8003608166690503"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/EligibilityResponse/170184",
+    "resource": {
+      "resourceType": "EligibilityResponse",
+      "id": "170184",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-04-06T11:28:45.564+00:00"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/EligibilityResponse/170191",
+    "resource": {
+      "resourceType": "EligibilityResponse",
+      "id": "170191",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-04-06T12:25:08.534+00:00"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/EligibilityResponse/170193",
+    "resource": {
+      "resourceType": "EligibilityResponse",
+      "id": "170193",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-04-06T12:37:55.700+00:00"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

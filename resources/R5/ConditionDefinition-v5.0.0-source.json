@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "33eab58a-4446-4780-b9b5-9e031e3cdc37",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:28:53.626+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/ConditionDefinition?_count=1&_format=json"
+  } ]
+}

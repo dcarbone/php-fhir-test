@@ -1,0 +1,85 @@
+{
+  "resourceType": "Bundle",
+  "id": "9af9c5cc-4104-4b10-a6ff-a395032859e0",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:02:34.454+00:00"
+  },
+  "type": "searchset",
+  "total": 8,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ImmunizationRecommendation?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=9af9c5cc-4104-4b10-a6ff-a395032859e0&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ImmunizationRecommendation/medmij-bgz-vaccinationrequest-ts-01",
+    "resource": {
+      "resourceType": "ImmunizationRecommendation",
+      "id": "medmij-bgz-vaccinationrequest-ts-01",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-07-17T20:03:19.086+00:00",
+        "profile": [ "http://nictiz.nl/fhir/StructureDefinition/zib-VaccinationRecommendation" ],
+        "security": [ {
+          "system": "http://hl7.org/fhir/v3/ActReason",
+          "code": "HTEST",
+          "display": "Touchstone test data"
+        } ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>patient</b>: <a href=\"Patient/medmij-bgz-patient-ts-01\">Johan XXX_Helleman</a></p><blockquote><p><b>recommendation</b></p><p><b>date</b>: Jan 1, 2018 </p><p><b>vaccineCode</b>: hepatitis A immunoglobulin <span style=\"background: LightGoldenRodYellow\">(Details : {http://www.whocc.no/atc code 'J06BB11' = 'J06BB11', given as 'hepatitis A immunoglobulin'})</span></p><p><b>forecastStatus</b>: Due <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/immunization-recommendation-status code 'due' = 'Due', given as 'Due'})</span></p><h3>DateCriterions</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td>*</td><td>Recommended <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/immunization-recommendation-date-criterion code 'recommended' = 'Recommended', given as 'Recommended'})</span></td><td>Jan 1, 2018</td></tr></table><p><b>supportingImmunization</b>: <a href=\"Immunization/medmij-bgz-vaccination-ts-01\">hepatitis A immunoglobulin</a></p></blockquote></div>"
+      },
+      "extension": [ {
+        "url": "http://nictiz.nl/fhir/StructureDefinition/zib-VaccinationRecommendation-OrderStatus",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "385644000",
+            "display": "Requested"
+          } ]
+        }
+      } ],
+      "patient": {
+        "reference": "Patient/medmij-bgz-patient-ts-01",
+        "display": "Johan XXX_Helleman"
+      },
+      "recommendation": [ {
+        "date": "2018",
+        "vaccineCode": {
+          "coding": [ {
+            "system": "http://www.whocc.no/atc",
+            "code": "J06BB11",
+            "display": "hepatitis A immunoglobulin"
+          } ]
+        },
+        "forecastStatus": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/immunization-recommendation-status",
+            "code": "due",
+            "display": "Due"
+          } ]
+        },
+        "dateCriterion": [ {
+          "code": {
+            "coding": [ {
+              "system": "http://hl7.org/fhir/immunization-recommendation-date-criterion",
+              "code": "recommended",
+              "display": "Recommended"
+            } ]
+          },
+          "value": "2018"
+        } ],
+        "supportingImmunization": [ {
+          "reference": "Immunization/medmij-bgz-vaccination-ts-01",
+          "display": "hepatitis A immunoglobulin"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,147 @@
+{
+  "resourceType": "Bundle",
+  "id": "1e7e1be7-0620-4395-8c45-cfa477bd1d90",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:20:07.769+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/Patient?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=1e7e1be7-0620-4395-8c45-cfa477bd1d90&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Patient/131",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "131",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-04T18:06:32.222+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">John <b>SMITH </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>12345</td></tr></tbody></table></div>"
+      },
+      "identifier": [ {
+        "system": "urn:system",
+        "value": "12345"
+      } ],
+      "name": [ {
+        "family": [ "Smith" ],
+        "given": [ "John" ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Patient/137",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "137",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-05T10:37:49.428+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">J Jonah <b>JAMESON </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>12345</td></tr></tbody></table></div>"
+      },
+      "identifier": [ {
+        "system": "http://acme.org/mrns",
+        "value": "12345"
+      } ],
+      "name": [ {
+        "family": [ "Jameson" ],
+        "given": [ "J", "Jonah" ]
+      } ],
+      "gender": "male"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Patient/141",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "141",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-05T13:41:19.762+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">J Jonah <b>JAMESON </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>12345</td></tr></tbody></table></div>"
+      },
+      "identifier": [ {
+        "system": "http://acme.org/mrns",
+        "value": "12345"
+      } ],
+      "name": [ {
+        "family": [ "Jameson" ],
+        "given": [ "J", "Jonah" ]
+      } ],
+      "gender": "male"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Patient/151",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "151",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-05T14:56:03.849+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Harald <b>SENIOR </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>12345</td></tr><tr><td>Date of birth</td><td><span>20 January 1951</span></td></tr></tbody></table></div>"
+      },
+      "identifier": [ {
+        "system": "http://projecthealth.org/mrns",
+        "value": "12345"
+      } ],
+      "name": [ {
+        "family": [ "Senior" ],
+        "given": [ "Harald" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1951-01-20"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Patient/153",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "153",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-05T15:00:36.516+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Harald <b>SENIOR </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>12345</td></tr><tr><td>Date of birth</td><td><span>20 January 1951</span></td></tr></tbody></table></div>"
+      },
+      "identifier": [ {
+        "system": "http://projecthealth.org/mrns",
+        "value": "12345"
+      } ],
+      "name": [ {
+        "family": [ "Senior" ],
+        "given": [ "Harald" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1951-01-20"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

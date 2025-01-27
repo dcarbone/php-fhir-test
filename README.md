@@ -22,6 +22,8 @@ static and this webserver is (currently) read-only.
 Resources were generated / sourced from the below sources:
 
 * [synthetichealth/synthea](https://github.com/synthetichealth/synthea) project, using the seed `9001`.
+* Resources found on the open [HAPI](https://hapifhir.io/) servers.
+* Other servers listed on the [FHIR Public Test Servers](https://confluence.hl7.org/display/FHIR/Public+Test+Servers) page. 
 
 ## Building and Running Binary
 

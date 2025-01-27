@@ -1,0 +1,36 @@
+{
+  "resourceType": "Bundle",
+  "id": "e3961b99-1948-43c6-8800-5ef1454fe03d",
+  "meta": {
+    "lastUpdated": "2024-05-03T15:59:32.685+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Composition?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=e3961b99-1948-43c6-8800-5ef1454fe03d&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Composition/cf-1542617861085",
+    "resource": {
+      "resourceType": "Composition",
+      "id": "cf-1542617861085",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-19T09:18:14.700+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">文档目录<a name=\"mm\"></a><div><strong class=\"inset\">subject: </strong>患者</div></div>"
+      },
+      "subject": {
+        "reference": "Patient/cf-1542617823334"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

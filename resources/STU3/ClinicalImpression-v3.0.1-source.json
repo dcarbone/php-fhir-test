@@ -1,0 +1,34 @@
+{
+  "resourceType": "Bundle",
+  "id": "0e83356e-2f3b-404c-a589-c74f6e1edd89",
+  "meta": {
+    "lastUpdated": "2024-05-03T15:59:12.682+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ClinicalImpression?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=0e83356e-2f3b-404c-a589-c74f6e1edd89&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ClinicalImpression/id1538641360708",
+    "resource": {
+      "resourceType": "ClinicalImpression",
+      "id": "id1538641360708",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-04T08:23:16.613+00:00"
+      },
+      "status": "draft",
+      "subject": {
+        "reference": "Patient/id1538597328466",
+        "display": "mary eccles"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,224 @@
+{
+  "resourceType": "Bundle",
+  "id": "787626c6-e0a4-4130-9bc4-acd5d12e11bc",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:29:37.826+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/Questionnaire?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=787626c6-e0a4-4130-9bc4-acd5d12e11bc&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/Questionnaire/aldrete",
+    "resource": {
+      "resourceType": "Questionnaire",
+      "id": "aldrete",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-08-08T12:50:16.694+00:00",
+        "source": "#XCejO9hxtjuppUOg"
+      },
+      "extension": [ {
+        "url": "scoreCalculation",
+        "extension": [ {
+          "url": "Puntuacion",
+          "extension": [ {
+            "url": "questions",
+            "valueString": "ALL"
+          }, {
+            "url": "operation",
+            "valueCoding": {
+              "code": "SUM",
+              "display": "Sumatorio"
+            }
+          }, {
+            "url": "evaluation",
+            "valueString": "Nueve (9) puntos o más indican que se puede dar de alta al paciente"
+          } ]
+        } ]
+      } ],
+      "title": "4 - Escala d'Aldrette",
+      "status": "active",
+      "subjectType": [ "Encounter", "Patient" ],
+      "date": "2022-07-14",
+      "item": [ {
+        "linkId": "escala_aldrette",
+        "text": "ESCALA D'ALDRETTE",
+        "type": "group",
+        "item": [ {
+          "linkId": "group1",
+          "text": "GROUP1",
+          "type": "group",
+          "item": [ {
+            "linkId": "actividad",
+            "text": "Actividad",
+            "type": "coding",
+            "answerOption": [ {
+              "extension": [ {
+                "url": "scoreWeight",
+                "valueInteger": 2
+              } ],
+              "valueCoding": {
+                "code": "actividad-1",
+                "display": "Mou 4 extremitats"
+              }
+            }, {
+              "extension": [ {
+                "url": "scoreWeight",
+                "valueInteger": 1
+              } ],
+              "valueCoding": {
+                "code": "actividad-2",
+                "display": "Mou 2 extremitats"
+              }
+            }, {
+              "extension": [ {
+                "url": "scoreWeight",
+                "valueInteger": 0
+              } ],
+              "valueCoding": {
+                "code": "actividad-3",
+                "display": "No mou"
+              }
+            } ]
+          } ]
+        }, {
+          "linkId": "respiracion",
+          "text": "Respiración",
+          "type": "coding",
+          "answerOption": [ {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 2
+            } ],
+            "valueCoding": {
+              "code": "respiracion-1",
+              "display": "Respiració profunda, tos fàcil"
+            }
+          }, {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 1
+            } ],
+            "valueCoding": {
+              "code": "respiracion-2",
+              "display": "Respiració dispneica, superficial o limitada"
+            }
+          }, {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 0
+            } ],
+            "valueCoding": {
+              "code": "respiracion-3",
+              "display": "Apnea"
+            }
+          } ]
+        }, {
+          "linkId": "circulacion",
+          "text": "Circulación",
+          "type": "coding",
+          "answerOption": [ {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 2
+            } ],
+            "valueCoding": {
+              "code": "circulacion-1",
+              "display": "PA ± 20% del normal"
+            }
+          }, {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 1
+            } ],
+            "valueCoding": {
+              "code": "circulacion-2",
+              "display": "PA ± 20-50% del normal"
+            }
+          }, {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 0
+            } ],
+            "valueCoding": {
+              "code": "circulacion-3",
+              "display": "PA ± 50% del normal"
+            }
+          } ]
+        }, {
+          "linkId": "consciencia",
+          "text": "Consciencia",
+          "type": "coding",
+          "answerOption": [ {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 2
+            } ],
+            "valueCoding": {
+              "code": "consciencia-1",
+              "display": "Ben despert"
+            }
+          }, {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 1
+            } ],
+            "valueCoding": {
+              "code": "consciencia-2",
+              "display": "Despert sota estímul"
+            }
+          }, {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 0
+            } ],
+            "valueCoding": {
+              "code": "consciencia-3",
+              "display": "No respon"
+            }
+          } ]
+        }, {
+          "linkId": "saturacion-o2",
+          "text": "Saturación de O2",
+          "type": "coding",
+          "answerOption": [ {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 2
+            } ],
+            "valueCoding": {
+              "code": "saturacion-1",
+              "display": "SpO2 > 92% amb aire ambiental"
+            }
+          }, {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 1
+            } ],
+            "valueCoding": {
+              "code": "saturacion-2",
+              "display": "SpO2 > 90% amb oxígen"
+            }
+          }, {
+            "extension": [ {
+              "url": "scoreWeight",
+              "valueInteger": 0
+            } ],
+            "valueCoding": {
+              "code": "saturacion-3",
+              "display": "SpO2 < 90% amb oxígen"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

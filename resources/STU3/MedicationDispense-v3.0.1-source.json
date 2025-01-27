@@ -1,0 +1,36 @@
+{
+  "resourceType": "Bundle",
+  "id": "9ba8fc3d-773a-473d-bd29-ef7c9ac036de",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:03:18.453+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/MedicationDispense?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=9ba8fc3d-773a-473d-bd29-ef7c9ac036de&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/MedicationDispense/cf-1541269851789",
+    "resource": {
+      "resourceType": "MedicationDispense",
+      "id": "cf-1541269851789",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-03T18:32:35.361+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"mm\"></a></div>"
+      },
+      "subject": {
+        "reference": "Patient/cf-1541269324163"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

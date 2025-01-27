@@ -1,0 +1,84 @@
+{
+  "resourceType": "Bundle",
+  "id": "cba1a01c-4702-4046-9a03-7113d6ce1ed6",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:28:49.623+00:00"
+  },
+  "type": "searchset",
+  "total": 5,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/ConceptMap?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=cba1a01c-4702-4046-9a03-7113d6ce1ed6&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/ConceptMap/4052",
+    "resource": {
+      "resourceType": "ConceptMap",
+      "id": "4052",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2021-11-25T07:05:02.311+00:00",
+        "source": "#VFUoNZQpqXfPtn8X"
+      },
+      "url": "http://hl7.org/fhir/ConceptMap/10",
+      "version": "4.6.0",
+      "name": "FHIR-v3-Address-Use",
+      "title": "FHIR/v3 Address Use Mapping",
+      "status": "draft",
+      "experimental": true,
+      "date": "2012-06-13",
+      "publisher": "HL7, Inc",
+      "purpose": "To help implementers map from HL7 v3/CDA to FHIR",
+      "copyright": "Creative Commons 0",
+      "group": [ {
+        "source": "http://hl7.org/fhir/address-use|4.6.0",
+        "target": "http://terminology.hl7.org/CodeSystem/v3-AddressUse|4.6.0",
+        "element": [ {
+          "code": "home",
+          "display": "home",
+          "target": [ {
+            "code": "H",
+            "display": "home",
+            "relationship": "equivalent"
+          } ]
+        }, {
+          "code": "work",
+          "display": "work",
+          "target": [ {
+            "code": "WP",
+            "display": "work place",
+            "relationship": "equivalent"
+          } ]
+        }, {
+          "code": "temp",
+          "display": "temp",
+          "target": [ {
+            "code": "TMP",
+            "display": "temporary address",
+            "relationship": "equivalent"
+          } ]
+        }, {
+          "code": "old",
+          "display": "old",
+          "target": [ {
+            "code": "BAD",
+            "display": "bad address",
+            "relationship": "not-related-to",
+            "comment": "In the HL7 v3 AD, old is handled by the usablePeriod element, but you have to provide a time, there's no simple equivalent of flagging an address as old"
+          } ]
+        } ],
+        "unmapped": {
+          "mode": "fixed",
+          "code": "temp",
+          "display": "temp"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

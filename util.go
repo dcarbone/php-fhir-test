@@ -3,15 +3,9 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"path/filepath"
 	"slices"
 	"strconv"
-	"strings"
 )
-
-func extractFHIRVersionFromDir(in string) string {
-	return strings.ToUpper(filepath.Base(in)[5:])
-}
 
 func versionList() []string {
 	out := make([]string, len(resourceMap))

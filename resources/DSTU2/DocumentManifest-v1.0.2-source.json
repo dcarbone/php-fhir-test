@@ -1,0 +1,49 @@
+{
+  "resourceType": "Bundle",
+  "id": "5caa9bb0-6193-4e86-9a99-c48b061bbfc1",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:16:31.767+00:00"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/DocumentManifest?_count=5&_format=json"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DocumentManifest/258893",
+    "resource": {
+      "resourceType": "DocumentManifest",
+      "id": "258893",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-04-14T15:15:08.140+00:00"
+      },
+      "contained": [ {
+        "resourceType": "Practitioner",
+        "id": "a2"
+      } ],
+      "subject": {
+        "fhir_comments": [ " SubmissionSet.patientId ", " optional for FHIR 0..1 " ],
+        "reference": "Patient/1728"
+      },
+      "type": {
+        "fhir_comments": [ " SubmissionSet.contentTypeCode ", " optional for FHIR 0..1 " ],
+        "coding": [ {
+          "system": "urn:oid:1.3.6.1.4.1.19376.3.276.1.5.12",
+          "code": "11",
+          "display": "Monitoring"
+        } ],
+        "text": "Monitoring"
+      },
+      "author": [ {
+        "fhir_comments": [ " SubmissionSet.author ", " optional for FHIR 0..* " ],
+        "reference": "#a2"
+      } ],
+      "status": "current"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

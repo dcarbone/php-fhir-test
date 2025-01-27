@@ -1,0 +1,1490 @@
+{
+  "resourceType": "Bundle",
+  "id": "b4f95dd4-e61b-4c77-8f77-800788380e6f",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:21:13.771+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/Questionnaire?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=b4f95dd4-e61b-4c77-8f77-800788380e6f&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Questionnaire/507",
+    "resource": {
+      "resourceType": "Questionnaire",
+      "id": "507",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-12T06:49:13.667+00:00"
+      },
+      "language": "de",
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Todo</div>"
+      },
+      "contained": [ {
+        "resourceType": "ValueSet",
+        "id": "v2-0136",
+        "url": "http://hl7.org/fhir/ValueSet/v2-0136",
+        "version": "2.8.2",
+        "name": "v2 Yes/no Indicator",
+        "status": "active",
+        "experimental": true,
+        "publisher": "HL7, Inc",
+        "contact": [ {
+          "telecom": [ {
+            "system": "other",
+            "value": "http://hl7.org"
+          } ]
+        } ],
+        "description": "FHIR Value set/code system definition for HL7 v2 table 0136 ( Yes/no Indicator)",
+        "codeSystem": {
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/valueset-oid",
+            "valueUri": "urn:oid:n/a"
+          } ],
+          "system": "http://hl7.org/fhir/v2/0136",
+          "caseSensitive": false,
+          "concept": [ {
+            "code": "Y",
+            "display": "Ja"
+          }, {
+            "code": "N",
+            "display": "Nein"
+          } ]
+        }
+      }, {
+        "resourceType": "ValueSet",
+        "id": "yesnodontknow",
+        "url": "http://hl7.org/fhir/ValueSet/yesnodontknow",
+        "name": "Yes/No/Don't Know",
+        "status": "draft",
+        "description": "For Capturing simple yes-no-don't know answers",
+        "compose": {
+          "import": [ "http://hl7.org/fhir/ValueSet/v2-0136" ],
+          "include": [ {
+            "system": "http://hl7.org/fhir/data-absent-reason",
+            "concept": [ {
+              "code": "asked",
+              "display": "Unbekannt/Weiß nicht"
+            } ]
+          } ]
+        },
+        "expansion": {
+          "identifier": "urn:uuid:bf99fe50-2c2b-41ad-bd63-bee6919810b4",
+          "timestamp": "2015-07-14T10:00:00Z",
+          "contains": [ {
+            "system": "http://hl7.org/fhir/v2/0136",
+            "code": "Y",
+            "display": "Ja"
+          }, {
+            "system": "http://hl7.org/fhir/v2/0136",
+            "code": "N",
+            "display": "Nein"
+          }, {
+            "system": "http://hl7.org/fhir/data-absent-reason",
+            "code": "asked",
+            "display": "Unbekannt/Weiß nicht"
+          } ]
+        }
+      } ],
+      "identifier": [ {
+        "use": "official",
+        "value": "DZHK_statusplus_questionnaire"
+      } ],
+      "version": "1.0",
+      "status": "draft",
+      "date": "2016-10-31",
+      "publisher": "http://ikmb.uni-kiel.de",
+      "telecom": [ {
+        "system": "email",
+        "value": "f.schrinner@ikmb.uni-kiel.de"
+      } ],
+      "subjectType": [ "Patient" ],
+      "group": {
+        "linkId": "root",
+        "required": true,
+        "repeats": false,
+        "group": [ {
+          "linkId": "1",
+          "title": "Soziodemographische Daten",
+          "text": "<p><p>Sie haben als Teilnehmer/in die Möglichkeit, das Probandenportal „Statusplus“ mitzugestalten <br> und damit für sich und andere Probanden/Probandinnen eine verständliche und nutzerfreundliche Oberfläche zu entwickeln. </p><p>Als zukünftige/r Nutzer/in der Website zählen sowohl Ihre Meinung als auch Ihre eigenen Ideen. <br>Deshalb würden wir uns freuen, wenn Sie uns mit Ihrer Teilnahme an dieser Umfrage Ihre Interessen, <br>Fragen und Ansprüche an Ihr Probandenportal und Ihre Untersuchungsbefunde mitteilen.</p><p>Die Bearbeitung des Fragebogens wird <b>ca. 15 Minuten</b> in Anspruch nehmen.<br>Die Daten werden <b>anonymisiert</b> erhoben, sodass ein Rückschluss auf Ihre Person nicht möglich ist.</p>",
+          "required": true,
+          "repeats": false,
+          "question": [ {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "1.1",
+            "text": "Welches Geschlecht haben Sie?",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "option": [ {
+              "code": "w",
+              "display": "weiblich"
+            }, {
+              "code": "m",
+              "display": "männlich"
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 30
+            }, {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 130
+            }, {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-units",
+              "valueString": "Jahre"
+            } ],
+            "linkId": "1.2",
+            "text": "Wie alt sind Sie? (in Jahren):",
+            "type": "integer",
+            "required": false,
+            "repeats": false
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "1.3",
+            "text": "Was ist Ihr höchster Bildungsabschluss?",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "option": [ {
+              "code": "Noch in beruflicher Ausbildung",
+              "display": "Noch in beruflicher Ausbildung"
+            }, {
+              "code": "Volks-/Hauptschulabschluss (bzw. 9.Klasse)",
+              "display": "Volks-/Hauptschulabschluss (bzw. 9.Klasse)"
+            }, {
+              "code": "Realschulabschluss/mittlere Reife (bzw. 10. Klasse)",
+              "display": "Realschulabschluss/mittlere Reife (bzw. 10. Klasse)"
+            }, {
+              "code": "Fachhochschulreife",
+              "display": "Fachhochschulreife"
+            }, {
+              "code": "Abitur",
+              "display": "Abitur"
+            }, {
+              "code": "Abgeschlossene Lehre/Ausbildung",
+              "display": "Abgeschlossene Lehre/Ausbildung"
+            }, {
+              "code": "Fachhochschulabschluss",
+              "display": "Fachhochschulabschluss"
+            }, {
+              "code": "Universitätsabschluss",
+              "display": "Universitätsabschluss"
+            }, {
+              "code": "Promotion",
+              "display": "Promotion"
+            }, {
+              "code": "other",
+              "display": "sonstiges"
+            } ],
+            "group": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-enableWhen",
+                "extension": [ {
+                  "url": "question",
+                  "valueString": "1.3"
+                }, {
+                  "url": "answer",
+                  "valueCoding": {
+                    "code": "other",
+                    "display": "sonstiges"
+                  }
+                } ]
+              } ],
+              "linkId": "1.3.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "1.3.1.1",
+                "text": "Bildungsabschluss Sonstiges:",
+                "type": "string",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "1.4",
+            "text": "Sind oder waren Sie beruflich im Gesundheitssystem tätig?",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "options": {
+              "reference": "#v2-0136"
+            },
+            "group": [ {
+              "extension": [ {
+                "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-enableWhen",
+                "extension": [ {
+                  "url": "question",
+                  "valueString": "1.4"
+                }, {
+                  "url": "answer",
+                  "valueCoding": {
+                    "system": "http://hl7.org/fhir/v2/0136",
+                    "code": "Y",
+                    "display": "Ja"
+                  }
+                } ]
+              } ],
+              "linkId": "1.4.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "1.4.1.1",
+                "text": "Und zwar?",
+                "type": "string",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "2",
+          "title": "Abfrage Ihrer Interessen, Fragen, Bedenken und Ängste",
+          "text": "Um die Studienbefunde Ihren Interessen entsprechend aufzubereiten, möchten wir erfahren, <br>was Sie an den einzelnen Untersuchungsergebnissen interessiert und ob Sie dazu Fragen, Bedenken und/oder Ängste haben:",
+          "required": true,
+          "repeats": false,
+          "question": [ {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "check-box",
+                  "display": "Check Box"
+                } ],
+                "text": "check-box"
+              }
+            } ],
+            "linkId": "2.1",
+            "text": "Blut: Was interessiert Sie an Ihren Blutwerten? Bitte wählen Sie einen/mehrere Punkt/e aus der Liste aus.",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "option": [ {
+              "code": "Interessieren mich nicht.",
+              "display": "Interessieren mich nicht."
+            }, {
+              "code": "Bin ich gesund?",
+              "display": "Bin ich gesund?"
+            }, {
+              "code": "Habe ich auffällige Werte?",
+              "display": "Habe ich auffällige Werte?"
+            }, {
+              "code": "Bin ich krank?",
+              "display": "Bin ich krank?"
+            }, {
+              "code": "other",
+              "display": "Sonstiges"
+            } ],
+            "group": [ {
+              "linkId": "2.1.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "2.1.1.1",
+                "text": "Sonstiges",
+                "type": "string",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          }, {
+            "linkId": "2.2",
+            "text": "Blut: Haben Sie in Bezug auf das Blut, seine Analyse und/oder Ihre Blutwerte Fragen, Bedenken und/oder Ängste? Bitte schreiben Sie diese in das Feld.",
+            "type": "text",
+            "required": false,
+            "repeats": false
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "check-box",
+                  "display": "Check Box"
+                } ],
+                "text": "check-box"
+              }
+            } ],
+            "linkId": "2.3",
+            "text": "Herz: Was interessiert Sie an Ihrem EKG-Befund?",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "option": [ {
+              "code": "Interessiert mich nicht.",
+              "display": "Interessiert mich nicht."
+            }, {
+              "code": "Bin ich gesund?",
+              "display": "Bin ich gesund?"
+            }, {
+              "code": "Habe ich auffällige Werte?",
+              "display": "Habe ich auffällige Werte?"
+            }, {
+              "code": "Bin ich krank?",
+              "display": "Bin ich krank?"
+            }, {
+              "code": "other",
+              "display": "Sonstiges"
+            } ],
+            "group": [ {
+              "linkId": "2.3.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "2.3.1.1",
+                "text": "Sonstiges",
+                "type": "string",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "check-box",
+                  "display": "Check Box"
+                } ],
+                "text": "check-box"
+              }
+            } ],
+            "linkId": "2.4",
+            "text": "Herz: Was interessiert Sie an Ihrem Herzultraschall- (Echo-) Befund?",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "option": [ {
+              "code": "Interessiert mich nicht.",
+              "display": "Interessiert mich nicht."
+            }, {
+              "code": "Bin ich gesund?",
+              "display": "Bin ich gesund?"
+            }, {
+              "code": "Habe ich auffällige Werte?",
+              "display": "Habe ich auffällige Werte?"
+            }, {
+              "code": "Bin ich krank?",
+              "display": "Bin ich krank?"
+            }, {
+              "code": "other",
+              "display": "Sonstiges"
+            } ],
+            "group": [ {
+              "linkId": "2.4.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "2.4.1.1",
+                "text": "Sonstiges",
+                "type": "string",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          }, {
+            "linkId": "2.5",
+            "text": "Herz: Haben Sie in Bezug auf das Herz, seine Untersuchung und/oder Befunde Fragen, Bedenken und/oder Ängste? Bitte schreiben Sie diese in das Feld.",
+            "type": "text",
+            "required": false,
+            "repeats": false
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "check-box",
+                  "display": "Check Box"
+                } ],
+                "text": "check-box"
+              }
+            } ],
+            "linkId": "2.6",
+            "text": "Mikrobiom: Was interessiert Sie an Ihren Mikrobiomdaten?",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "option": [ {
+              "code": "Interessieren mich nicht.",
+              "display": "Interessieren mich nicht."
+            }, {
+              "code": "Bin ich gesund?",
+              "display": "Bin ich gesund?"
+            }, {
+              "code": "Habe ich auffällige Werte?",
+              "display": "Habe ich auffällige Werte?"
+            }, {
+              "code": "Bin ich krank?",
+              "display": "Bin ich krank?"
+            }, {
+              "code": "other",
+              "display": "Sonstiges"
+            } ],
+            "group": [ {
+              "linkId": "2.6.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "2.6.1.1",
+                "text": "Sonstiges",
+                "type": "string",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          }, {
+            "linkId": "2.7",
+            "text": "Mikrobiom: Haben Sie in Bezug auf das Mikrobiom, seine Analyse und/oder die Mikrobiomdaten Fragen, Bedenken und/oder Ängste? Bitte schreiben Sie diese in das Feld.",
+            "type": "text",
+            "required": false,
+            "repeats": false
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "check-box",
+                  "display": "Check Box"
+                } ],
+                "text": "check-box"
+              }
+            } ],
+            "linkId": "2.8",
+            "text": "Genom: Was interessier Sie an Ihren Genomdaten?",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "option": [ {
+              "code": "Interessieren mich nicht.",
+              "display": "Interessieren mich nicht."
+            }, {
+              "code": "Bin ich gesund?",
+              "display": "Bin ich gesund?"
+            }, {
+              "code": "Habe ich auffällige Werte?",
+              "display": "Habe ich auffällige Werte?"
+            }, {
+              "code": "Bin ich krank?",
+              "display": "Bin ich krank?"
+            }, {
+              "code": "other",
+              "display": "Sonstiges"
+            } ],
+            "group": [ {
+              "linkId": "2.8.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "2.8.1.1",
+                "text": "Sonstiges",
+                "type": "string",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          }, {
+            "linkId": "2.9",
+            "text": "Genom: Haben Sie in Bezug auf das Genom, seine Sequenzierung und/oder die Genomdaten Fragen, Bedenken und/oder Ängste? Bitte schreiben Sie diese in das Feld.",
+            "type": "text",
+            "required": false,
+            "repeats": false
+          } ]
+        }, {
+          "linkId": "3",
+          "title": "Abfrage Ihres Informationsbedürfnisses zum Thema:",
+          "text": "<h3>Blut</h3><p>Über die Website Statusplus werden Sie <b>ohne die Anwesenheit eines Arztes</b> Ihre Befunde einsehen können.<br> Um Fragen und Unsicherheiten vorzubeugen, kann es daher sinnvoll sein, für das Verständnis relevante Informationen<br> auf der Website bereitzustellen.</p> <p>Im Folgenden möchten wir erfahren, welche Informationen Ihnen helfen würden, <br><b>Ihre Befunde (besser) verstehen und deuten zu können</b> und <b>wann</b> Sie diese Informationen erhalten möchten:</p>",
+          "required": true,
+          "repeats": false,
+          "question": [ {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "3.1",
+            "text": "Würden Ihnen Informationen zum Blut und seine Funktion im Körper helfen, Ihre Blutwerte (besser) verstehen und deuten zu können?",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "3.1.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "3.1.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "3.1.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": false,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Blutwerte einsehe",
+                  "display": "Bevor ich meine Blutwerte einsehe"
+                }, {
+                  "code": "Während ich meine Blutwerte einsehe",
+                  "display": "Während ich meine Blutwerte einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              }, {
+                "linkId": "3.1.1.3",
+                "text": "Welche Informationen zum Blut und seine Funktion im Körper würden Sie sich wünschen? (optional)",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "3.2",
+            "text": "Würde Ihnen die Grundlage (z.B. Referenzbereich) für die Einstufung Ihrer Blutwerte als “gesund“ oder “auffällig“ helfen, Ihre Blutwerte (besser) verstehen und deuten zu können?",
+            "type": "choice",
+            "required": true,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "3.2.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "3.2.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "3.2.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": true,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Blutwerte einsehe",
+                  "display": "Bevor ich meine Blutwerte einsehe"
+                }, {
+                  "code": "Während ich meine Blutwerte einsehe",
+                  "display": "Während ich meine Blutwerte einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              } ]
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "3.3",
+            "text": "Würden Ihnen die gesundheitlichen Auswirkungen Ihrer Blutwerte helfen, diese besser verstehen und deuten zu können?",
+            "type": "choice",
+            "required": true,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "3.3.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "3.3.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "3.3.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": true,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Blutwerte einsehe",
+                  "display": "Bevor ich meine Blutwerte einsehe"
+                }, {
+                  "code": "Während ich meine Blutwerte einsehe",
+                  "display": "Während ich meine Blutwerte einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              }, {
+                "linkId": "3.3.1.3",
+                "text": "Bitte tragen Sie hier ein, was sie außerdem über das Blut, die Blutanalyse und/oder Ihre Blutwerte erfahren möchten:",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "4",
+          "title": "Abfrage Ihres Informationsbedürfnisses zum Thema:",
+          "text": "<h3>Herz</h3><p>Über die Website Statusplus werden Sie <b>ohne die Anwesenheit eines Arztes</b> Ihre Befunde einsehen können.<br> Um Fragen und Unsicherheiten vorzubeugen, kann es daher sinnvoll sein, für das Verständnis relevante Informationen<br> auf der Website bereitzustellen.</p> <p>Im Folgenden möchten wir erfahren, welche Informationen Ihnen helfen würden, <br><b>Ihre Befunde (besser) verstehen und deuten zu können</b> und <b>wann</b> Sie diese Informationen erhalten möchten:</p>",
+          "required": true,
+          "repeats": false,
+          "question": [ {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "4.1",
+            "text": "Würden Ihnen Informationen zum Herzen und seine Funktion im Körper helfen, Ihren EKG- und Herzultraschall-Befund (besser) verstehen und deuten zu können?",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "4.1.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "4.1.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "4.1.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": false,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Befunde einsehe",
+                  "display": "Bevor ich meine Befunde einsehe"
+                }, {
+                  "code": "Während ich meine Befunde einsehe",
+                  "display": "Während ich meine Befunde einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              }, {
+                "linkId": "4.1.1.3",
+                "text": "Welche Informationen zum Herzen und seine Funktion im Körper würden Sie sich wünschen? (optional)",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "4.2",
+            "text": "Würde Ihnen die Grundlage (z.B. Normbereich) für die Einstufung Ihrer Befunde als “gesund“ oder “auffällig“ helfen, Ihren EKG- und Echobefund (besser) verstehen und deuten zu können?",
+            "type": "choice",
+            "required": true,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "4.2.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "4.2.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "4.2.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": true,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Befunde einsehe",
+                  "display": "Bevor ich meine Befunde einsehe"
+                }, {
+                  "code": "Während ich meine Befunde einsehe",
+                  "display": "Während ich meine Befunde einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              } ]
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "4.3",
+            "text": "Würden Ihnen die gesundheitlichen Auswirkungen Ihrer EKG- und Echobefunde helfen, diese (besser) verstehen und deuten zu können?",
+            "type": "choice",
+            "required": true,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "4.3.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "4.3.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "4.3.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": true,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Befunde einsehe",
+                  "display": "Bevor ich meine Blutwerte einsehe"
+                }, {
+                  "code": "Während ich meine Befunde einsehe",
+                  "display": "Während ich meine Befunde einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              }, {
+                "linkId": "4.3.1.3",
+                "text": "Bitte tragen Sie hier ein, was sie außerdem über das Herz, EKG, den Herzultraschall und/oder Ihre Herzbefunde erfahren möchten:",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "5",
+          "title": "Abfrage Ihres Informationsbedürfnisses zum Thema:",
+          "text": "<h3>Mikrobiom</h3><p>Über die Website Statusplus werden Sie <b>ohne die Anwesenheit eines Arztes</b> Ihre Befunde einsehen können.<br> Um Fragen und Unsicherheiten vorzubeugen, kann es daher sinnvoll sein, für das Verständnis relevante Informationen<br> auf der Website bereitzustellen.</p> <p>Im Folgenden möchten wir erfahren, welche Informationen Ihnen helfen würden, <br><b>Ihre Befunde (besser) verstehen und deuten zu können</b> und <b>wann</b> Sie diese Informationen erhalten möchten:</p>",
+          "required": true,
+          "repeats": false,
+          "question": [ {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "5.1",
+            "text": "Würden Ihnen Informationen zum Mikrobiom und seine Funktion im Körper helfen, Ihre Mikrobiomdaten (besser) verstehen und deuten zu können?",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "5.1.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "5.1.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "5.1.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": false,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Mikrobiomdaten einsehe",
+                  "display": "Bevor ich meine Mikrobiomdaten einsehe"
+                }, {
+                  "code": "Während ich meine Mikrobiomdaten einsehe",
+                  "display": "Während ich meine Mikrobiomdaten einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              }, {
+                "linkId": "5.1.1.3",
+                "text": "Welche Informationen zum Mikrobiom und seine Funktion im Körper würden Sie sich wünschen? (optional)",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "5.2",
+            "text": "Würde Ihnen die Grundlage für die Einstufung Ihrer Werte als “gesund“ oder “auffällig“ helfen, Ihre Mikrobiomdaten (besser) verstehen und deuten zu können?",
+            "type": "choice",
+            "required": true,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "5.2.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "5.2.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "5.2.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": true,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Mikrobiomdaten einsehe",
+                  "display": "Bevor ich meine Mikrobiomdaten einsehe"
+                }, {
+                  "code": "Während ich meine Mikrobiomdaten einsehe",
+                  "display": "Während ich meine Mikrobiomdaten einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              } ]
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "5.3",
+            "text": "Würden Ihnen die gesundheitlichen Auswirkungen Ihrer Mikrobiomdaten helfen, diese (besser) verstehen und deuten zu können?",
+            "type": "choice",
+            "required": true,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "5.3.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "5.3.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "5.3.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": true,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Mikrobiomdaten einsehe",
+                  "display": "Bevor ich meine Mikrobiomdaten einsehe"
+                }, {
+                  "code": "Während ich meine Mikrobiomdaten einsehe",
+                  "display": "Während ich meine Mikrobiomdaten einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              }, {
+                "linkId": "5.3.1.3",
+                "text": "Bitte tragen Sie hier ein, was sie außerdem über das Mikrobiom, die Mikrobiomanalyse und Ihre Mikrobiomwerte erfahren möchten:",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "6",
+          "title": "Abfrage Ihres Informationsbedürfnisses zum Thema:",
+          "text": "<h3>Genom</h3><p>Über die Website Statusplus werden Sie <b>ohne die Anwesenheit eines Arztes</b> Ihre Befunde einsehen können.<br> Um Fragen und Unsicherheiten vorzubeugen, kann es daher sinnvoll sein, für das Verständnis relevante Informationen<br> auf der Website bereitzustellen.</p> <p>Im Folgenden möchten wir erfahren, welche Informationen Ihnen helfen würden, <br><b>Ihre Befunde (besser) verstehen und deuten zu können</b> und <b>wann</b> Sie diese Informationen erhalten möchten:</p>",
+          "required": true,
+          "repeats": false,
+          "question": [ {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "6.1",
+            "text": "Würden Ihnen Informationen zum Genom und seine Funktion im Körper helfen, Ihre Genomdaten (besser) verstehen und deuten zu können?",
+            "type": "choice",
+            "required": false,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "6.1.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "6.1.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "6.1.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": false,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Genomdaten einsehe",
+                  "display": "Bevor ich meine Genomdaten einsehe"
+                }, {
+                  "code": "Während ich meine Genomdaten einsehe",
+                  "display": "Während ich meine Genomdaten einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              }, {
+                "linkId": "6.1.1.3",
+                "text": "Welche Informationen zum Genom und seine Funktion im Körper würden Sie sich wünschen? (optional)",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "6.2",
+            "text": "Würde Ihnen die Grundlage für die Einstufung Ihrer Werte als “gesund“ oder “auffällig“ helfen, Ihre Genomdaten (besser) verstehen und deuten zu können?",
+            "type": "choice",
+            "required": true,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "6.2.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "6.2.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "6.2.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": true,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Genomdaten einsehe",
+                  "display": "Bevor ich meine Genomdaten einsehe"
+                }, {
+                  "code": "Während ich meine Genomdaten einsehe",
+                  "display": "Während ich meine Genomdaten einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              } ]
+            } ]
+          }, {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                  "code": "radio-button",
+                  "display": "Radio Button"
+                } ],
+                "text": "radio-button"
+              }
+            } ],
+            "linkId": "6.3",
+            "text": "Würden Ihnen die gesundheitlichen Auswirkungen Ihrer Genomdaten helfen, diese (besser) verstehen und deuten zu können?",
+            "type": "choice",
+            "required": true,
+            "repeats": false,
+            "options": {
+              "reference": "#yesnodontknow"
+            },
+            "group": [ {
+              "linkId": "6.3.1",
+              "required": false,
+              "repeats": false,
+              "question": [ {
+                "linkId": "6.3.1.1",
+                "text": "Bitte begründen Sie kurz Ihre Antwort.",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              }, {
+                "extension": [ {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-questionControl",
+                  "valueCodeableConcept": {
+                    "coding": [ {
+                      "system": "https://www.hl7.org/fhir/valueset-questionnaire-question-control.html",
+                      "code": "check-box",
+                      "display": "Check Box"
+                    } ],
+                    "text": "check-box"
+                  }
+                } ],
+                "linkId": "6.3.1.2",
+                "text": "Wann wäre die Information hilfreich?",
+                "type": "choice",
+                "required": true,
+                "repeats": false,
+                "option": [ {
+                  "code": "Bevor ich meine Genomdaten einsehe",
+                  "display": "Bevor ich meine Genomdaten einsehe"
+                }, {
+                  "code": "Während ich meine Genomdaten einsehe",
+                  "display": "Während ich meine Genomdaten einsehe"
+                }, {
+                  "code": "Bei Bedarf",
+                  "display": "Bei Bedarf"
+                } ]
+              }, {
+                "linkId": "6.3.1.3",
+                "text": "Bitte tragen Sie hier ein, was sie außerdem über das Genom, die Genomsequenzierung und Ihre Genomdaten erfahren möchten:",
+                "type": "text",
+                "required": false,
+                "repeats": false
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "7",
+          "title": "Anmerkungen und Danke",
+          "text": "Vielen Dank für Ihre Teilnahme an der Umfrage! <br>Für Fragen oder Feedback wenden Sie sich bitte an unsere Kommunikationsdesignerin<br< Kathrin Exner, Muthesius Kunsthochschule (E-Mail: kathrin.exner1(at)gmx.net).",
+          "required": true,
+          "repeats": false,
+          "question": [ {
+            "linkId": "7.1",
+            "text": "Möchten Sie uns noch etwas mitteilen?",
+            "type": "text",
+            "required": true,
+            "repeats": false
+          } ]
+        } ]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Questionnaire/712",
+    "resource": {
+      "resourceType": "Questionnaire",
+      "id": "712",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-19T06:17:28.854+00:00"
+      },
+      "fhir_comments": [ "Test Ressource from Chiara" ],
+      "status": "draft",
+      "group": {
+        "question": [ {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "0 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "1 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "2 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "3 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "4 - Is grass green?",
+          "type": "boolean"
+        } ]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Questionnaire/713",
+    "resource": {
+      "resourceType": "Questionnaire",
+      "id": "713",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-19T06:20:09.500+00:00"
+      },
+      "fhir_comments": [ "Test Ressource from Chiara" ],
+      "status": "draft",
+      "group": {
+        "question": [ {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "0 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "1 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "2 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "3 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "4 - Is grass green?",
+          "type": "boolean"
+        } ]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Questionnaire/714",
+    "resource": {
+      "resourceType": "Questionnaire",
+      "id": "714",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-19T06:58:05.796+00:00"
+      },
+      "fhir_comments": [ "Test Ressource from Chiara" ],
+      "status": "draft",
+      "group": {
+        "question": [ {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "0 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "1 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "2 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "3 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "4 - Is grass green?",
+          "type": "boolean"
+        } ]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Questionnaire/715",
+    "resource": {
+      "resourceType": "Questionnaire",
+      "id": "715",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-19T07:03:57.319+00:00"
+      },
+      "fhir_comments": [ "Test Ressource from Chiara" ],
+      "status": "draft",
+      "group": {
+        "question": [ {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "0 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "1 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "2 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "3 - Is grass green?",
+          "type": "boolean"
+        }, {
+          "linkId": "hier muss Link zur Questionnaire- Response hin!",
+          "text": "4 - Is grass green?",
+          "type": "boolean"
+        } ]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

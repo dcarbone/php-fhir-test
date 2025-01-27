@@ -1,0 +1,56 @@
+{
+  "resourceType": "Bundle",
+  "id": "fa23f666-bb1f-4d7a-b302-0bb692010c25",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:00:58.149+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Device?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=fa23f666-bb1f-4d7a-b302-0bb692010c25&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Device/9ba59cde-1ddf-48d3-84a6-de42acb6b4f6",
+    "resource": {
+      "resourceType": "Device",
+      "id": "9ba59cde-1ddf-48d3-84a6-de42acb6b4f6",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-03T19:44:19.800+00:00",
+        "tag": [ {
+          "system": "http://dcx.fhir-test.com/fhir/",
+          "code": "9ba59cde-1ddf-48d3-84a6-de42acb6b4f6",
+          "display": "pseudo-escort"
+        } ]
+      },
+      "identifier": [ {
+        "use": "secondary",
+        "type": {
+          "text": "Barcode"
+        },
+        "system": "http://dcx.fhir-test.com/fhir/",
+        "value": "myhboxtag0001"
+      }, {
+        "use": "secondary",
+        "type": {
+          "text": "Escort"
+        },
+        "system": "http://dcx.fhir-test.com/fhir/",
+        "value": "FTG9X9D8"
+      } ],
+      "udi": {
+        "deviceIdentifier": "9ba59cde-1ddf-48d3-84a6-de42acb6b4f6",
+        "name": "pseudo-escort",
+        "issuer": "http://dcx.fhir-test.com/fhir/",
+        "entryType": "self-reported"
+      },
+      "status": "active"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

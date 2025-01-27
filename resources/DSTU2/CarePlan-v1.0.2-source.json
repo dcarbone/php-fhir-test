@@ -1,0 +1,355 @@
+{
+  "resourceType": "Bundle",
+  "id": "fbf9b556-9030-4c52-b518-6903ebf3d775",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:14:25.767+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/CarePlan?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=fbf9b556-9030-4c52-b518-6903ebf3d775&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/CarePlan/1824",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "1824",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-19T12:29:03.365+00:00"
+      },
+      "subject": {
+        "reference": "Patient/1814"
+      },
+      "status": "active",
+      "context": {
+        "reference": "Encounter/1815"
+      },
+      "period": {
+        "start": "1990-03-04"
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "698358001",
+          "display": "Angina self management plan"
+        } ]
+      } ],
+      "addresses": [ {
+        "reference": "Condition/1818"
+      } ],
+      "activity": [ {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "229065009",
+              "display": "Exercise therapy"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      }, {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "226060000",
+              "display": "Stress management"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      }, {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "710081004",
+              "display": "Smoking cessation therapy"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      }, {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "226234005",
+              "display": "Healthy diet"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/CarePlan/1825",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "1825",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-19T12:29:03.365+00:00"
+      },
+      "subject": {
+        "reference": "Patient/1814"
+      },
+      "status": "active",
+      "context": {
+        "reference": "Encounter/1815"
+      },
+      "period": {
+        "start": "1998-07-02"
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "395082007",
+          "display": "Cancer care plan"
+        } ]
+      } ],
+      "addresses": [ {
+        "reference": "Condition/1821"
+      } ],
+      "activity": [ {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "226234005",
+              "display": "Healthy diet"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      }, {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "703993001",
+              "display": "Colonoscopy planned"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      }, {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "243072006",
+              "display": "Cancer education"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/CarePlan/1849",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "1849",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-19T12:29:04.646+00:00"
+      },
+      "subject": {
+        "reference": "Patient/1834"
+      },
+      "status": "active",
+      "context": {
+        "reference": "Encounter/1836"
+      },
+      "period": {
+        "start": "1971-12-07"
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "698360004",
+          "display": "Diabetes self management plan"
+        } ]
+      } ],
+      "addresses": [ {
+        "reference": "Condition/1840"
+      } ],
+      "activity": [ {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "160670007",
+              "display": "Diabetic diet"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      }, {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "229065009",
+              "display": "Exercise therapy"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/CarePlan/2042",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "2042",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-19T12:29:04.646+00:00"
+      },
+      "subject": {
+        "reference": "Patient/1834"
+      },
+      "status": "active",
+      "context": {
+        "reference": "Encounter/2040"
+      },
+      "period": {
+        "start": "2015-11-09"
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "395082007",
+          "display": "Cancer care plan"
+        } ]
+      } ],
+      "addresses": [ {
+        "reference": "Condition/2041"
+      } ],
+      "activity": [ {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "226234005",
+              "display": "Healthy diet"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      }, {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "703993001",
+              "display": "Colonoscopy planned"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      }, {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "243072006",
+              "display": "Cancer education"
+            } ]
+          },
+          "status": "in-progress",
+          "prohibited": false
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/CarePlan/2046",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "2046",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-19T12:29:04.646+00:00"
+      },
+      "subject": {
+        "reference": "Patient/1834"
+      },
+      "status": "completed",
+      "context": {
+        "reference": "Encounter/2044"
+      },
+      "period": {
+        "start": "2015-11-20",
+        "end": "2015-11-28"
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "781831000000109",
+          "display": "Major surgery care management"
+        } ]
+      } ],
+      "addresses": [ {
+        "reference": "Condition/2041"
+      } ],
+      "activity": [ {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "10888001",
+              "display": "Liquid diet"
+            } ]
+          },
+          "status": "completed",
+          "prohibited": false
+        }
+      }, {
+        "detail": {
+          "code": {
+            "coding": [ {
+              "system": "http://snomed.info/sct",
+              "code": "103744005",
+              "display": "Administration of intravenous fluids"
+            } ]
+          },
+          "status": "completed",
+          "prohibited": false
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

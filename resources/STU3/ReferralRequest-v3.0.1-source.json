@@ -1,0 +1,53 @@
+{
+  "resourceType": "Bundle",
+  "id": "e9ae4019-c544-4779-a308-a82aa722dcef",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:05:02.453+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ReferralRequest?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=e9ae4019-c544-4779-a308-a82aa722dcef&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ReferralRequest/cf-1540396185328",
+    "resource": {
+      "resourceType": "ReferralRequest",
+      "id": "cf-1540396185328",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-24T17:13:06.400+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"mm\"></a></div>"
+      },
+      "type": {
+        "text": "Confirmación diagnóstica"
+      },
+      "subject": {
+        "reference": "Patient/cf-1540393581521"
+      },
+      "requester": {
+        "agent": {
+          "reference": "Practitioner/cf-1540396403420"
+        }
+      },
+      "specialty": {
+        "text": "oftalmólogo"
+      },
+      "recipient": [ {
+        "reference": "HealthcareService/cf-1540399619702"
+      } ],
+      "reasonReference": [ {
+        "reference": "Condition/cf-1540396301739"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

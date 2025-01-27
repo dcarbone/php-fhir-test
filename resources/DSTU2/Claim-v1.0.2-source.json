@@ -1,0 +1,121 @@
+{
+  "resourceType": "Bundle",
+  "id": "206f9264-17d7-456d-9ade-fb7ab503f9c2",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:14:37.768+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/Claim?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=206f9264-17d7-456d-9ade-fb7ab503f9c2&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Claim/1092",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "1092",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-07T20:53:48.812+00:00"
+      },
+      "diagnosis": [ {
+        "diagnosis": {
+          "code": "F33.9"
+        }
+      } ],
+      "patient": {
+        "reference": "Patient/1091"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Claim/1098",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "1098",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-07T21:08:52.596+00:00"
+      },
+      "diagnosis": [ {
+        "diagnosis": {
+          "code": "F33.9"
+        }
+      } ],
+      "patient": {
+        "reference": "Patient/1097"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Claim/1100",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "1100",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-07T21:08:52.867+00:00"
+      },
+      "diagnosis": [ {
+        "diagnosis": {
+          "code": "F33.0"
+        }
+      } ],
+      "patient": {
+        "reference": "Patient/1099"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Claim/1102",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "1102",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-07T21:08:53.145+00:00"
+      },
+      "diagnosis": [ {
+        "diagnosis": {
+          "code": "F33.1"
+        }
+      } ],
+      "patient": {
+        "reference": "Patient/1101"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Claim/1104",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "1104",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-07T21:08:53.435+00:00"
+      },
+      "diagnosis": [ {
+        "diagnosis": {
+          "code": "F32.9"
+        }
+      } ],
+      "patient": {
+        "reference": "Patient/1103"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

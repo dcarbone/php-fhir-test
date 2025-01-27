@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "971998bc-6d5c-4758-8162-f809c3baca0c",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:17:55.771+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/ImagingObjectSelection?_count=5&_format=json"
+  } ]
+}

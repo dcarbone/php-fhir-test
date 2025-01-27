@@ -1,0 +1,56 @@
+{
+  "resourceType": "Bundle",
+  "id": "97fc17a7-dc87-4a19-9c36-7eb0f14ffb74",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:00:50.149+00:00"
+  },
+  "type": "searchset",
+  "total": 9,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/DeviceMetric?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=97fc17a7-dc87-4a19-9c36-7eb0f14ffb74&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/DeviceMetric/866200",
+    "resource": {
+      "resourceType": "DeviceMetric",
+      "id": "866200",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-12T14:48:12.878+00:00"
+      },
+      "identifier": {
+        "system": "http://www.vanilla.kr",
+        "value": "metric001"
+      },
+      "type": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "150020",
+          "display": "MDC_PRESS_BLD_NONINV"
+        } ]
+      },
+      "unit": {
+        "coding": [ {
+          "system": "https://rtmms.nist.gov",
+          "code": "266016",
+          "display": "MDC_DIM_MMHG"
+        } ]
+      },
+      "source": {
+        "reference": "Device/866196"
+      },
+      "parent": {
+        "reference": "DeviceComponent/866199"
+      },
+      "operationalStatus": "on",
+      "category": "measurement"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

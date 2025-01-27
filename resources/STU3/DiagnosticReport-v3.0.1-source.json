@@ -1,0 +1,79 @@
+{
+  "resourceType": "Bundle",
+  "id": "1d6d2fa9-746e-45fc-818d-c4a1a12823e6",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:01:06.147+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/DiagnosticReport?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=1d6d2fa9-746e-45fc-818d-c4a1a12823e6&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/DiagnosticReport/15566",
+    "resource": {
+      "resourceType": "DiagnosticReport",
+      "id": "15566",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-09-30T18:24:45.437+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>\nHLA-A,-B,-C genotyping report for John Storm (MRN:12345)\n\nLOCUS   ALLELE\nHLA-A   HLA-A*03:01:01:01\n        HLA-A*30:01:01\n        \nHLA-B   HLA-B*07:02:01:01/HLA-B*07:02:01:03\n        HLA-B*13:02:01:01\n        \nHLA-C   HLA-C*06:02:01:01/HLA-C*06:02:01:10\n        HLA-C*07:02:01:03/HLA-C*07:02:01:09/HLA-C*07:02:01:10/HLA-C*07:02:01:11\n\nAllele assignments based on IMGT/HLA 3.31.0\nEffective date: 2018-07-26\nMethod: sbt-ngs locus=HLA-A test-id=PACBIOSequel test-id-source=Be The Match\nLab: aTypingLab Inc\n                    </pre>\n                    </div>"
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/hla-genotyping-resultsAlleleDatabase",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://www.ebi.ac.uk/ipd/imgt/hla/",
+            "version": "3.31.0"
+          } ]
+        }
+      }, {
+        "url": "http://hl7.org/fhir/StructureDefinition/hla-genotyping-resultsGlstring",
+        "extension": [ {
+          "url": "text",
+          "valueString": "HLA-A*03:01:01:01+HLA-A*30:01:01^HLA-B*07:02:01:01/HLA-B*07:02:01:03+HLA-B*13:02:01:01^HLA-C*06:02:01:01/HLA-C*06:02:01:10+HLA-C*07:02:01:03/HLA-C*07:02:01:09/HLA-C*07:02:01:10/HLA-C*07:02:01:11"
+        } ]
+      } ],
+      "identifier": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+          "valueString": "root=999 extension=256073-2018-7-26"
+        } ],
+        "value": "999^256073-2018-7-26"
+      } ],
+      "status": "final",
+      "category": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/v2/0074",
+          "code": "GE",
+          "display": "Genetics"
+        } ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "81247-9",
+          "display": "Master HL7 genetic variant reporting panel"
+        } ]
+      },
+      "effectiveDateTime": "2018-07-26",
+      "specimen": [ {
+        "reference": "Specimen/15556",
+        "display": "buccal swab"
+      } ],
+      "result": [ {
+        "reference": "Observation/15565",
+        "display": "HLA-A genotype: HLA-A:01:01:01G+HLA-A*01:02"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

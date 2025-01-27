@@ -1,0 +1,36 @@
+{
+  "resourceType": "Bundle",
+  "id": "31c450a2-1096-4045-a80f-8f5ec3f6942b",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:28:33.381+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/ActivityDefinition?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=31c450a2-1096-4045-a80f-8f5ec3f6942b&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/ActivityDefinition/5552",
+    "resource": {
+      "resourceType": "ActivityDefinition",
+      "id": "5552",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-07-26T07:25:07.942+00:00",
+        "source": "#a0GCwtlCwvSxyCLK"
+      },
+      "title": "laboratoriokokeet",
+      "status": "active",
+      "date": "2023-02-02",
+      "timingTiming": {
+        "event": [ "2022-09-04" ]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

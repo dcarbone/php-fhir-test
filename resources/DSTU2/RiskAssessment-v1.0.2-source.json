@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "ebf5c7cc-78b2-42b9-a8c2-96fd0209e496",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:21:31.771+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/RiskAssessment?_count=5&_format=json"
+  } ]
+}

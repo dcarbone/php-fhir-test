@@ -1,0 +1,61 @@
+{
+  "resourceType": "Bundle",
+  "id": "b5d69143-6837-44ec-89be-7cce99077224",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:01:10.148+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/DocumentManifest?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=b5d69143-6837-44ec-89be-7cce99077224&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/DocumentManifest/822341",
+    "resource": {
+      "resourceType": "DocumentManifest",
+      "id": "822341",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-07T12:55:34.344+00:00"
+      },
+      "masterIdentifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.276.0.76.3.1.260.1.0.56.172031033102.14475816"
+      },
+      "identifier": [ {
+        "use": "official",
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:cf535ac2-6a77-4947-b315-2f696707ae21"
+      } ],
+      "status": "current",
+      "type": {
+        "coding": [ {
+          "system": "urn:oid:1.3.6.1.4.1.21367.2017.3",
+          "code": "DICOM KON TYPECODE",
+          "display": "DICOM Key Object Note Type Code"
+        } ]
+      },
+      "subject": {
+        "reference": "http://hapi.fhir.org/baseDstu3/Patient/165342"
+      },
+      "created": "2018-12-07T12:55:32.385Z",
+      "source": "1.2.276.0.76.3.1.260.1.0.52.172031101149.266104493",
+      "description": "Submission from Freitag, 7. Dezember 2018",
+      "content": [ {
+        "pReference": {
+          "reference": "DocumentReference/822342"
+        }
+      }, {
+        "pReference": {
+          "reference": "DocumentReference/822343"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

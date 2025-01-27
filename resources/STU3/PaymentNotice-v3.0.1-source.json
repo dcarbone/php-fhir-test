@@ -1,0 +1,33 @@
+{
+  "resourceType": "Bundle",
+  "id": "f2b5b95f-53bc-46e3-82fd-2c422fcda58a",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:04:10.454+00:00"
+  },
+  "type": "searchset",
+  "total": 3,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/PaymentNotice?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=f2b5b95f-53bc-46e3-82fd-2c422fcda58a&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/PaymentNotice/1669551",
+    "resource": {
+      "resourceType": "PaymentNotice",
+      "id": "1669551",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-03-18T14:05:41.557+00:00"
+      },
+      "text": {
+        "status": "generated"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

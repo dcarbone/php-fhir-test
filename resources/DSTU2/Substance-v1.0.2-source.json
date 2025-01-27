@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "2fee3157-12d5-491c-a674-e4d701d62dd3",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:22:43.865+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/Substance?_count=5&_format=json"
+  } ]
+}

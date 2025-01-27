@@ -1,0 +1,36 @@
+{
+  "resourceType": "Bundle",
+  "id": "bee2cae1-ce48-4d18-a9c1-a6be3d8d8a10",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:39:02.602+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Account?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=bee2cae1-ce48-4d18-a9c1-a6be3d8d8a10&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Account/195194",
+    "resource": {
+      "resourceType": "Account",
+      "id": "195194",
+      "meta": {
+        "versionId": "7",
+        "lastUpdated": "2018-10-16T11:03:25.282+00:00"
+      },
+      "name": "My account\nрп 1237657",
+      "balance": {
+        "value": 1000,
+        "comparator": "<=",
+        "unit": "US dollars",
+        "code": "10\n"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,35 @@
+{
+  "resourceType": "Bundle",
+  "id": "3248a34b-c6c2-499c-ae53-18b1968b23ee",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:01:34.150+00:00"
+  },
+  "type": "searchset",
+  "total": 4,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/EnrollmentRequest?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=3248a34b-c6c2-499c-ae53-18b1968b23ee&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/EnrollmentRequest/2843307",
+    "resource": {
+      "resourceType": "EnrollmentRequest",
+      "id": "2843307",
+      "meta": {
+        "extension": [ {
+          "url": "http://hapifhir.io/fhir/StructureDefinition/resource-meta-source",
+          "valueUri": "#Rx9GJgBQxs5s0Na4"
+        } ],
+        "versionId": "2",
+        "lastUpdated": "2023-11-29T05:06:44.422+00:00"
+      },
+      "status": "active"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "a6ea2ba0-e3c2-4da8-9f44-daa984eb1f25",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:16:13.771+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/DeviceUseStatement?_count=5&_format=json"
+  } ]
+}

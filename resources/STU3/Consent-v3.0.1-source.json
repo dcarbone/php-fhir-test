@@ -1,0 +1,33 @@
+{
+  "resourceType": "Bundle",
+  "id": "0921adff-f948-4a24-ba45-7072f81eb70e",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:00:26.146+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Consent?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=0921adff-f948-4a24-ba45-7072f81eb70e&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Consent/cf-1529424737073",
+    "resource": {
+      "resourceType": "Consent",
+      "id": "cf-1529424737073",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-05T15:08:43.455+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"mm\"></a></div>"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

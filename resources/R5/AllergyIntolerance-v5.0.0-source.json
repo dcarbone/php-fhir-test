@@ -1,0 +1,65 @@
+{
+  "resourceType": "Bundle",
+  "id": "0c68dca1-5e35-4db8-9795-93ca2dff429f",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:27:29.381+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/AllergyIntolerance?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=0c68dca1-5e35-4db8-9795-93ca2dff429f&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/AllergyIntolerance/1724",
+    "resource": {
+      "resourceType": "AllergyIntolerance",
+      "id": "1724",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2020-12-18T13:14:17.853+00:00",
+        "source": "#TqXKrutV1UeMi2D1",
+        "profile": [ "https://www.ehealth.fgov.be/standards/fhir/StructureDefinition/be-allergyintolerance" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+          "code": "active",
+          "display": "Active"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+          "code": "confirmed"
+        } ]
+      },
+      "category": [ "food" ],
+      "criticality": "low",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "278840001",
+          "display": "Shrimp (substance)"
+        } ],
+        "text": "Allergic to shrimp"
+      },
+      "patient": {
+        "reference": "Patient/1721"
+      },
+      "lastOccurrence": "2012-06",
+      "note": [ {
+        "text": "Some extra information can be given here."
+      } ],
+      "reaction": [ {
+        "onset": "2012-06-12",
+        "severity": "severe"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

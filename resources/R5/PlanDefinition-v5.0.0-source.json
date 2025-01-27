@@ -1,0 +1,688 @@
+{
+  "resourceType": "Bundle",
+  "id": "98eb534e-e598-4092-ae1c-5ad9b757597a",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:29:33.823+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/PlanDefinition?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=98eb534e-e598-4092-ae1c-5ad9b757597a&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/PlanDefinition/4893",
+    "resource": {
+      "resourceType": "PlanDefinition",
+      "id": "4893",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-05-04T12:27:09.220+00:00",
+        "source": "#CQpQpER1edR5zgWA"
+      },
+      "title": "Leitlinie akuter Husten",
+      "actor": [ {
+        "title": "Arzt"
+      }, {
+        "title": "Patient"
+      } ],
+      "action": [ {
+        "id": "StartEvent_1",
+        "relatedAction": [ {
+          "id": "Flow_1",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ]
+      }, {
+        "id": "Gateway_1",
+        "title": "Paralleles Gateway",
+        "relatedAction": [ {
+          "id": "Flow_1",
+          "relationship": "before"
+        }, {
+          "id": "Flow_3",
+          "relationship": "after"
+        }, {
+          "id": "Flow_2",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ]
+      }, {
+        "id": "Gateway_2",
+        "title": "Paralleles Gateway",
+        "relatedAction": [ {
+          "id": "Flow_4",
+          "relationship": "before"
+        }, {
+          "id": "Flow_5",
+          "relationship": "before"
+        }, {
+          "id": "Flow_6",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ]
+      }, {
+        "id": "Gateway_4",
+        "title": "Medikamente als Ursache?",
+        "relatedAction": [ {
+          "id": "Flow_8",
+          "relationship": "before"
+        }, {
+          "id": "Flow_9",
+          "relationship": "after"
+        }, {
+          "id": "Flow_10",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ],
+        "action": [ {
+          "id": "Flow_9",
+          "title": "Bedingung 1",
+          "code": {
+            "coding": [ {
+              "id": "Med. nicht als Ursache",
+              "system": "http://snomed.info/sct",
+              "code": "408508002"
+            } ]
+          },
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "Nein (408508002)"
+            }
+          } ]
+        }, {
+          "id": "Flow_10",
+          "title": "Bedingung 2",
+          "code": {
+            "coding": [ {
+              "id": "Medikamente als Ursache",
+              "system": "http://snomed.info/sct",
+              "code": "(401207004)"
+            } ]
+          },
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "Ja (401207004)                            "
+            }
+          } ]
+        } ]
+      }, {
+        "id": "Gateway_5",
+        "relatedAction": [ {
+          "id": "Flow_9",
+          "relationship": "before"
+        }, {
+          "id": "Flow_12",
+          "relationship": "before"
+        }, {
+          "id": "Flow_13",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ],
+        "action": [ {
+          "id": "Flow_13",
+          "title": "Bedingung 1",
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql"
+            }
+          } ]
+        } ]
+      }, {
+        "id": "Gateway_6",
+        "title": "Husten nach 8 Wochen abgeklungen? (310341009)",
+        "relatedAction": [ {
+          "id": "Flow_0sv2bkw",
+          "relationship": "before"
+        }, {
+          "id": "Flow_12",
+          "relationship": "after"
+        }, {
+          "id": "Flow_16",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Patient"
+        } ],
+        "action": [ {
+          "id": "Flow_12",
+          "title": "Bedingung 1",
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "Nein"
+            }
+          } ]
+        }, {
+          "id": "Flow_16",
+          "title": "Bedingung 2",
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "Ja"
+            }
+          } ]
+        } ]
+      }, {
+        "id": "Gateway_8",
+        "title": "Befund erklärt Husten ?",
+        "relatedAction": [ {
+          "id": "Flow_15",
+          "relationship": "before"
+        }, {
+          "id": "Flow_32",
+          "relationship": "after"
+        }, {
+          "id": "Flow_17",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ],
+        "action": [ {
+          "id": "Flow_32",
+          "title": "Bedingung 1",
+          "code": {
+            "coding": [ {
+              "id": "Husten",
+              "system": "http://snomed.info/sct",
+              "code": "49727002"
+            } ]
+          },
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "Ja (49727002)"
+            }
+          } ]
+        }, {
+          "id": "Flow_17",
+          "title": "Bedingung 2",
+          "code": {
+            "coding": [ {
+              "id": "Kein Husten",
+              "system": "http://snomed.info/sct",
+              "code": "161922009"
+            } ]
+          },
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "Nein (161922009)"
+            }
+          } ]
+        } ]
+      }, {
+        "id": "Gateway_7",
+        "relatedAction": [ {
+          "id": "Flow_7",
+          "relationship": "before"
+        }, {
+          "id": "Flow_32",
+          "relationship": "before"
+        }, {
+          "id": "Flow_18",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ],
+        "action": [ {
+          "id": "Flow_18",
+          "title": "Bedingung 1",
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql"
+            }
+          } ]
+        } ]
+      }, {
+        "id": "Gateway_10",
+        "title": "Relative Einsekundenkapazität? (165043001)",
+        "relatedAction": [ {
+          "id": "Flow_21",
+          "relationship": "before"
+        }, {
+          "id": "Flow_22",
+          "relationship": "after"
+        }, {
+          "id": "Flow_23",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ],
+        "action": [ {
+          "id": "Flow_22",
+          "title": "Bedingung 1",
+          "code": {
+            "coding": [ {
+              "id": "Wert kleiner 75%",
+              "system": "http://snomed.info/sct",
+              "code": "314472003"
+            } ]
+          },
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "kleiner 75% (314472003)"
+            }
+          } ]
+        }, {
+          "id": "Flow_23",
+          "title": "Bedingung 2",
+          "code": {
+            "coding": [ {
+              "id": "Wert größer 75%",
+              "system": "http://snomed.info/sct",
+              "code": "314473008"
+            } ]
+          },
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "größer 75 % (314473008)"
+            }
+          } ]
+        } ]
+      }, {
+        "id": "Gateway_9",
+        "relatedAction": [ {
+          "id": "Flow_22",
+          "relationship": "before"
+        }, {
+          "id": "Flow_18",
+          "relationship": "before"
+        }, {
+          "id": "Flow_19",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ],
+        "action": [ {
+          "id": "Flow_19",
+          "title": "Bedingung 1",
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql"
+            }
+          } ]
+        } ]
+      }, {
+        "id": "Gateway_11",
+        "title": "Husten abgeklungen ? (161922009)",
+        "relatedAction": [ {
+          "id": "Flow_25",
+          "relationship": "before"
+        }, {
+          "id": "Flow_26",
+          "relationship": "after"
+        }, {
+          "id": "Flow_27",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Patient"
+        } ],
+        "action": [ {
+          "id": "Flow_26",
+          "title": "Bedingung 1",
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "Nein"
+            }
+          } ]
+        }, {
+          "id": "Flow_27",
+          "title": "Bedingung 2",
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "Ja"
+            }
+          } ]
+        } ]
+      }, {
+        "id": "Gateway_12",
+        "relatedAction": [ {
+          "id": "Flow_29",
+          "relationship": "before"
+        }, {
+          "id": "Flow_28",
+          "relationship": "before"
+        }, {
+          "id": "Flow_31",
+          "relationship": "before"
+        }, {
+          "id": "Flow_30",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ],
+        "action": [ {
+          "id": "Flow_30",
+          "title": "Bedingung 1",
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql"
+            }
+          } ]
+        } ]
+      }, {
+        "id": "Gateway_13",
+        "relatedAction": [ {
+          "id": "Flow_16",
+          "relationship": "before"
+        }, {
+          "id": "Flow_27",
+          "relationship": "before"
+        }, {
+          "id": "Flow_31",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ],
+        "action": [ {
+          "id": "Flow_31",
+          "title": "Bedingung 1",
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql"
+            }
+          } ]
+        } ]
+      }, {
+        "id": "Gateway_3",
+        "title": "Hinweis auf Infekt? (445241004)",
+        "relatedAction": [ {
+          "id": "Flow_6",
+          "relationship": "before"
+        }, {
+          "id": "Flow_8",
+          "relationship": "after"
+        }, {
+          "id": "Flow_7",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ],
+        "action": [ {
+          "id": "Flow_8",
+          "title": "Bedingung 1",
+          "code": {
+            "coding": [ {
+              "id": "kein Hinweis auf Infekt",
+              "system": "http://snomed.info/sct"
+            } ]
+          },
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "Nein"
+            }
+          } ]
+        }, {
+          "id": "Flow_7",
+          "title": "Bedingung 2",
+          "code": {
+            "coding": [ {
+              "id": "Hinweis auf Infekt",
+              "system": "http://snomed.info/sct",
+              "code": "445241004"
+            } ]
+          },
+          "condition": [ {
+            "kind": "applicability",
+            "expression": {
+              "language": "text/cql",
+              "expression": "Ja"
+            }
+          } ]
+        } ]
+      }, {
+        "id": "Activity_1",
+        "title": "Anamnese und körperliche Untersuchung durchführen (162673000)",
+        "code": {
+          "coding": [ {
+            "id": "Körperliche Untersuchung",
+            "system": "http://snomed.info/sct",
+            "code": "(162673000)"
+          } ]
+        },
+        "relatedAction": [ {
+          "id": "Flow_3",
+          "relationship": "before"
+        }, {
+          "id": "Flow_5",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ]
+      }, {
+        "id": "Activity_5",
+        "title": "Anordnung: Röntgen Thorax  (168732002)",
+        "code": {
+          "coding": [ {
+            "id": "Röntgen Thorax",
+            "system": "http://snomed.info/sct",
+            "code": "168732002"
+          } ]
+        },
+        "relatedAction": [ {
+          "id": "Flow_13",
+          "relationship": "before"
+        }, {
+          "id": "Flow_14",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ]
+      }, {
+        "id": "Activity_3",
+        "title": "Anordnung: Medikamente absetzten (274512008)",
+        "code": {
+          "coding": [ {
+            "id": "Medi. absetzten",
+            "system": "http://snomed.info/sct",
+            "code": "274512008"
+          } ]
+        },
+        "relatedAction": [ {
+          "id": "Flow_10",
+          "relationship": "before"
+        }, {
+          "id": "Flow_11",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ]
+      }, {
+        "id": "Activity_2",
+        "title": "Fragen der Anamnese beantworten und körperliche Untersuchung",
+        "relatedAction": [ {
+          "id": "Flow_2",
+          "relationship": "before"
+        }, {
+          "id": "Flow_4",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Patient"
+        } ]
+      }, {
+        "id": "Activity_4",
+        "title": "Durchführung Medikamente absetzten",
+        "relatedAction": [ {
+          "id": "Flow_11",
+          "relationship": "before"
+        }, {
+          "id": "Flow_0sv2bkw",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Patient"
+        } ]
+      }, {
+        "id": "Activity_6",
+        "title": "Durchführung Röntgen Thorax",
+        "relatedAction": [ {
+          "id": "Flow_14",
+          "relationship": "before"
+        }, {
+          "id": "Flow_15",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Patient"
+        } ]
+      }, {
+        "id": "Activity_7",
+        "title": "Anordnung Spirometrie (127783003)",
+        "code": {
+          "coding": [ {
+            "id": "Spirometrie",
+            "system": "http://snomed.info/sct",
+            "code": "127783003"
+          } ]
+        },
+        "relatedAction": [ {
+          "id": "Flow_17",
+          "relationship": "before"
+        }, {
+          "id": "Flow_20",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ]
+      }, {
+        "id": "Activity_8",
+        "title": "Durchführung Spiometrie",
+        "relatedAction": [ {
+          "id": "Flow_20",
+          "relationship": "before"
+        }, {
+          "id": "Flow_21",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Patient"
+        } ]
+      }, {
+        "id": "Activity_12",
+        "title": "Anordnung: Therapie (277132007)",
+        "code": {
+          "coding": [ {
+            "id": "Therapie",
+            "system": "http://snomed.info/sct",
+            "code": "277132007"
+          } ]
+        },
+        "relatedAction": [ {
+          "id": "Flow_19",
+          "relationship": "before"
+        }, {
+          "id": "Flow_28",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ]
+      }, {
+        "id": "Activity_11",
+        "title": "Diagnose chronischer Husten (68154008)",
+        "code": {
+          "coding": [ {
+            "id": "Diagnose chronischer Husten ",
+            "system": "http://snomed.info/sct",
+            "code": "68154008"
+          } ]
+        },
+        "relatedAction": [ {
+          "id": "Flow_26",
+          "relationship": "before"
+        }, {
+          "id": "Flow_29",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ]
+      }, {
+        "id": "Activity_9",
+        "title": "Anordnung: 8 Wochen warten (310341009)",
+        "code": {
+          "coding": [ {
+            "id": "8 Wochen warten",
+            "system": "http://snomed.info/sct",
+            "code": "310341009"
+          } ]
+        },
+        "relatedAction": [ {
+          "id": "Flow_23",
+          "relationship": "before"
+        }, {
+          "id": "Flow_24",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Arzt"
+        } ]
+      }, {
+        "id": "Activity_10",
+        "title": "Durchführung: 8 Wochen warten (310341009)",
+        "relatedAction": [ {
+          "id": "Flow_24",
+          "relationship": "before"
+        }, {
+          "id": "Flow_25",
+          "relationship": "after"
+        } ],
+        "participant": [ {
+          "actorId": "Patient"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

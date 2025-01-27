@@ -1,0 +1,205 @@
+{
+  "resourceType": "Bundle",
+  "id": "a33e773d-f2dc-4832-abb0-810805760c69",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:16:55.771+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/Encounter?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=a33e773d-f2dc-4832-abb0-810805760c69&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Encounter/223",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "223",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-06T23:11:48.569+00:00"
+      },
+      "status": "finished",
+      "type": [ {
+        "text": "OutPatient"
+      } ],
+      "patient": {
+        "reference": "Patient/207"
+      },
+      "participant": [ {
+        "individual": {
+          "reference": "Practitioner/208",
+          "display": "Dr John Doe"
+        }
+      } ],
+      "period": {
+        "start": "2018-10-02T23:11:46.929Z"
+      },
+      "reason": [ {
+        "text": "headache"
+      } ],
+      "indication": [ {
+        "reference": "Condition/218"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Encounter/224",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "224",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-06T23:11:48.569+00:00"
+      },
+      "status": "finished",
+      "type": [ {
+        "text": "GP"
+      } ],
+      "patient": {
+        "reference": "Patient/207"
+      },
+      "participant": [ {
+        "individual": {
+          "reference": "Practitioner/209",
+          "display": "Dr Annette Jones"
+        }
+      } ],
+      "period": {
+        "start": "2018-08-31T23:11:46.929Z"
+      },
+      "reason": [ {
+        "text": "headache"
+      } ],
+      "indication": [ {
+        "reference": "Condition/216"
+      }, {
+        "reference": "Condition/215"
+      }, {
+        "reference": "Condition/216"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Encounter/225",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "225",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-06T23:11:48.569+00:00"
+      },
+      "status": "finished",
+      "type": [ {
+        "text": "OutPatient"
+      } ],
+      "patient": {
+        "reference": "Patient/207"
+      },
+      "participant": [ {
+        "individual": {
+          "reference": "Practitioner/209",
+          "display": "Dr Annette Jones"
+        }
+      } ],
+      "period": {
+        "start": "2018-10-02T23:11:46.929Z"
+      },
+      "reason": [ {
+        "text": "sore throat"
+      } ],
+      "indication": [ {
+        "reference": "Condition/215"
+      }, {
+        "reference": "Condition/212"
+      }, {
+        "reference": "Condition/218"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Encounter/226",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "226",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-06T23:11:48.569+00:00"
+      },
+      "status": "finished",
+      "type": [ {
+        "text": "GP"
+      } ],
+      "patient": {
+        "reference": "Patient/207"
+      },
+      "participant": [ {
+        "individual": {
+          "reference": "Practitioner/208",
+          "display": "Dr John Doe"
+        }
+      } ],
+      "period": {
+        "start": "2018-09-14T23:11:46.929Z"
+      },
+      "reason": [ {
+        "text": "headache"
+      } ],
+      "indication": [ {
+        "reference": "Condition/212"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Encounter/227",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "227",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-06T23:11:48.569+00:00"
+      },
+      "status": "finished",
+      "type": [ {
+        "text": "OutPatient"
+      } ],
+      "patient": {
+        "reference": "Patient/207"
+      },
+      "participant": [ {
+        "individual": {
+          "reference": "Practitioner/209",
+          "display": "Dr Annette Jones"
+        }
+      } ],
+      "period": {
+        "start": "2018-08-13T23:11:46.929Z"
+      },
+      "reason": [ {
+        "text": "headache"
+      } ],
+      "indication": [ {
+        "reference": "Condition/212"
+      }, {
+        "reference": "Condition/213"
+      }, {
+        "reference": "Condition/216"
+      }, {
+        "reference": "Condition/221"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

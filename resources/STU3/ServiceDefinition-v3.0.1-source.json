@@ -1,0 +1,64 @@
+{
+  "resourceType": "Bundle",
+  "id": "3944c26c-c7fe-4908-9630-dbd684deb377",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:05:38.601+00:00"
+  },
+  "type": "searchset",
+  "total": 10,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ServiceDefinition?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=3944c26c-c7fe-4908-9630-dbd684deb377&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ServiceDefinition/1718220",
+    "resource": {
+      "resourceType": "ServiceDefinition",
+      "id": "1718220",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-04-08T05:34:11.443+00:00"
+      },
+      "status": "active",
+      "experimental": true,
+      "effectivePeriod": {
+        "start": "2018-01-01",
+        "end": "2018-12-31"
+      },
+      "useContext": [ {
+        "code": {
+          "system": "http://hl7.org/fhir/usage-context-type",
+          "code": "gender",
+          "display": "Gender"
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/administrative-gender",
+            "code": "female",
+            "display": "Female"
+          } ]
+        }
+      } ],
+      "jurisdiction": [ {
+        "coding": [ {
+          "system": "urn:iso:std:iso:3166",
+          "code": "GB",
+          "display": "United Kingdom of Great Britain and Northern Ireland (the)"
+        } ]
+      } ],
+      "trigger": [ {
+        "type": "data-added",
+        "eventData": {
+          "type": "Observation",
+          "profile": [ "https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-CDS-Observation-1" ]
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

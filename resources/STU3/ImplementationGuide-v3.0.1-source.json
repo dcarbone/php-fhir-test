@@ -1,0 +1,43 @@
+{
+  "resourceType": "Bundle",
+  "id": "418c2109-a4f7-4058-a899-7c38a81af416",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:02:42.454+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ImplementationGuide?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=418c2109-a4f7-4058-a899-7c38a81af416&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ImplementationGuide/test",
+    "resource": {
+      "resourceType": "ImplementationGuide",
+      "id": "test",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2018-10-07T08:57:33.034+00:00"
+      },
+      "extension": [ {
+        "url": "http://clinfhir.com/fhir/StructureDefinition/cfAuthor",
+        "valueBoolean": true
+      } ],
+      "url": "http://fhirtest.uhn.ca/baseDstu3/ImplementationGuide/USCoreR3",
+      "name": "test",
+      "status": "draft",
+      "package": [ {
+        "name": "complete"
+      } ],
+      "page": {
+        "title": "Root of Pages",
+        "kind": "page"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

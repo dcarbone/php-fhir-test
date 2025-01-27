@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "383b1ef6-31d9-4cab-bb40-1494423c9122",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:16:07.769+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/DeviceUseRequest?_count=5&_format=json"
+  } ]
+}

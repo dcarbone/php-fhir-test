@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "41baf9d4-3550-46a2-90b0-4139a8dfca58",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:20:13.767+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/PaymentNotice?_count=5&_format=json"
+  } ]
+}

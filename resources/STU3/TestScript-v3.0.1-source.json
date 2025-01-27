@@ -1,0 +1,95 @@
+{
+  "resourceType": "Bundle",
+  "id": "19183b24-9976-4c0d-8b71-8780f99582a8",
+  "meta": {
+    "lastUpdated": "2021-10-22T01:25:59.534+00:00"
+  },
+  "type": "searchset",
+  "total": 11,
+  "link": [ {
+    "relation": "self",
+    "url": "http://hapi.fhir.org/baseDstu3/TestScript/?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "http://hapi.fhir.org/baseDstu3?_getpages=19183b24-9976-4c0d-8b71-8780f99582a8&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://hapi.fhir.org/baseDstu3/TestScript/2719602",
+    "resource": {
+      "resourceType": "TestScript",
+      "id": "2719602",
+      "meta": {
+        "extension": [ {
+          "url": "http://hapifhir.io/fhir/StructureDefinition/resource-meta-source",
+          "valueUri": "#GLsIULmjt8yNBZJa"
+        } ],
+        "versionId": "2",
+        "lastUpdated": "2020-05-04T18:22:40.179+00:00"
+      },
+      "url": "http://hl7.org/fhir/TestScript/testscript-example",
+      "name": "test",
+      "title": "test820",
+      "status": "draft",
+      "jurisdiction": [ {
+        "coding": [ {
+          "system": "urn:iso:std:iso:3166",
+          "code": "AD"
+        } ]
+      } ],
+      "origin": [ {
+        "index": 2,
+        "profile": {
+          "system": "http://hl7.org/fhir/testscript-profile-origin-types",
+          "code": "FHIR-Client"
+        }
+      } ],
+      "destination": [ {
+        "index": 3,
+        "profile": {
+          "system": "http://hl7.org/fhir/testscript-profile-destination-types",
+          "code": "FHIR-Server"
+        }
+      } ],
+      "rule": [ {
+        "resource": {
+          "reference": "Patient/1497697"
+        },
+        "param": [ {
+          "name": "testname820"
+        } ]
+      } ],
+      "ruleset": [ {
+        "resource": {
+          "reference": "Patient/1497697"
+        },
+        "rule": [ {
+          "ruleId": "ruleid820"
+        } ]
+      } ],
+      "setup": {
+        "action": [ {
+          "operation": {
+            "type": {
+              "system": "http://hl7.org/fhir/testscript-operation-codes",
+              "code": "read"
+            },
+            "resource": "Age",
+            "accept": "ttl",
+            "contentType": "ttl"
+          },
+          "assert": {
+            "direction": "response",
+            "contentType": "ttl",
+            "operator": "eval",
+            "requestMethod": "delete",
+            "resource": "Age",
+            "response": "unprocessable"
+          }
+        } ]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,38 @@
+{
+  "resourceType": "Bundle",
+  "id": "f77a2d33-93bb-4d56-a085-3a9ebcee14b5",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:01:38.149+00:00"
+  },
+  "type": "searchset",
+  "total": 3,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/EnrollmentResponse?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=f77a2d33-93bb-4d56-a085-3a9ebcee14b5&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/EnrollmentResponse/2843312",
+    "resource": {
+      "resourceType": "EnrollmentResponse",
+      "id": "2843312",
+      "meta": {
+        "extension": [ {
+          "url": "http://hapifhir.io/fhir/StructureDefinition/resource-meta-source",
+          "valueUri": "#4kKufqDF0udVvTXi"
+        } ],
+        "versionId": "2",
+        "lastUpdated": "2023-11-29T09:41:41.211+00:00"
+      },
+      "identifier": [ {
+        "system": "http://www.BenefitsInc.com/fhir/enrollmentresponse"
+      } ],
+      "status": "active"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

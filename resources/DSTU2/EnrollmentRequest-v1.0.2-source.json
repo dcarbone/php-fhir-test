@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "243c7ced-577d-4f41-8363-30f0c4fd1cc2",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:17:01.773+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/EnrollmentRequest?_count=5&_format=json"
+  } ]
+}

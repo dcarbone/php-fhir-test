@@ -1,0 +1,57 @@
+{
+  "resourceType": "Bundle",
+  "id": "15d1eb82-5826-490f-ae59-eae8e4c6d6ce",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:39:50.604+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ChargeItem?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=15d1eb82-5826-490f-ae59-eae8e4c6d6ce&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ChargeItem/cf-1541623576565",
+    "resource": {
+      "resourceType": "ChargeItem",
+      "id": "cf-1541623576565",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-07T21:34:44.166+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"mm\"></a></div>"
+      },
+      "identifier": {
+        "value": "CI_TKP1_66eff058be"
+      },
+      "status": "billable",
+      "code": {
+        "coding": [ {
+          "system": "http://fhir.de/ValueSet/kbv/ebm",
+          "code": "32120"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/415133"
+      },
+      "context": {
+        "reference": "Encounter/cf-1541623564744"
+      },
+      "bodysite": [ {
+        "coding": [ {
+          "code": "L"
+        } ]
+      } ],
+      "account": [ {
+        "reference": "Account/cf-1541622429312"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,51 @@
+{
+  "resourceType": "Bundle",
+  "id": "d1602fcd-80ee-47ce-ae05-a18d43091b3a",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:05:22.605+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/RiskAssessment?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=d1602fcd-80ee-47ce-ae05-a18d43091b3a&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/RiskAssessment/04dbab34-ec0b-4284-8d43-e61427b47cd0",
+    "resource": {
+      "resourceType": "RiskAssessment",
+      "id": "04dbab34-ec0b-4284-8d43-e61427b47cd0",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-05T14:23:48.377+00:00"
+      },
+      "status": "final",
+      "subject": {
+        "reference": "Patient/e12b8944-6bf2-438b-ad19-84de4b8a628d"
+      },
+      "basis": [ {
+        "reference": "Patient/e12b8944-6bf2-438b-ad19-84de4b8a628d"
+      }, {
+        "reference": "QuestionnaireResponse/8521e5db-faca-44ce-8ec4-747fb53b15ec"
+      } ],
+      "prediction": [ {
+        "outcome": {
+          "coding": [ {
+            "display": "Hepatitis"
+          } ]
+        },
+        "qualitativeRisk": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/risk-probability",
+            "code": "low"
+          } ]
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

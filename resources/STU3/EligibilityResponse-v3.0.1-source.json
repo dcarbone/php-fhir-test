@@ -1,0 +1,27 @@
+{
+  "resourceType": "Bundle",
+  "id": "c79aa236-1c55-4ef2-af28-e8bff0defa05",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:01:22.147+00:00"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/EligibilityResponse?_count=1&_format=json"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/EligibilityResponse/1689391",
+    "resource": {
+      "resourceType": "EligibilityResponse",
+      "id": "1689391",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-03-21T13:30:44.786+00:00"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

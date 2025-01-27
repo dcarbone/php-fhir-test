@@ -1,0 +1,51 @@
+{
+  "resourceType": "Bundle",
+  "id": "f4419b97-54a9-403c-9ecc-63ee593a3653",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:39:42.603+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/CarePlan?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=f4419b97-54a9-403c-9ecc-63ee593a3653&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/CarePlan/26581",
+    "resource": {
+      "resourceType": "CarePlan",
+      "id": "26581",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-01T12:30:15.773+00:00"
+      },
+      "identifier": [ {
+        "value": "CM0000159"
+      } ],
+      "status": "active",
+      "intent": "plan",
+      "category": [ {
+        "text": "CCM"
+      } ],
+      "title": "active",
+      "subject": {
+        "reference": "Patient/25028"
+      },
+      "period": {
+        "start": "2018-07-13T00:00:00+05:30"
+      },
+      "addresses": [ {
+        "reference": "Condition/26561"
+      }, {
+        "reference": "Condition/26579"
+      }, {
+        "reference": "Condition/26580"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

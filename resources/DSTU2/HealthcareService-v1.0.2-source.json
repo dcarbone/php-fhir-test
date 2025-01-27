@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "27ae741f-c6a8-4dce-b7d9-c670d4c4bfdc",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:17:49.770+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/HealthcareService?_count=5&_format=json"
+  } ]
+}

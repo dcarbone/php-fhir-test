@@ -1,0 +1,58 @@
+{
+  "resourceType": "Bundle",
+  "id": "e0b0106b-a00e-4b7c-b93a-f6422c38f82c",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:03:22.455+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/MedicationRequest?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=e0b0106b-a00e-4b7c-b93a-f6422c38f82c&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/MedicationRequest/28717",
+    "resource": {
+      "resourceType": "MedicationRequest",
+      "id": "28717",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-01T15:23:34.365+00:00"
+      },
+      "identifier": [ {
+        "system": "usual",
+        "value": "d4b5a385-1a70-4595-8e58-19a2de8b49d6"
+      } ],
+      "status": "active",
+      "intent": "order",
+      "category": {
+        "coding": [ {
+          "system": "CategorySystem",
+          "code": "CategoryCode"
+        } ],
+        "text": "CategoryName"
+      },
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "3094-0"
+        } ],
+        "text": "Urea nitrogen in Serum or Plasma"
+      },
+      "subject": {
+        "reference": "Patient/28701"
+      },
+      "authoredOn": "2014-08-21",
+      "requester": {
+        "agent": {
+          "reference": "Practitioner/28702"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

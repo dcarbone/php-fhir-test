@@ -1,0 +1,106 @@
+{
+  "resourceType": "Bundle",
+  "id": "2375d267-cd20-4661-a0bd-1efec985f7d0",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:27:45.449+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/AuditEvent?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=2375d267-cd20-4661-a0bd-1efec985f7d0&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/AuditEvent/99638",
+    "resource": {
+      "resourceType": "AuditEvent",
+      "id": "99638",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-12-13T14:08:12.913+00:00",
+        "source": "#KgNlXXeKkYygFljZ"
+      },
+      "category": [ {
+        "text": "file-deleted"
+      } ],
+      "code": {
+        "text": "file-delete-request"
+      },
+      "action": "D",
+      "severity": "alert",
+      "recorded": "2023-12-13T14:08:12.762313860Z",
+      "outcome": {
+        "detail": [ {
+          "text": "file delete request by 9LxBlfoAiV8krfNdZ0HEURtqlSka@com.uls.avuri.dev.app successfully."
+        } ]
+      },
+      "agent": [ {
+        "role": [ {
+          "text": "[system]"
+        } ],
+        "who": {
+          "identifier": {
+            "value": "d4f651f8-7461-4349-a73f-3f9e569fe1c2"
+          },
+          "display": "9LxBlfoAiV8krfNdZ0HEURtqlSka@com.uls.avuri.dev.app"
+        }
+      } ],
+      "source": {
+        "observer": {
+          "identifier": {
+            "value": "gehc-uls-file-server"
+          },
+          "display": "file-server"
+        }
+      },
+      "entity": [ {
+        "detail": [ {
+          "type": {
+            "text": "fileUid"
+          },
+          "valueString": "0a00022b-8c44-1bc3-818c-6381a9bb028a"
+        }, {
+          "type": {
+            "text": "tenant"
+          },
+          "valueString": "tenant1"
+        }, {
+          "type": {
+            "text": "category"
+          },
+          "valueString": "Configurations"
+        }, {
+          "type": {
+            "text": "key"
+          },
+          "valueString": "TFM-DEV/Configurations/2023/12/13/Asset_EHS File10_2023-12-13T14:08:10.zip"
+        }, {
+          "type": {
+            "text": "path"
+          },
+          "valueString": "TFM-DEV/Configurations/2023/12/13"
+        }, {
+          "type": {
+            "text": "metadata"
+          },
+          "valueString": "{type=asset-configuration, fileExt=zip, fileSize=1MB}"
+        }, {
+          "type": {
+            "text": "createdTimestamp"
+          },
+          "valueString": "1.70247649132452E9"
+        }, {
+          "type": {
+            "text": "updatedTimestamp"
+          },
+          "valueString": "1.702476491324529E9"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

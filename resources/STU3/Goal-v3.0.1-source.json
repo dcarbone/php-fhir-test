@@ -1,0 +1,55 @@
+{
+  "resourceType": "Bundle",
+  "id": "d4c25e85-d729-4633-8cd5-a90578600762",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:02:02.146+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Goal?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=d4c25e85-d729-4633-8cd5-a90578600762&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Goal/26557",
+    "resource": {
+      "resourceType": "Goal",
+      "id": "26557",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-01T12:30:15.773+00:00"
+      },
+      "identifier": [ {
+        "value": "67aba535-4c29-45ee-a093-5713f3ee805d"
+      } ],
+      "status": "accepted",
+      "category": [ {
+        "coding": [ {
+          "display": "User interaction"
+        } ],
+        "text": "Intervention"
+      } ],
+      "description": {
+        "text": "Care Manager will review with member/caregiver/family the various diagnoses and what it means to be impacted by comorbidity"
+      },
+      "subject": {
+        "reference": "Patient/25028"
+      },
+      "target": {
+        "dueDate": "2018-09-16"
+      },
+      "statusDate": "2018-09-16",
+      "addresses": [ {
+        "display": "Comorbid Conditions"
+      } ],
+      "note": [ {
+        "text": "The member/caregiver/family understands the significance of having more than one health condition"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,73 @@
+{
+  "resourceType": "Bundle",
+  "id": "c2de56d7-c91a-44eb-aed7-61b3e171d145",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:05:46.601+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Specimen?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=c2de56d7-c91a-44eb-aed7-61b3e171d145&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Specimen/15556",
+    "resource": {
+      "resourceType": "Specimen",
+      "id": "15556",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-09-30T18:24:45.437+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <pre>a buccal swab from 001-246802468 </pre>\n                    </div>"
+      },
+      "identifier": [ {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+          "valueString": "sample id=246802468 center-code=001"
+        } ],
+        "value": "001^246802468"
+      } ],
+      "type": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "258564008",
+          "display": "Buccal smear sample"
+        } ]
+      },
+      "subject": {
+        "identifier": {
+          "extension": [ {
+            "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+            "valueString": "sample id=246802468 center-code=001"
+          } ],
+          "value": "001^246802468"
+        }
+      },
+      "collection": {
+        "method": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/v2/0488",
+            "code": "SWA",
+            "display": "Swab"
+          } ]
+        },
+        "bodySite": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "261063000",
+            "display": "Buccal space"
+          } ],
+          "text": "Buccal space"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

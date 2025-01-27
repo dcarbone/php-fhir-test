@@ -1,0 +1,29 @@
+{
+  "resourceType": "Bundle",
+  "id": "93db0dcb-aa11-4b5c-b53e-808686029e04",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:04:18.453+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Person?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=93db0dcb-aa11-4b5c-b53e-808686029e04&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Person/207256",
+    "resource": {
+      "resourceType": "Person",
+      "id": "207256",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-12T20:07:48.356+00:00"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

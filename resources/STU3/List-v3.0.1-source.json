@@ -1,0 +1,98 @@
+{
+  "resourceType": "Bundle",
+  "id": "adc53a3a-3bc3-48ab-b584-8aeba0c5a273",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:02:54.454+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/List?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=adc53a3a-3bc3-48ab-b584-8aeba0c5a273&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/List/22697",
+    "resource": {
+      "resourceType": "List",
+      "id": "22697",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-01T06:53:30.473+00:00"
+      },
+      "status": "current",
+      "mode": "snapshot",
+      "title": "Problems List",
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/list-example-use-codes",
+          "code": "problems"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/22693"
+      },
+      "date": "2018-10-01T07:53:28+01:00",
+      "entry": [ {
+        "date": "2018-10-01T07:53:28+01:00",
+        "item": {
+          "reference": "Condition/22698"
+        }
+      }, {
+        "date": "2018-10-01T07:53:28+01:00",
+        "item": {
+          "reference": "Condition/22699"
+        }
+      }, {
+        "date": "2018-10-01T07:53:28+01:00",
+        "item": {
+          "reference": "Condition/22700"
+        }
+      }, {
+        "date": "2018-10-01T07:53:28+01:00",
+        "item": {
+          "reference": "Condition/22701"
+        }
+      }, {
+        "date": "2018-10-01T07:53:28+01:00",
+        "item": {
+          "reference": "Condition/22702"
+        }
+      }, {
+        "date": "2018-10-01T07:53:28+01:00",
+        "item": {
+          "reference": "Condition/22703"
+        }
+      }, {
+        "date": "2018-10-01T07:53:28+01:00",
+        "item": {
+          "reference": "Condition/22704"
+        }
+      }, {
+        "date": "2018-10-01T07:53:28+01:00",
+        "item": {
+          "reference": "Condition/22705"
+        }
+      }, {
+        "date": "2018-10-01T07:53:28+01:00",
+        "item": {
+          "reference": "Condition/22706"
+        }
+      }, {
+        "date": "2018-10-01T07:53:28+01:00",
+        "item": {
+          "reference": "Condition/22707"
+        }
+      }, {
+        "date": "2018-10-01T07:53:28+01:00",
+        "item": {
+          "reference": "Condition/22708"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

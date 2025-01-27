@@ -1,0 +1,250 @@
+{
+  "resourceType": "Bundle",
+  "id": "1dcd7c0f-bcda-4007-b6b7-4c3e04d09b2a",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:16:37.768+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/DocumentReference?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=1dcd7c0f-bcda-4007-b6b7-4c3e04d09b2a&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DocumentReference/164845",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "164845",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-20T10:56:16.566+00:00"
+      },
+      "status": "current",
+      "description": "test Doc",
+      "content": [ {
+        "attachment": {
+          "url": "http://www.w3.org/TR/grddl-primer/hl7-sample.xml"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DocumentReference/165175",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "165175",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-23T07:25:46.392+00:00"
+      },
+      "status": "current",
+      "description": "test Doc schön!",
+      "content": [ {
+        "attachment": {
+          "url": "http://www.w3.org/TR/grddl-primer/hl7-sample.xml"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DocumentReference/165501",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "165501",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-26T10:11:43.863+00:00"
+      },
+      "status": "current",
+      "description": "test Doc schön!",
+      "content": [ {
+        "attachment": {
+          "url": "http://www.w3.org/TR/grddl-primer/hl7-sample.xml"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DocumentReference/165942",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "165942",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-13T23:35:28.295+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
+      },
+      "masterIdentifier": {
+        "system": "https://www.liquid-technologies.com",
+        "value": "12345"
+      },
+      "identifier": [ {
+        "system": "https://www.liquid-technologies.com",
+        "value": "1"
+      }, {
+        "use": "usual",
+        "system": "https://www.liquid-technologies.com",
+        "value": "2"
+      } ],
+      "type": {
+        "text": "string"
+      },
+      "class": {
+        "coding": [ {
+          "system": "http://ihe.net/xds/connectathon/classCodes",
+          "code": "History and Physical",
+          "display": "History and Physical"
+        } ]
+      },
+      "author": [ {
+        "reference": "Practitioner/209"
+      } ],
+      "custodian": {
+        "display": "Practitioner/209"
+      },
+      "authenticator": {
+        "reference": "Practitioner/209"
+      },
+      "created": "2064",
+      "indexed": "2013-07-01T23:11:33+10:00",
+      "status": "current",
+      "docStatus": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/composition-status",
+          "code": "final"
+        } ]
+      },
+      "relatesTo": [ {
+        "code": "appends",
+        "target": {
+          "reference": "DocumentReference/164843"
+        }
+      } ],
+      "description": "string",
+      "securityLabel": [ {
+        "text": "string"
+      }, {
+        "text": "string"
+      }, {
+        "text": "string"
+      } ],
+      "content": [ {
+        "attachment": {
+          "data": "YTM0NZomIzI2OTsmIzM0NTueYQ=="
+        }
+      } ],
+      "context": {
+        "facilityType": {
+          "text": "string2"
+        },
+        "practiceSetting": {
+          "text": "string"
+        },
+        "sourcePatientInfo": {
+          "display": "string"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DocumentReference/165950",
+    "resource": {
+      "resourceType": "DocumentReference",
+      "id": "165950",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-14T17:36:51.649+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"></div>"
+      },
+      "masterIdentifier": {
+        "system": "https://www.liquid-technologies.com",
+        "value": "12345"
+      },
+      "identifier": [ {
+        "system": "https://www.liquid-technologies.com",
+        "value": "1"
+      }, {
+        "use": "usual",
+        "system": "https://www.liquid-technologies.com",
+        "value": "2"
+      } ],
+      "type": {
+        "text": "string"
+      },
+      "class": {
+        "coding": [ {
+          "system": "http://ihe.net/xds/connectathon/classCodes",
+          "code": "History and Physical",
+          "display": "History and Physical"
+        } ]
+      },
+      "author": [ {
+        "reference": "Practitioner/209"
+      } ],
+      "custodian": {
+        "display": "Practitioner/209"
+      },
+      "authenticator": {
+        "reference": "Practitioner/209"
+      },
+      "created": "2064",
+      "indexed": "2013-07-01T23:11:33+10:00",
+      "status": "current",
+      "docStatus": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/composition-status",
+          "code": "final"
+        } ]
+      },
+      "relatesTo": [ {
+        "code": "appends",
+        "target": {
+          "reference": "DocumentReference/164843"
+        }
+      } ],
+      "description": "string",
+      "securityLabel": [ {
+        "text": "string"
+      }, {
+        "text": "string"
+      }, {
+        "text": "string"
+      } ],
+      "content": [ {
+        "attachment": {
+          "data": "YTM0NZomIzI2OTsmIzM0NTueYQ=="
+        }
+      } ],
+      "context": {
+        "facilityType": {
+          "text": "string2"
+        },
+        "practiceSetting": {
+          "text": "string"
+        },
+        "sourcePatientInfo": {
+          "display": "string"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

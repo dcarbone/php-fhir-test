@@ -1,0 +1,146 @@
+{
+  "resourceType": "Bundle",
+  "id": "85cb76dd-a8ea-454c-b276-8adf6d496ff4",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:18:19.772+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/ImplementationGuide?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=85cb76dd-a8ea-454c-b276-8adf6d496ff4&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ImplementationGuide/Test2",
+    "resource": {
+      "resourceType": "ImplementationGuide",
+      "id": "Test2",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2018-10-13T20:27:18.133+00:00"
+      },
+      "extension": [ {
+        "url": "http://clinfhir.com/fhir/StructureDefinition/cfAuthor",
+        "valueBoolean": true
+      } ],
+      "url": "http://fhir.org/guides/argonaut/StructureDefinition/argo-allergyintolerance",
+      "name": "Test2",
+      "status": "draft",
+      "package": [ {
+        "name": "complete"
+      } ],
+      "page": {
+        "kind": "page"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ImplementationGuide/Test",
+    "resource": {
+      "resourceType": "ImplementationGuide",
+      "id": "Test",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2018-10-30T10:57:33.531+00:00"
+      },
+      "extension": [ {
+        "url": "http://clinfhir.com/fhir/StructureDefinition/cfAuthor",
+        "valueBoolean": true
+      } ],
+      "url": "http://fhir.org/guides/argonaut/StructureDefinition/argo-allergyintolerance",
+      "name": "Test",
+      "status": "draft",
+      "package": [ {
+        "name": "complete"
+      } ],
+      "page": {
+        "kind": "page"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ImplementationGuide/test3",
+    "resource": {
+      "resourceType": "ImplementationGuide",
+      "id": "test3",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-31T00:29:23.114+00:00"
+      },
+      "extension": [ {
+        "url": "http://clinfhir.com/fhir/StructureDefinition/cfAuthor",
+        "valueBoolean": true
+      } ],
+      "url": "http://fhirtest.uhn.ca/baseDstu2/ImplementationGuide/test3",
+      "name": "test3",
+      "status": "draft",
+      "package": [ {
+        "name": "complete"
+      } ],
+      "page": {
+        "kind": "page"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ImplementationGuide/l",
+    "resource": {
+      "resourceType": "ImplementationGuide",
+      "id": "l",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-31T19:42:27.743+00:00"
+      },
+      "extension": [ {
+        "url": "http://clinfhir.com/fhir/StructureDefinition/cfAuthor",
+        "valueBoolean": true
+      } ],
+      "url": "http://fhirtest.uhn.ca/baseDstu2/ImplementationGuide/l",
+      "name": "l",
+      "status": "draft",
+      "package": [ {
+        "name": "complete"
+      } ],
+      "page": {
+        "kind": "page"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ImplementationGuide/werwrtw",
+    "resource": {
+      "resourceType": "ImplementationGuide",
+      "id": "werwrtw",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2018-11-02T00:53:02.571+00:00"
+      },
+      "extension": [ {
+        "url": "http://clinfhir.com/fhir/StructureDefinition/cfAuthor",
+        "valueBoolean": true
+      } ],
+      "url": "http://fhirtest.uhn.ca/baseDstu2/ImplementationGuide/argonaut",
+      "name": "werwrtw",
+      "status": "draft",
+      "package": [ {
+        "name": "complete"
+      } ],
+      "page": {
+        "kind": "page"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

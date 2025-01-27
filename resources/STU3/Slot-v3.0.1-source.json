@@ -1,0 +1,44 @@
+{
+  "resourceType": "Bundle",
+  "id": "0a4934b0-2982-4fb2-9ec1-3159a7498e5d",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:05:42.602+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Slot?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=0a4934b0-2982-4fb2-9ec1-3159a7498e5d&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Slot/24751",
+    "resource": {
+      "resourceType": "Slot",
+      "id": "24751",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-01T10:06:59.323+00:00",
+        "profile": [ "http://fhir.nhs.uk/DSTU3/StructureDefinition/UEC-PoC-Slot-1" ]
+      },
+      "serviceCategory": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/service-category",
+          "code": "10",
+          "display": "Dental"
+        } ],
+        "text": "Emergency Dental Service"
+      },
+      "schedule": {
+        "reference": "Schedule/24338"
+      },
+      "status": "free",
+      "start": "2018-10-02T09:45:01+00:00",
+      "end": "2018-10-02T10:00:00+00:00"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

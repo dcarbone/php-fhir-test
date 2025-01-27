@@ -1,0 +1,187 @@
+{
+  "resourceType": "Bundle",
+  "id": "47072359-fb04-437f-8328-06774dc9c01f",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:13:49.770+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/AllergyIntolerance?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=47072359-fb04-437f-8328-06774dc9c01f&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/AllergyIntolerance/1503",
+    "resource": {
+      "resourceType": "AllergyIntolerance",
+      "id": "1503",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-15T21:19:01.469+00:00"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/AllergyIntolerance/1711",
+    "resource": {
+      "resourceType": "AllergyIntolerance",
+      "id": "1711",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-16T23:42:11.753+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ibuprofen causes urticaria</div>"
+      },
+      "recorder": {
+        "reference": "Practitioner/209"
+      },
+      "patient": {
+        "reference": "Patient/1635"
+      },
+      "type": "allergy",
+      "reaction": [ {
+        "manifestation": [ {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "126485001",
+            "display": "Urticaria"
+          } ]
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/AllergyIntolerance/1712",
+    "resource": {
+      "resourceType": "AllergyIntolerance",
+      "id": "1712",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-16T23:42:11.753+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">eggs causes hives</div>"
+      },
+      "recorder": {
+        "reference": "Practitioner/858"
+      },
+      "patient": {
+        "reference": "Patient/1635"
+      },
+      "type": "allergy",
+      "category": "food",
+      "reaction": [ {
+        "manifestation": [ {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "247472004",
+            "display": "Hives"
+          } ]
+        }, {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "422587007",
+            "display": "Nausea"
+          } ]
+        }, {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "422400008",
+            "display": "Vomiting"
+          } ]
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/AllergyIntolerance/1804",
+    "resource": {
+      "resourceType": "AllergyIntolerance",
+      "id": "1804",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-18T21:05:53.219+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Ibuprofen causes urticaria</div>"
+      },
+      "recorder": {
+        "reference": "Practitioner/209"
+      },
+      "patient": {
+        "reference": "Patient/1728"
+      },
+      "type": "allergy",
+      "reaction": [ {
+        "manifestation": [ {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "126485001",
+            "display": "Urticaria"
+          } ]
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/AllergyIntolerance/1805",
+    "resource": {
+      "resourceType": "AllergyIntolerance",
+      "id": "1805",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-18T21:05:53.219+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">eggs causes hives</div>"
+      },
+      "recorder": {
+        "reference": "Practitioner/209"
+      },
+      "patient": {
+        "reference": "Patient/1728"
+      },
+      "type": "allergy",
+      "category": "food",
+      "reaction": [ {
+        "manifestation": [ {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "247472004",
+            "display": "Hives"
+          } ]
+        }, {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "422587007",
+            "display": "Nausea"
+          } ]
+        }, {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "422400008",
+            "display": "Vomiting"
+          } ]
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

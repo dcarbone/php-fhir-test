@@ -1,0 +1,1296 @@
+{
+  "resourceType": "Bundle",
+  "id": "8fcbedcd-92bb-42b8-86a7-00dc6a870836",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:17:43.772+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/Group?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=8fcbedcd-92bb-42b8-86a7-00dc6a870836&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Group/214766",
+    "resource": {
+      "resourceType": "Group",
+      "id": "214766",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-12-16T16:55:08.287+00:00",
+        "security": [ {
+          "system": "http://flatiron.com/interopio-user-management-id",
+          "code": "account/env/gateway"
+        } ]
+      },
+      "type": "person",
+      "actual": false,
+      "name": "FA_NSC1: Crizotinib PO(250 BID) D1-28 Q28D - Criteria 1",
+      "characteristic": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Disease"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Non-Small Cell Lung Cancer"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Setting"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Metastatic"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Histopathology"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Adenocarcinoma (with mixed subtypes)"
+          }, {
+            "system": "http://flatiron.com",
+            "code": "Large cell carcinoma"
+          }, {
+            "system": "http://flatiron.com",
+            "code": "Squamous cell carcinoma"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Line of Therapy"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "First Line"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "pT"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "pT1a"
+          } ]
+        },
+        "exclude": false
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Group/214767",
+    "resource": {
+      "resourceType": "Group",
+      "id": "214767",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-12-16T16:55:35.323+00:00",
+        "security": [ {
+          "system": "http://flatiron.com/interopio-user-management-id",
+          "code": "account/env/gateway"
+        } ]
+      },
+      "type": "person",
+      "actual": false,
+      "name": "FA_NSC1: Crizotinib PO(250 BID) D1-28 Q28D - Criteria 1",
+      "characteristic": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Setting"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Metastatic"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Histopathology"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Adenocarcinoma (with mixed subtypes)"
+          }, {
+            "system": "http://flatiron.com",
+            "code": "Large cell carcinoma"
+          }, {
+            "system": "http://flatiron.com",
+            "code": "Squamous cell carcinoma"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Line of Therapy"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "First Line"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "pT"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Group/214768",
+    "resource": {
+      "resourceType": "Group",
+      "id": "214768",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-12-16T17:05:51.255+00:00",
+        "security": [ {
+          "system": "http://flatiron.com/interopio-user-management-id",
+          "code": "account/env/gateway"
+        } ]
+      },
+      "type": "person",
+      "actual": false,
+      "name": "FA_NSC1: Crizotinib PO(250 BID) D1-28 Q28D - Criteria 1",
+      "characteristic": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Setting"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Metastatic"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Histopathology"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Adenocarcinoma (with mixed subtypes)"
+          }, {
+            "system": "http://flatiron.com",
+            "code": "Large cell carcinoma"
+          }, {
+            "system": "http://flatiron.com",
+            "code": "Squamous cell carcinoma"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Line of Therapy"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "First Line"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "pT"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "wild_card"
+          } ]
+        },
+        "exclude": false
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Group/214769",
+    "resource": {
+      "resourceType": "Group",
+      "id": "214769",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2019-12-16T17:50:48.585+00:00",
+        "security": [ {
+          "system": "http://flatiron.com/interopio-user-management-id",
+          "code": "account/env/gateway"
+        } ]
+      },
+      "type": "person",
+      "actual": false,
+      "name": "FA_NSC1: Crizotinib PO(250 BID) D1-28 Q28D - Criteria 1",
+      "characteristic": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Setting"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Metastatic"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Histopathology"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Adenocarcinoma (with mixed subtypes)"
+          }, {
+            "system": "http://flatiron.com",
+            "code": "Large cell carcinoma"
+          }, {
+            "system": "http://flatiron.com",
+            "code": "Squamous cell carcinoma"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Line of Therapy"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Second Line"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "pT"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "wild_card"
+          } ]
+        },
+        "exclude": false
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Group/disease-100154",
+    "resource": {
+      "resourceType": "Group",
+      "id": "disease-100154",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-03-09T19:14:35.334+00:00"
+      },
+      "type": "person",
+      "actual": false,
+      "code": {
+        "coding": [ {
+          "system": "http://flatiron.com",
+          "code": "disease"
+        } ]
+      },
+      "name": "Non-Small Cell Lung Cancer",
+      "characteristic": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Clinical Stage Group"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "1"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "IA1"
+          }, {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "IA2"
+          }, {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "IA3"
+          }, {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "IB"
+          }, {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "IIA"
+          }, {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "IIB"
+          }, {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "IIIA"
+          }, {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "IIIB"
+          }, {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "IIIC"
+          }, {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "IVA"
+          }, {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "IVB"
+          }, {
+            "system": "http://flatiron.com/clinical-stage-group",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "cT"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "2"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/ct",
+            "code": "cT1a"
+          }, {
+            "system": "http://flatiron.com/ct",
+            "code": "cT1b"
+          }, {
+            "system": "http://flatiron.com/ct",
+            "code": "cT1c"
+          }, {
+            "system": "http://flatiron.com/ct",
+            "code": "cT2a"
+          }, {
+            "system": "http://flatiron.com/ct",
+            "code": "cT2b"
+          }, {
+            "system": "http://flatiron.com/ct",
+            "code": "cT3"
+          }, {
+            "system": "http://flatiron.com/ct",
+            "code": "cT4"
+          }, {
+            "system": "http://flatiron.com/ct",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "cN"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "3"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/cn",
+            "code": "cN0"
+          }, {
+            "system": "http://flatiron.com/cn",
+            "code": "cN1"
+          }, {
+            "system": "http://flatiron.com/cn",
+            "code": "cN2"
+          }, {
+            "system": "http://flatiron.com/cn",
+            "code": "cN3"
+          }, {
+            "system": "http://flatiron.com/cn",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "cM"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "4"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/cm",
+            "code": "cM0"
+          }, {
+            "system": "http://flatiron.com/cm",
+            "code": "cM1a"
+          }, {
+            "system": "http://flatiron.com/cm",
+            "code": "cM1b"
+          }, {
+            "system": "http://flatiron.com/cm",
+            "code": "cM1c"
+          }, {
+            "system": "http://flatiron.com/cm",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Pathologic Stage Group"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "5"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "IA1"
+          }, {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "IA2"
+          }, {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "IA3"
+          }, {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "IB"
+          }, {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "IIA"
+          }, {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "IIB"
+          }, {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "IIIA"
+          }, {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "IIIB"
+          }, {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "IIIC"
+          }, {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "IVA"
+          }, {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "IVB"
+          }, {
+            "system": "http://flatiron.com/pathologic-stage-group",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "pT"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "6"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/pt",
+            "code": "pT1a"
+          }, {
+            "system": "http://flatiron.com/pt",
+            "code": "pT1b"
+          }, {
+            "system": "http://flatiron.com/pt",
+            "code": "pT1c"
+          }, {
+            "system": "http://flatiron.com/pt",
+            "code": "pT2a"
+          }, {
+            "system": "http://flatiron.com/pt",
+            "code": "pT2b"
+          }, {
+            "system": "http://flatiron.com/pt",
+            "code": "pT3"
+          }, {
+            "system": "http://flatiron.com/pt",
+            "code": "pT4"
+          }, {
+            "system": "http://flatiron.com/pt",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "pN"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "7"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/pn",
+            "code": "pN0"
+          }, {
+            "system": "http://flatiron.com/pn",
+            "code": "pN1"
+          }, {
+            "system": "http://flatiron.com/pn",
+            "code": "pN2"
+          }, {
+            "system": "http://flatiron.com/pn",
+            "code": "pN3"
+          }, {
+            "system": "http://flatiron.com/pn",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "pM"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "8"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/pm",
+            "code": "pM1a"
+          }, {
+            "system": "http://flatiron.com/pm",
+            "code": "pM1b"
+          }, {
+            "system": "http://flatiron.com/pm",
+            "code": "pM1c"
+          }, {
+            "system": "http://flatiron.com/pm",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "M"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "9"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/m",
+            "code": "M0"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Treatment Setting"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "10"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/treatment-setting",
+            "code": "Neoadjuvant"
+          }, {
+            "system": "http://flatiron.com/treatment-setting",
+            "code": "Adjuvant"
+          }, {
+            "system": "http://flatiron.com/treatment-setting",
+            "code": "Induction"
+          }, {
+            "system": "http://flatiron.com/treatment-setting",
+            "code": "Definitive"
+          }, {
+            "system": "http://flatiron.com/treatment-setting",
+            "code": "Recurrent"
+          }, {
+            "system": "http://flatiron.com/treatment-setting",
+            "code": "Advanced"
+          }, {
+            "system": "http://flatiron.com/treatment-setting",
+            "code": "Metastatic"
+          }, {
+            "system": "http://flatiron.com/treatment-setting",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Line of Therapy"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "11"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/line-of-therapy",
+            "code": "First Line"
+          }, {
+            "system": "http://flatiron.com/line-of-therapy",
+            "code": "Subsequent"
+          }, {
+            "system": "http://flatiron.com/line-of-therapy",
+            "code": "Continuation"
+          }, {
+            "system": "http://flatiron.com/line-of-therapy",
+            "code": "Maintenance (Continuation)"
+          }, {
+            "system": "http://flatiron.com/line-of-therapy",
+            "code": "Maintenance (Switch)"
+          }, {
+            "system": "http://flatiron.com/line-of-therapy",
+            "code": "Initial"
+          }, {
+            "system": "http://flatiron.com/line-of-therapy",
+            "code": "Maintenance"
+          }, {
+            "system": "http://flatiron.com/line-of-therapy",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Histology"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "12"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/histology",
+            "code": "Adenocarcinoma (with mixed subtypes)"
+          }, {
+            "system": "http://flatiron.com/histology",
+            "code": "Large cell carcinoma"
+          }, {
+            "system": "http://flatiron.com/histology",
+            "code": "Squamous cell carcinoma"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Performance Status"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "13"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/performance-status",
+            "code": "0"
+          }, {
+            "system": "http://flatiron.com/performance-status",
+            "code": "1"
+          }, {
+            "system": "http://flatiron.com/performance-status",
+            "code": "2"
+          }, {
+            "system": "http://flatiron.com/performance-status",
+            "code": "3"
+          }, {
+            "system": "http://flatiron.com/performance-status",
+            "code": "4"
+          }, {
+            "system": "http://flatiron.com/performance-status",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Margin Status"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "14"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/margin-status",
+            "code": "Positive"
+          }, {
+            "system": "http://flatiron.com/margin-status",
+            "code": "Negative"
+          }, {
+            "system": "http://flatiron.com/margin-status",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Resectability"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "15"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/primary-tumor-location",
+            "code": "Yes"
+          }, {
+            "system": "http://flatiron.com/primary-tumor-location",
+            "code": "Possibly"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Primary Tumor Location"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "16"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/",
+            "code": "Superior Sulcus"
+          }, {
+            "system": "http://flatiron.com/",
+            "code": "Chest Wall"
+          }, {
+            "system": "http://flatiron.com/",
+            "code": "Proximal Airway"
+          }, {
+            "system": "http://flatiron.com/",
+            "code": "Mediastinum"
+          }, {
+            "system": "http://flatiron.com/",
+            "code": "Mediastinal Nodes"
+          }, {
+            "system": "http://flatiron.com/",
+            "code": "SVC Obstruction"
+          }, {
+            "system": "http://flatiron.com/",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Sites of Metastases"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "17"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/sites-of-metastases",
+            "code": "Non-Brain"
+          }, {
+            "system": "http://flatiron.com/sites-of-metastases",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Progression"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "18"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/progression",
+            "code": "Yes"
+          }, {
+            "system": "http://flatiron.com/progression",
+            "code": "No"
+          }, {
+            "system": "http://flatiron.com/progression",
+            "code": "asymptomatic disease"
+          }, {
+            "system": "http://flatiron.com/progression",
+            "code": "symptomatic brain lesions"
+          }, {
+            "system": "http://flatiron.com/progression",
+            "code": "isolated symptomatic systemic lesions"
+          }, {
+            "system": "http://flatiron.com/progression",
+            "code": "leptomeningeal disease"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Previous Treatment"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "19"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Response to Previous Treatment"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "20"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/",
+            "code": "Complete Response"
+          }, {
+            "system": "http://flatiron.com/",
+            "code": "Partial Response"
+          }, {
+            "system": "http://flatiron.com/",
+            "code": "Stable Disease With Initial Treatment"
+          }, {
+            "system": "http://flatiron.com/",
+            "code": "Progression"
+          }, {
+            "system": "http://flatiron.com/",
+            "code": "Progressed on a Non-BRAF targeted therapy"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "EGFR Mutation"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "21"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/egfr-mutation",
+            "code": "Positive"
+          }, {
+            "system": "http://flatiron.com/egfr-mutation",
+            "code": "Negative"
+          }, {
+            "system": "http://flatiron.com/egfr-mutation",
+            "code": "Unknown"
+          }, {
+            "system": "http://flatiron.com/egfr-mutation",
+            "code": "Not_Positive"
+          }, {
+            "system": "http://flatiron.com/egfr-mutation",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "T790M Status"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "22"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/t790m-status",
+            "code": "Positive"
+          }, {
+            "system": "http://flatiron.com/t790m-status",
+            "code": "Negative"
+          }, {
+            "system": "http://flatiron.com/t790m-status",
+            "code": "Not_Positive"
+          }, {
+            "system": "http://flatiron.com/t790m-status",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "ALK Rearrangement"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "23"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/alk-rearrangement",
+            "code": "Positive"
+          }, {
+            "system": "http://flatiron.com/alk-rearrangement",
+            "code": "Negative"
+          }, {
+            "system": "http://flatiron.com/alk-rearrangement",
+            "code": "Unknown"
+          }, {
+            "system": "http://flatiron.com/alk-rearrangement",
+            "code": "Not_Positive"
+          }, {
+            "system": "http://flatiron.com/alk-rearrangement",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "ROS1 Rearrangement"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "24"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/ros1-rearrangement",
+            "code": "Positive"
+          }, {
+            "system": "http://flatiron.com/ros1-rearrangement",
+            "code": "Negative"
+          }, {
+            "system": "http://flatiron.com/ros1-rearrangement",
+            "code": "Unknown"
+          }, {
+            "system": "http://flatiron.com/ros1-rearrangement",
+            "code": "Not_Positive"
+          }, {
+            "system": "http://flatiron.com/ros1-rearrangement",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "BRAF Mutation"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "25"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/braf-mutation",
+            "code": "Negative"
+          }, {
+            "system": "http://flatiron.com/braf-mutation",
+            "code": "Unknown"
+          }, {
+            "system": "http://flatiron.com/braf-mutation",
+            "code": "V600E Positive"
+          }, {
+            "system": "http://flatiron.com/braf-mutation",
+            "code": "Not_Positive"
+          }, {
+            "system": "http://flatiron.com/braf-mutation",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "PD-L1 Status"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "26"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/pd-l1-status",
+            "code": "< 1%"
+          }, {
+            "system": "http://flatiron.com/pd-l1-status",
+            "code": ">/= 1%"
+          }, {
+            "system": "http://flatiron.com/pd-l1-status",
+            "code": "Not_Positive"
+          }, {
+            "system": "http://flatiron.com/pd-l1-status",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "MET Alteration"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "27"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/met-alteration",
+            "code": "Positive (MET Amplification or MET exon 14 Skipping)"
+          }, {
+            "system": "http://flatiron.com/met-alteration",
+            "code": "Not_Positive"
+          }, {
+            "system": "http://flatiron.com/met-alteration",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "RET Rearrangement"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "28"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/ret-rearrangement",
+            "code": "Positive"
+          }, {
+            "system": "http://flatiron.com/ret-rearrangement",
+            "code": "Not_Positive"
+          }, {
+            "system": "http://flatiron.com/ret-rearrangement",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "NTRK Gene Fusion"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "29"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/ntrk-gene-fusion",
+            "code": "Positive"
+          }, {
+            "system": "http://flatiron.com/ntrk-gene-fusion",
+            "code": "Not_Positive"
+          }, {
+            "system": "http://flatiron.com/ntrk-gene-fusion",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "TMB Status"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "30"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/tmb-status",
+            "code": "Positive"
+          }, {
+            "system": "http://flatiron.com/tmb-status",
+            "code": "Not_Positive"
+          }, {
+            "system": "http://flatiron.com/tmb-status",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "HER2 Status"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "31"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/her2-status",
+            "code": "Positive"
+          }, {
+            "system": "http://flatiron.com/her2-status",
+            "code": "Not_Positive"
+          }, {
+            "system": "http://flatiron.com/her2-status",
+            "code": "*"
+          } ]
+        },
+        "exclude": false
+      }, {
+        "code": {
+          "coding": [ {
+            "system": "http://flatiron.com",
+            "code": "Other"
+          }, {
+            "system": "http://flatiron.com/search-suggestion-order",
+            "code": "32"
+          } ]
+        },
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://flatiron.com/free-text"
+          } ]
+        },
+        "exclude": false
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

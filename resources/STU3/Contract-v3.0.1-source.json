@@ -1,0 +1,35 @@
+{
+  "resourceType": "Bundle",
+  "id": "528311d7-2115-4e28-a1bf-7c9f98c81197",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:00:30.147+00:00"
+  },
+  "type": "searchset",
+  "total": 5,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Contract?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=528311d7-2115-4e28-a1bf-7c9f98c81197&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Contract/195246",
+    "resource": {
+      "resourceType": "Contract",
+      "id": "195246",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-12T05:35:37.320+00:00"
+      },
+      "action": [ {
+        "coding": [ {
+          "code": "55"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

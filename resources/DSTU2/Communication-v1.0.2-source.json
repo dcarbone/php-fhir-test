@@ -1,0 +1,137 @@
+{
+  "resourceType": "Bundle",
+  "id": "a8631a8a-8eb0-4163-970c-dc058b6b5162",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:14:55.771+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/Communication?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=a8631a8a-8eb0-4163-970c-dc058b6b5162&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Communication/166355",
+    "resource": {
+      "resourceType": "Communication",
+      "id": "166355",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-01-07T10:14:45.398+00:00"
+      },
+      "identifier": [ {
+        "use": "usual"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Communication/175028",
+    "resource": {
+      "resourceType": "Communication",
+      "id": "175028",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2019-06-19T17:24:50.476+00:00"
+      },
+      "identifier": [ {
+        "system": "http://acme.org/mrns",
+        "value": "123435"
+      } ],
+      "status": "in-progress",
+      "reason": [ {
+        "coding": [ {
+          "system": "http://acme.org/mrns",
+          "code": "test",
+          "display": "UpdatedtestDisplay"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Communication/175029",
+    "resource": {
+      "resourceType": "Communication",
+      "id": "175029",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2019-06-19T17:24:51.316+00:00"
+      },
+      "identifier": [ {
+        "system": "http://acme.org/mrns",
+        "value": "123435"
+      } ],
+      "status": "in-progress",
+      "reason": [ {
+        "coding": [ {
+          "system": "http://acme.org/mrns",
+          "code": "test",
+          "display": "UpdatedtestDisplay"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Communication/175031",
+    "resource": {
+      "resourceType": "Communication",
+      "id": "175031",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-06-19T17:24:52.633+00:00"
+      },
+      "identifier": [ {
+        "system": "http://acme.org/mrns",
+        "value": "123431"
+      } ],
+      "status": "completed",
+      "reason": [ {
+        "coding": [ {
+          "system": "http://acme.org/mrns",
+          "code": "test",
+          "display": "testDisplay"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Communication/175032",
+    "resource": {
+      "resourceType": "Communication",
+      "id": "175032",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-06-19T17:24:53.383+00:00"
+      },
+      "recipient": [ {
+        "display": "RecipientDisplay"
+      } ],
+      "medium": [ {
+        "coding": [ {
+          "system": "http://acme.org/mrns",
+          "version": "123431"
+        } ]
+      } ],
+      "reason": [ {
+        "coding": [ {
+          "version": "ReasonVersion",
+          "code": "TestCode",
+          "display": "ReasonDisplay"
+        } ],
+        "text": "SampleReason"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,37 @@
+{
+  "resourceType": "Bundle",
+  "id": "6a4315e6-7b4e-461a-b903-0fffc8cbf9e1",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:39:54.601+00:00"
+  },
+  "type": "searchset",
+  "total": 11,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ClaimResponse?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=6a4315e6-7b4e-461a-b903-0fffc8cbf9e1&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ClaimResponse/cf-1548385054425",
+    "resource": {
+      "resourceType": "ClaimResponse",
+      "id": "cf-1548385054425",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-01-25T13:23:38.061+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Se utiliza para proporcionar los resultados de la adjudicación y / o autorización de un conjunto de productos y servicios relacionados con la atención médica para un paciente contra las coberturas de seguro del paciente (Copago prestación)<a name=\"mm\"></a></div>"
+      },
+      "patient": {
+        "reference": "Patient/cf-1548382427014"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

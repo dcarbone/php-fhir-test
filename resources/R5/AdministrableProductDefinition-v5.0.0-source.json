@@ -1,0 +1,39 @@
+{
+  "resourceType": "Bundle",
+  "id": "edc590d6-2d0d-4906-9658-c170147f19e6",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:27:21.379+00:00"
+  },
+  "type": "searchset",
+  "total": 10,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/AdministrableProductDefinition?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=edc590d6-2d0d-4906-9658-c170147f19e6&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/AdministrableProductDefinition/cfsb1639071846791",
+    "resource": {
+      "resourceType": "AdministrableProductDefinition",
+      "id": "cfsb1639071846791",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2021-12-09T17:45:57.264+00:00",
+        "source": "#BKomnWXnJgyzQEg1"
+      },
+      "routeOfAdministration": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://g.com",
+            "code": "s"
+          } ]
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

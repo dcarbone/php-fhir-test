@@ -1,0 +1,47 @@
+{
+  "resourceType": "Bundle",
+  "id": "03ba3b95-05a9-46f9-9995-ee53d83e5f92",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:29:09.625+00:00"
+  },
+  "type": "searchset",
+  "total": 2,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/EvidenceVariable?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=03ba3b95-05a9-46f9-9995-ee53d83e5f92&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/EvidenceVariable/1121",
+    "resource": {
+      "resourceType": "EvidenceVariable",
+      "id": "1121",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-07-28T16:03:46.434+00:00",
+        "source": "#LvPsbplqtteX5vm9"
+      },
+      "url": "https://gps.health/coka/resources/EvidenceVariable/1",
+      "identifier": [ {
+        "system": "https://gps.health/coka",
+        "value": "1"
+      } ],
+      "name": "Hydroxychloroquine200mgBIDx5d",
+      "status": "active",
+      "date": "2020-07-28",
+      "description": "Oral hydroxychloroquine sulfate 200 mg twice daily for 5 days",
+      "characteristic": [ {
+        "definitionReference": {
+          "reference": "https://gps.health/coka/resources/ActivityDefinition/1",
+          "type": "ActivityDefinition",
+          "display": "Oral hydroxychloroquine sulfate 200 mg twice daily for 5 days"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

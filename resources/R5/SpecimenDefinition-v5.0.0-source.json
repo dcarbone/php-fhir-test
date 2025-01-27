@@ -1,0 +1,55 @@
+{
+  "resourceType": "Bundle",
+  "id": "aed534d1-c911-4651-a569-d81e73f9fc09",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:29:41.827+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/SpecimenDefinition?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=aed534d1-c911-4651-a569-d81e73f9fc09&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/SpecimenDefinition/SpecimenConservationExample",
+    "resource": {
+      "resourceType": "SpecimenDefinition",
+      "id": "SpecimenConservationExample",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2023-08-15T18:01:50.085+00:00",
+        "source": "#ieDBFubKunUceep8",
+        "profile": [ "http://openhie.org/fhir/rwanda-hiv/StructureDefinition/specimen-preservation" ]
+      },
+      "status": "active",
+      "typeTested": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "119361006"
+          } ]
+        },
+        "preference": "preferred",
+        "handling": [ {
+          "temperatureRange": {
+            "low": {
+              "value": -10
+            },
+            "high": {
+              "value": 10
+            }
+          },
+          "maxDuration": {
+            "value": 20
+          },
+          "instruction": "Comments regarding the specimen conservation."
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

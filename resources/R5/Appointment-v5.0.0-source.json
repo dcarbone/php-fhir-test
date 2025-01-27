@@ -1,0 +1,39 @@
+{
+  "resourceType": "Bundle",
+  "id": "73c88484-8625-4c1d-87a7-2ab72919fa0d",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:27:37.382+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/Appointment?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=73c88484-8625-4c1d-87a7-2ab72919fa0d&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/Appointment/3503",
+    "resource": {
+      "resourceType": "Appointment",
+      "id": "3503",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2021-07-27T00:20:20.649+00:00",
+        "source": "#Qz0P45eN4L5bETkX"
+      },
+      "identifier": [ {
+        "system": "http://example.org/sampleappointment-identifier",
+        "value": "123"
+      } ],
+      "status": "proposed",
+      "slot": [ {
+        "reference": "Slot/3502"
+      } ],
+      "created": "2015-12-02"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

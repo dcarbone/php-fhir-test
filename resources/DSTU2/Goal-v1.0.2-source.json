@@ -1,0 +1,106 @@
+{
+  "resourceType": "Bundle",
+  "id": "fe4cccbd-f1ef-4a41-8bed-2cfb86e1e3df",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:17:37.772+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/Goal?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=fe4cccbd-f1ef-4a41-8bed-2cfb86e1e3df&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Goal/655",
+    "resource": {
+      "resourceType": "Goal",
+      "id": "655",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-17T17:49:05.762+00:00"
+      },
+      "description": "Hemoglobin A1c total in Blood < 7.0",
+      "status": "in-progress",
+      "addresses": [ {
+        "reference": "Condition/645"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Goal/656",
+    "resource": {
+      "resourceType": "Goal",
+      "id": "656",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-17T17:49:05.762+00:00"
+      },
+      "description": "Glucose [Mass/volume] in Blood < 108",
+      "status": "in-progress",
+      "addresses": [ {
+        "reference": "Condition/645"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Goal/657",
+    "resource": {
+      "resourceType": "Goal",
+      "id": "657",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-17T17:49:05.762+00:00"
+      },
+      "description": "Maintain blood pressure below 140/90 mmHg",
+      "status": "in-progress",
+      "addresses": [ {
+        "reference": "Condition/645"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Goal/658",
+    "resource": {
+      "resourceType": "Goal",
+      "id": "658",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-17T17:49:05.762+00:00"
+      },
+      "description": "Improve and maintenance of optimal foot health: aim at early detection of peripheral vascular problems and neuropathy presumed due to diabetes; and prevention of diabetic foot ulcer, gangrene",
+      "status": "in-progress",
+      "addresses": [ {
+        "reference": "Condition/645"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Goal/659",
+    "resource": {
+      "resourceType": "Goal",
+      "id": "659",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-17T17:49:05.762+00:00"
+      },
+      "description": "Address patient knowledge deficit on diabetic self-care",
+      "status": "in-progress",
+      "addresses": [ {
+        "reference": "Condition/645"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,143 @@
+{
+  "resourceType": "Bundle",
+  "id": "af0113d9-0ece-4d4c-9bc9-986852e41479",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:20:31.772+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/Practitioner?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=af0113d9-0ece-4d4c-9bc9-986852e41479&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Practitioner/clinFhirHhcFkJYwOpV3RnTBuS0DxKKG2sL2",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "clinFhirHhcFkJYwOpV3RnTBuS0DxKKG2sL2",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-03T15:02:57.727+00:00"
+      },
+      "identifier": [ {
+        "system": "http://clinfhir.com/fhir/NamingSystem/practitioner",
+        "value": "HhcFkJYwOpV3RnTBuS0DxKKG2sL2"
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "healthcareinterop@gmail.com"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Practitioner/clinFhirtPQj8XzEyQakmSDuAC1xnUOkZU43",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "clinFhirtPQj8XzEyQakmSDuAC1xnUOkZU43",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-04T19:37:49.331+00:00"
+      },
+      "identifier": [ {
+        "system": "http://clinfhir.com/fhir/NamingSystem/practitioner",
+        "value": "tPQj8XzEyQakmSDuAC1xnUOkZU43"
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "m.van.der.zel@umcg.nl"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Practitioner/209",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "209",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-06T23:11:44.327+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dr Annette Jones</div>"
+      },
+      "identifier": [ {
+        "system": "http://fhir.hl7.org.nz/identifier",
+        "value": "aj"
+      } ],
+      "name": {
+        "text": "Dr Annette Jones"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Practitioner/clinFhirWGmetv95wmhIT6KBUPeyuMtJ67D2",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "clinFhirWGmetv95wmhIT6KBUPeyuMtJ67D2",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-06T23:13:54.405+00:00"
+      },
+      "identifier": [ {
+        "system": "http://clinfhir.com/fhir/NamingSystem/practitioner",
+        "value": "WGmetv95wmhIT6KBUPeyuMtJ67D2"
+      } ],
+      "telecom": [ {
+        "system": "email",
+        "value": "miscaminatas@gmail.com"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Practitioner/Pract343819",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "Pract343819",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2018-10-10T11:44:30.424+00:00"
+      },
+      "identifier": [ {
+        "use": "official",
+        "system": "http://www.invivocorp.com/fhir/PractitionerIdentifier",
+        "value": "343819"
+      } ],
+      "name": {
+        "family": [ "OGPT" ],
+        "given": [ "BERRY ROBERT" ]
+      },
+      "gender": "unknown",
+      "practitionerRole": [ {
+        "managingOrganization": {
+          "reference": "Organization/OrgMC"
+        },
+        "role": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/practitioner-role",
+            "code": "doctor",
+            "display": "Doctor"
+          } ]
+        }
+      } ],
+      "communication": [ {
+        "coding": [ {
+          "code": "1"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

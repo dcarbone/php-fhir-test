@@ -1,0 +1,735 @@
+{
+  "resourceType": "Bundle",
+  "id": "8c72d620-5d2f-4c51-a579-21faf6843cb6",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:48:35.991+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Claim?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=8c72d620-5d2f-4c51-a579-21faf6843cb6&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Claim/cf-1537927817810",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "cf-1537927817810",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2018-10-25T01:39:21.332+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">all</div>"
+      },
+      "extension": [ {
+        "url": "http://gyfyy.com/fhir/extension/model-per",
+        "valueString": "imfs"
+      } ],
+      "status": "active",
+      "use": "complete",
+      "patient": {
+        "reference": "Patient/cf-1537870488874"
+      },
+      "hospitalization": {
+        "start": "1900-01-01",
+        "_start": {
+          "extension": [ {
+            "url": "http://gyfyy.com/fhir/extension/model-eval",
+            "valueString": "$:VISIT_DATE"
+          } ]
+        },
+        "end": "1900-01-01",
+        "_end": {
+          "extension": [ {
+            "url": "http://gyfyy.com/fhir/extension/model-eval",
+            "valueString": "$:D_TIME"
+          } ]
+        }
+      },
+      "item": [ {
+        "sequence": 1,
+        "service": {
+          "coding": [ {
+            "system": "http://gyfyy.com/fhir/claim-code",
+            "code": "comprehensive-medical-services",
+            "display": "Comprehensive medical services"
+          } ],
+          "text": "综合医疗服务类"
+        },
+        "encounter": [ {
+          "reference": "Encounter/cf-1537870500173"
+        } ],
+        "detail": [ {
+          "sequence": 1,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "general-medical-service-fee",
+              "display": "General medical service fee"
+            } ],
+            "text": "一般医疗服务费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:SERVICE_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 3,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "general-treatment-cost",
+              "display": "General treatment cost"
+            } ],
+            "text": "一般治疗操作费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:OPRATION_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 3,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "nursing-fee",
+              "display": "nursing fee"
+            } ],
+            "text": "护理费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:NURSING_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 4,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "other-comprehensive-medical-service-fee",
+              "display": "other comprehensive medical service fee"
+            } ],
+            "text": "其他综合医疗服务费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:ELSE_SERVICE_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        } ]
+      }, {
+        "sequence": 2,
+        "service": {
+          "coding": [ {
+            "system": "http://gyfyy.com/fhir/claim-code",
+            "code": "diagnosis-of-class",
+            "display": "Diagnosis of class"
+          } ],
+          "text": "诊断类"
+        },
+        "encounter": [ {
+          "reference": "Encounter/cf-1537870500173"
+        } ],
+        "detail": [ {
+          "sequence": 1,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "pathological-diagnosis-fee",
+              "display": "Pathological diagnosis fee"
+            } ],
+            "text": "病理诊断费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:PATH_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 2,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "laboratory-diagnostics-fee",
+              "display": "Laboratory diagnostics fee"
+            } ],
+            "text": "实验室诊断费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:LAB_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 3,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "imaging-fee",
+              "display": "Imaging fee"
+            } ],
+            "text": "影像诊断费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:IMAGING_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 4,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "clinical-diagnosis-fee",
+              "display": "Clinical diagnosis fee"
+            } ],
+            "text": "临床诊断费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:C_DIA_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        } ]
+      }, {
+        "sequence": 3,
+        "service": {
+          "coding": [ {
+            "system": "http://gyfyy.com/fhir/claim-code",
+            "code": "treatment-of-class",
+            "display": "Treatment of class"
+          } ],
+          "text": "治疗类"
+        },
+        "encounter": [ {
+          "reference": "Encounter/cf-1537870500173"
+        } ],
+        "detail": [ {
+          "sequence": 1,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "non-surgical-treatment-costs",
+              "display": "Non-surgical treatment costs"
+            } ],
+            "text": "非手术治疗项目费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:N_OPERATION_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 2,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "surgical-treatment-fee",
+              "display": "Surgical treatment fee"
+            } ],
+            "text": "手术治疗费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:OPERATION_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        } ]
+      }, {
+        "sequence": 4,
+        "service": {
+          "coding": [ {
+            "system": "http://gyfyy.com/fhir/claim-code",
+            "code": "rehabilitation-class",
+            "display": "Rehabilitation class"
+          } ],
+          "text": "康复类"
+        },
+        "encounter": [ {
+          "reference": "Encounter/cf-1537870500173"
+        } ],
+        "detail": [ {
+          "sequence": 1,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "rehabilitation-fees",
+              "display": "Rehabilitation fees"
+            } ],
+            "text": "康复费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:RECURE_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        } ]
+      }, {
+        "sequence": 5,
+        "service": {
+          "coding": [ {
+            "system": "http://gyfyy.com/fhir/claim-code",
+            "code": "tcm-class",
+            "display": "TCM class"
+          } ],
+          "text": "中医类"
+        },
+        "encounter": [ {
+          "reference": "Encounter/cf-1537870500173"
+        } ],
+        "detail": [ {
+          "sequence": 1,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "tcm-treatment-fee",
+              "display": "TCM treatment fee"
+            } ],
+            "text": "中医治疗"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:TCM_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        } ]
+      }, {
+        "sequence": 6,
+        "service": {
+          "coding": [ {
+            "system": "http://gyfyy.com/fhir/claim-code",
+            "code": "western-medicine-class",
+            "display": "western medicine class"
+          } ],
+          "text": "西药类"
+        },
+        "encounter": [ {
+          "reference": "Encounter/cf-1537870500173"
+        } ],
+        "detail": [ {
+          "sequence": 1,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "western-medication-fee",
+              "display": "western medication fee"
+            } ],
+            "text": "西药费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:DRUG_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 2,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "cost-of-antibiotics",
+              "display": "Cost of antibiotics"
+            } ],
+            "text": "抗菌药物费用"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:ANTIBA_DRUG_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        } ]
+      }, {
+        "sequence": 7,
+        "service": {
+          "coding": [ {
+            "system": "http://gyfyy.com/fhir/claim-code",
+            "code": "traditional-Chinese-medicine-class",
+            "display": "traditional Chinese medicine class"
+          } ],
+          "text": "中药类"
+        },
+        "encounter": [ {
+          "reference": "Encounter/cf-1537870500173"
+        } ],
+        "detail": [ {
+          "sequence": 1,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "chinese-patent-medicine-fee",
+              "display": "Chinese patent medicine fee"
+            } ],
+            "text": "中成药费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:TCM_DRUG_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 2,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "chinese-herbal-medicine-fee",
+              "display": "Chinese herbal medicine fee"
+            } ],
+            "text": "中草药费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:HERBAL_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        } ]
+      }, {
+        "sequence": 8,
+        "service": {
+          "coding": [ {
+            "system": "http://gyfyy.com/fhir/claim-code",
+            "code": "blood-and-blood-products",
+            "display": "Blood and blood products"
+          } ],
+          "text": "血液和血液制品类"
+        },
+        "encounter": [ {
+          "reference": "Encounter/cf-1537870500173"
+        } ],
+        "detail": [ {
+          "sequence": 1,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "blood-fee",
+              "display": "Blood fee"
+            } ],
+            "text": "血费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:BLOOD_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 2,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "albumin-products-cost",
+              "display": "Albumin products cost"
+            } ],
+            "text": "白蛋白类制品费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:ALBUMIN_PRO_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 3,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "globulin-production-costs",
+              "display": "Globulin production costs"
+            } ],
+            "text": "球蛋白类制品费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:GLOBULIN_PRO_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 4,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "coagulation-factor-products-costs",
+              "display": "Coagulation factor products costs"
+            } ],
+            "text": "凝血因子类制品费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:CO_FACTOR_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 5,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "cytokine-products-costs",
+              "display": "Cytokine products costs"
+            } ],
+            "text": "细胞因子类制品费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:CY_FACTOR_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        } ]
+      }, {
+        "sequence": 9,
+        "service": {
+          "coding": [ {
+            "system": "http://gyfyy.com/fhir/claim-code",
+            "code": "material-class",
+            "display": "Material class"
+          } ],
+          "text": "耗材类"
+        },
+        "encounter": [ {
+          "reference": "Encounter/cf-1537870500173"
+        } ],
+        "detail": [ {
+          "sequence": 1,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "check-disposable-medical-materials-costs",
+              "display": "Check disposable medical materials costs"
+            } ],
+            "text": "检查用一次性医用材料费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:CHECK_MATERIAL_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 2,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "treatment-with-disposable-medical-materials-costs",
+              "display": "Treatment with disposable medical materials costs"
+            } ],
+            "text": "治疗用一次性医用材料费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:TREAT_MATERIAL_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        }, {
+          "sequence": 3,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "operation-disposable-medical-materials-costs",
+              "display": "Operation disposable medical materials costs"
+            } ],
+            "text": "手术用一次性医用材料费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:OPRATION_MATERIAL_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        } ]
+      }, {
+        "sequence": 10,
+        "service": {
+          "coding": [ {
+            "system": "http://gyfyy.com/fhir/claim-code",
+            "code": "other-class",
+            "display": "Other class"
+          } ],
+          "text": "其他类"
+        },
+        "encounter": [ {
+          "reference": "Encounter/cf-1537870500173"
+        } ],
+        "detail": [ {
+          "sequence": 1,
+          "service": {
+            "coding": [ {
+              "system": "http://gyfyy.com/fhir/claim-code",
+              "code": "other-fee",
+              "display": "Other fee"
+            } ],
+            "text": "其他费"
+          },
+          "net": {
+            "_value": {
+              "extension": [ {
+                "url": "http://gyfyy.com/fhir/extension/model-eval",
+                "valueString": "$:ELSE_FEE"
+              } ]
+            },
+            "unit": "元",
+            "system": "urn:iso:std:iso:4217",
+            "code": "CNY"
+          }
+        } ]
+      } ],
+      "total": {
+        "_value": {
+          "extension": [ {
+            "url": "http://gyfyy.com/fhir/extension/model-eval",
+            "valueString": "$:TOTAL_COSTS"
+          } ]
+        },
+        "unit": "元",
+        "system": "urn:iso:std:iso:4217",
+        "code": "CNY"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

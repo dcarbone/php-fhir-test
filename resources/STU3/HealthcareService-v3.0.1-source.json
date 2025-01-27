@@ -1,0 +1,34 @@
+{
+  "resourceType": "Bundle",
+  "id": "90a9cd6b-91d2-4761-a221-f4e3cfef577c",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:02:22.455+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/HealthcareService?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=90a9cd6b-91d2-4761-a221-f4e3cfef577c&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/HealthcareService/cf-1540398570721",
+    "resource": {
+      "resourceType": "HealthcareService",
+      "id": "cf-1540398570721",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-24T17:13:06.400+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lota<a name=\"mm\"></a></div>"
+      },
+      "name": "Centro de Salud Familiar Dr. Sergio Lagos (CSLO)"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

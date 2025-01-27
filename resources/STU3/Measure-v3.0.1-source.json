@@ -1,0 +1,33 @@
+{
+  "resourceType": "Bundle",
+  "id": "c8f64e62-401d-4801-902f-2e567b66fd1f",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:03:06.455+00:00"
+  },
+  "type": "searchset",
+  "total": 11,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Measure?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=c8f64e62-401d-4801-902f-2e567b66fd1f&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Measure/1426294",
+    "resource": {
+      "resourceType": "Measure",
+      "id": "1426294",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-02-22T23:24:36.669+00:00"
+      },
+      "name": "ibuprofen_days_oos",
+      "status": "draft",
+      "experimental": true
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

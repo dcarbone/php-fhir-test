@@ -1,0 +1,36 @@
+{
+  "resourceType": "Bundle",
+  "id": "994a6f05-d5e8-40b4-b419-756d91d4689f",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:05:14.488+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ResearchStudy?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=994a6f05-d5e8-40b4-b419-756d91d4689f&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ResearchStudy/cf-1543501419675",
+    "resource": {
+      "resourceType": "ResearchStudy",
+      "id": "cf-1543501419675",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2018-11-29T15:10:19.389+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">.<a name=\"mm\"></a></div>"
+      },
+      "enrollment": [ {
+        "reference": "Group/cf-1543500824079"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

@@ -1,0 +1,71 @@
+{
+  "resourceType": "Bundle",
+  "id": "f7de90d2-334f-4771-9c2a-948651ce0a4b",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:03:14.456+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/MedicationAdministration?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=f7de90d2-334f-4771-9c2a-948651ce0a4b&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/MedicationAdministration/28704",
+    "resource": {
+      "resourceType": "MedicationAdministration",
+      "id": "28704",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-01T15:23:27.090+00:00"
+      },
+      "identifier": [ {
+        "system": "usual",
+        "value": "ce355af4-81d9-4308-b6d2-ec75074db602"
+      } ],
+      "status": "completed",
+      "medicationCodeableConcept": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "387264003"
+        } ],
+        "text": "Diazepam"
+      },
+      "subject": {
+        "reference": "Patient/28701"
+      },
+      "effectivePeriod": {
+        "start": "2013-11-21",
+        "end": "2014-06-18"
+      },
+      "performer": [ {
+        "actor": {
+          "reference": "Practitioner/28702"
+        }
+      } ],
+      "prescription": {
+        "reference": "MedicationRequest/28703"
+      },
+      "dosage": {
+        "route": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "78421000"
+          } ],
+          "text": "Intramuscular route"
+        },
+        "dose": {
+          "value": 5,
+          "unit": "mg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg"
+        }
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

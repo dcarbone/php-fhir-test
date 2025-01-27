@@ -1,0 +1,151 @@
+{
+  "resourceType": "Bundle",
+  "id": "51f421c8-722c-41dc-b632-03065a83e5f2",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:15:49.767+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/DeviceComponent?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=51f421c8-722c-41dc-b632-03065a83e5f2&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DeviceComponent/165843",
+    "resource": {
+      "resourceType": "DeviceComponent",
+      "id": "165843",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-12T15:32:19.170+00:00"
+      },
+      "type": {
+        "coding": [ {
+          "system": "urn:iso:std:iso:11073:10101",
+          "code": "1234",
+          "display": "MDC_BLD_PLUS_RATE"
+        } ]
+      },
+      "identifier": {
+        "system": "http://www.jaeseon.co.kr",
+        "value": "mds001"
+      },
+      "source": {
+        "reference": "Device/165842"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DeviceComponent/165848",
+    "resource": {
+      "resourceType": "DeviceComponent",
+      "id": "165848",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-12T15:37:44.414+00:00"
+      },
+      "type": {
+        "coding": [ {
+          "system": "urn:iso:std:iso:11073:10101",
+          "code": "1234",
+          "display": "MDC_BLD_PLUS_RATE"
+        } ]
+      },
+      "identifier": {
+        "system": "http://www.jaeseon.co.kr",
+        "value": "mds001"
+      },
+      "source": {
+        "reference": "Device/165847"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DeviceComponent/165853",
+    "resource": {
+      "resourceType": "DeviceComponent",
+      "id": "165853",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-12T15:37:47.632+00:00"
+      },
+      "type": {
+        "coding": [ {
+          "system": "urn:iso:std:iso:11073:10101",
+          "code": "1234",
+          "display": "MDC_BLD_PLUS_RATE"
+        } ]
+      },
+      "identifier": {
+        "system": "http://www.jaeseon.co.kr",
+        "value": "mds001"
+      },
+      "source": {
+        "reference": "Device/165852"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DeviceComponent/165858",
+    "resource": {
+      "resourceType": "DeviceComponent",
+      "id": "165858",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-12T15:38:17.139+00:00"
+      },
+      "type": {
+        "coding": [ {
+          "system": "urn:iso:std:iso:11073:10101",
+          "code": "1234",
+          "display": "MDC_BLD_PLUS_RATE"
+        } ]
+      },
+      "identifier": {
+        "system": "http://www.jaeseon.co.kr",
+        "value": "mds001"
+      },
+      "source": {
+        "reference": "Device/165857"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/DeviceComponent/165863",
+    "resource": {
+      "resourceType": "DeviceComponent",
+      "id": "165863",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-12T15:38:19.938+00:00"
+      },
+      "type": {
+        "coding": [ {
+          "system": "urn:iso:std:iso:11073:10101",
+          "code": "1234",
+          "display": "MDC_BLD_PLUS_RATE"
+        } ]
+      },
+      "identifier": {
+        "system": "http://www.jaeseon.co.kr",
+        "value": "mds001"
+      },
+      "source": {
+        "reference": "Device/165862"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

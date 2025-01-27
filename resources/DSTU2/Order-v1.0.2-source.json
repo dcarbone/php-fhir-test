@@ -1,0 +1,101 @@
+{
+  "resourceType": "Bundle",
+  "id": "a5336e6a-e241-435d-bd22-814925210bc7",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:19:55.771+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/Order?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=a5336e6a-e241-435d-bd22-814925210bc7&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Order/165747",
+    "resource": {
+      "resourceType": "Order",
+      "id": "165747",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-07T07:36:12.821+00:00"
+      },
+      "identifier": [ {
+        "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+        "value": "zz12222"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Order/165750",
+    "resource": {
+      "resourceType": "Order",
+      "id": "165750",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-07T07:39:39.276+00:00"
+      },
+      "identifier": [ {
+        "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+        "value": "zz12222"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Order/165753",
+    "resource": {
+      "resourceType": "Order",
+      "id": "165753",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-07T07:40:49.745+00:00"
+      },
+      "identifier": [ {
+        "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+        "value": "zz12222"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Order/165756",
+    "resource": {
+      "resourceType": "Order",
+      "id": "165756",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-07T07:46:47.142+00:00"
+      },
+      "identifier": [ {
+        "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+        "value": "zz12222"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/Order/165759",
+    "resource": {
+      "resourceType": "Order",
+      "id": "165759",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-07T07:48:04.592+00:00"
+      },
+      "identifier": [ {
+        "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+        "value": "zz12222"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

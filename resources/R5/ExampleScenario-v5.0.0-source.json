@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "c25a5c70-2d2b-4b4b-8a1a-ad045959ebec",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:28:17.384+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/ExampleScenario?_count=1&_format=json"
+  } ]
+}

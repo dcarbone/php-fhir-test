@@ -1,0 +1,45 @@
+{
+  "resourceType": "Bundle",
+  "id": "aaa52492-236a-419c-99f5-58811a1b529f",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:04:50.454+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Provenance?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=aaa52492-236a-419c-99f5-58811a1b529f&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Provenance/48828",
+    "resource": {
+      "resourceType": "Provenance",
+      "id": "48828",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-02T23:56:03.336+00:00"
+      },
+      "extension": [ {
+        "url": "http://clinfhir.com/StructureDefinition/scenarioProvenance",
+        "valueString": "CDS 2018"
+      }, {
+        "url": "http://clinfhir.com/StructureDefinition/scenarioNote",
+        "valueString": "test"
+      } ],
+      "target": [ {
+        "reference": "Observation/cf-1538523847525"
+      }, {
+        "reference": "Patient/cf-1538523343622"
+      } ],
+      "recorded": "2018-10-02T23:56:03.171Z",
+      "agent": [ {
+        "whoUri": "http://clinfhir.com"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

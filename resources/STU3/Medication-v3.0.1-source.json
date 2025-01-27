@@ -1,0 +1,96 @@
+{
+  "resourceType": "Bundle",
+  "id": "64825268-8ad5-461e-85b0-b55d166ba5f4",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:03:30.453+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Medication?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=64825268-8ad5-461e-85b0-b55d166ba5f4&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Medication/EXmed0304",
+    "resource": {
+      "resourceType": "Medication",
+      "id": "EXmed0304",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-09-30T16:12:58.012+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                  <p>\n                     <b>Generated Narrative with Details</b>\n                  </p>\n                  <p>\n                     <b>id</b>: med0304\n                  </p>\n                  <p>\n                     <b>contained</b>: \n                  </p>\n                  <p>\n                     <b>code</b>: Myleran 2mg tablet, film coated \n                     <span>(Details : {http://hl7.org/fhir/sid/ndc code '76388-713-25' = '76388-713-25', given as 'Myleran 2mg tablet, film coated'})</span>\n                  </p>\n                  <p>\n                     <b>isBrand</b>: true\n                  </p>\n                  <p>\n                     <b>manufacturer</b>: id: org6; name: Aspen Global Inc\n                  </p>\n                  <p>\n                     <b>form</b>: Film-coated tablet (qualifier value) \n                     <span>(Details : {SNOMED CT code '385057009' = 'Film-coated tablet', given as 'Film-coated tablet (qualifier value)'})</span>\n                  </p>\n                  <h3>Ingredients</h3>\n                  <table>\n                     <tr>\n                        <td>-</td>\n                        <td>\n                           <b>Item[x]</b>\n                        </td>\n                        <td>\n                           <b>Amount</b>\n                        </td>\n                     </tr>\n                     <tr>\n                        <td>*</td>\n                        <td>Busulfan (substance) \n                           <span>(Details : {SNOMED CT code '387138002' = 'Busulphan', given as 'Busulfan (substance)'})</span>\n                        </td>\n                        <td>2 mg\n                           <span> (Details: UCUM code mg = 'mg')</span>/1 Tab\n                           <span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code Tab = 'Tab')</span>\n                        </td>\n                     </tr>\n                  </table>\n                  <blockquote>\n                     <p>\n                        <b>package</b>\n                     </p>\n                     <p>\n                        <b>container</b>: Bottle - unit of product usage (qualifier value) \n                        <span>(Details : {SNOMED CT code '419672006' = 'Bottle', given as 'Bottle - unit of product usage (qualifier value)'})</span>\n                     </p>\n                     <h3>Contents</h3>\n                     <table>\n                        <tr>\n                           <td>-</td>\n                           <td>\n                              <b>Item[x]</b>\n                           </td>\n                           <td>\n                              <b>Amount</b>\n                           </td>\n                        </tr>\n                        <tr>\n                           <td>*</td>\n                           <td>Myleran 2mg tablet, film coated \n                              <span>(Details : {http://hl7.org/fhir/sid/ndc code '76388-713-25' = '76388-713-25', given as 'Myleran 2mg tablet, film coated'})</span>\n                           </td>\n                           <td>25 Tab\n                              <span> (Details: http://hl7.org/fhir/v3/orderableDrugForm code Tab = 'Tab')</span>\n                           </td>\n                        </tr>\n                     </table>\n                     <h3>Batches</h3>\n                     <table>\n                        <tr>\n                           <td>-</td>\n                           <td>\n                              <b>LotNumber</b>\n                           </td>\n                           <td>\n                              <b>ExpirationDate</b>\n                           </td>\n                        </tr>\n                        <tr>\n                           <td>*</td>\n                           <td>9494788</td>\n                           <td>22/05/2017</td>\n                        </tr>\n                     </table>\n                  </blockquote>\n               </div>"
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/ndc",
+          "code": "76388-713-25",
+          "display": "Myleran 2mg tablet, film coated"
+        } ]
+      },
+      "isBrand": true,
+      "form": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "385057009",
+          "display": "Film-coated tablet (qualifier value)"
+        } ]
+      },
+      "ingredient": [ {
+        "itemCodeableConcept": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "387138002",
+            "display": "Busulfan (substance)"
+          } ]
+        },
+        "amount": {
+          "numerator": {
+            "value": 2,
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          },
+          "denominator": {
+            "value": 1,
+            "system": "http://hl7.org/fhir/v3/orderableDrugForm",
+            "code": "Tab"
+          }
+        }
+      } ],
+      "package": {
+        "container": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "419672006",
+            "display": "Bottle - unit of product usage (qualifier value)"
+          } ]
+        },
+        "content": [ {
+          "itemCodeableConcept": {
+            "coding": [ {
+              "system": "http://hl7.org/fhir/sid/ndc",
+              "code": "76388-713-25",
+              "display": "Myleran 2mg tablet, film coated"
+            } ]
+          },
+          "amount": {
+            "value": 25,
+            "system": "http://hl7.org/fhir/v3/orderableDrugForm",
+            "code": "Tab"
+          }
+        } ],
+        "batch": [ {
+          "lotNumber": "9494788",
+          "expirationDate": "2017-05-22"
+        } ]
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

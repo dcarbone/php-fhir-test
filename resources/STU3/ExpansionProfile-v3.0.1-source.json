@@ -1,0 +1,38 @@
+{
+  "resourceType": "Bundle",
+  "id": "626da10f-01f9-4516-9427-7f1b89c0ef86",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:01:46.149+00:00"
+  },
+  "type": "searchset",
+  "total": 2,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ExpansionProfile?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=626da10f-01f9-4516-9427-7f1b89c0ef86&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ExpansionProfile/2843318",
+    "resource": {
+      "resourceType": "ExpansionProfile",
+      "id": "2843318",
+      "meta": {
+        "extension": [ {
+          "url": "http://hapifhir.io/fhir/StructureDefinition/resource-meta-source",
+          "valueUri": "#UhZ8xAXLttHmnh5P"
+        } ],
+        "versionId": "2",
+        "lastUpdated": "2023-11-29T10:51:10.051+00:00"
+      },
+      "status": "draft",
+      "contact": [ {
+        "name": "FHIR project team"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

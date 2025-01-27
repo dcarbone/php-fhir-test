@@ -1,0 +1,55 @@
+{
+  "resourceType": "Bundle",
+  "id": "02c44230-7e37-4640-a7e4-b7ad7e8302b2",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:01:54.145+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/FamilyMemberHistory?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=02c44230-7e37-4640-a7e4-b7ad7e8302b2&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/FamilyMemberHistory/28723",
+    "resource": {
+      "resourceType": "FamilyMemberHistory",
+      "id": "28723",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-01T15:23:37.208+00:00"
+      },
+      "identifier": [ {
+        "system": "usual",
+        "value": "d261b986-5af4-4819-8cf2-24a0447ec184"
+      } ],
+      "status": "completed",
+      "patient": {
+        "reference": "Patient/28701"
+      },
+      "date": "2017-04-13",
+      "relationship": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/v3/RoleCode",
+          "code": "NSIS"
+        } ],
+        "text": "natural sister"
+      },
+      "gender": "female",
+      "condition": [ {
+        "code": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/sid/icd-10",
+            "code": "E10"
+          } ],
+          "text": "Type 1 diabetes mellitus"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

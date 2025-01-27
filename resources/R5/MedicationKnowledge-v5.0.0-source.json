@@ -1,0 +1,1400 @@
+{
+  "resourceType": "Bundle",
+  "id": "b187aab4-8a8f-46d3-8279-17e630e54246",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:29:21.625+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/MedicationKnowledge?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseR5?_getpages=b187aab4-8a8f-46d3-8279-17e630e54246&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseR5/MedicationKnowledge/UCD3400890020930",
+    "resource": {
+      "resourceType": "MedicationKnowledge",
+      "id": "UCD3400890020930",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2020-12-11T06:15:46.919+00:00",
+        "source": "#MJkshUACWfIS9E5Q",
+        "profile": [ "http://phast.fr/fhir/StructureDefinition/Resource/Pharmacy/SIPhMedicationKnowledgeR5" ]
+      },
+      "language": "fr-FR",
+      "text": {
+        "status": "generated",
+        "div": "<div xml:lang=\"fr-FR\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"fr-FR\"><p><b>Generated Narrative</b></p><p><b>id</b> : 3400890020930</p><p><b>meta.versionId</b> : 1.2-20191015145331</p><p><b>meta.lastUpdated</b> : 11/12/2020 07:10:49 +01:00</p><p><b>meta.profile</b> : http://phast.fr/fhir/StructureDefinition/Resource/Pharmacy/SIPhMedicationKnowledgeR5</p><p><b>language</b> : fr-FR</p><p>-</p><p><b>Code U.C.D.</b> : 3400890020930</p><p><b>Libellé</b> : ALDACTAZINE, cpr séc</p><p><b>LSDC</b> : SPIRONOLACTONE+ALTIZIDE 25 mg+15 mg (ALDACTAZINE), cpr séc</p><p>-</p><p><b>Code CIS</b> : 69724251</p><p><b>Libellé ANSM</b> : ALDACTAZINE 25 mg/15 mg, comprimé sécable</p><p><b>Composant</b> : ALTIZIDE (DCI)</p><p><b>Composant</b> : SPIRONOLACTONE (DCI) - [SNOMED CT] 387078006|Spironolactone (substance)| - 25 milligramme</p><p><b>Excipient à effets notoires</b> : LACTOSE</p><p><b>Forme</b> : Comprimé - [SNOMED CT] 385055001|Tablet dose form (qualifier value)| - [EDQM] 10219000|Comprimé|</p><p><b>Fractionnable</b> : En 2 équidoses</p><p><b>Voie d'administration</b> : Voie orale - [EDQM] 20053000|Voie orale|</p><p><b>Volume / Quantité Référence</b> : 1 comprimé</p><p><b>Présentation</b> : comprimé</p><p><b>Titulaire d'AMM</b> : PFIZER</p><p>-</p><p><b>ATC</b> : C03EA04 ALTIZIDE ET EPARGNEURS POTASSIQUES</p><p><table><caption><b>Hiérarchie</b></caption><tbody><tr><td>C</td><td>SYSTEME CARDIOVASCULAIRE</td></tr><tr><td>C03</td><td>DIURETIQUES</td></tr><tr><td>C03E</td><td>DIURETIQUES ET EPARGNEURS POTASSIQUES EN ASSOCIATION</td></tr><tr><td>C03EA</td><td>DIURETIQUES LOW-CEILING ET EPARGNEURS POTASSIQUES</td></tr><tr><td>C03EA04</td><td>ALTIZIDE ET EPARGNEURS POTASSIQUES</td></tr></tbody></table></p><p> </p><p><b>DC</b> : 1000045 SPIRONOLACTONE+ALTIZIDE</p><p><b>ISO IDMP PhPID L2</b> : 1000046 SPIRONOLACTONE+ALTIZIDE 25 mg+15 mg</p><p><b>ISO IDMP PhPID L3</b> : 1000047 SPIRONOLACTONE+ALTIZIDE Comprimé</p><p><b>ISO IDMP PhPID L4</b> : 1000048 SPIRONOLACTONE+ALTIZIDE 25 mg+15 mg Comprimé</p><p><b>Médicament virtuel</b> : 1000049 SPIRONOLACTONE+ALTIZIDE 25 mg+15 mg Comprimé</p><p><b>Nomenclature marchés (NCHFS)</b> : 18.03 SPECIALITES PHARMACEUTIQUES AVEC AMM : SYSTEME CARDIOVASCULAIRE</p><p><b>Nomenclature achats</b> : MC03EA04 ALTIZIDE ET EPARGNEURS POTASSIQUES</p><p>-</p><p><b>Code CIP</b> : 3400935125514</p><p><b>Libellé ANSM</b> : film(s) PVC-Aluminium de 30 comprimé(s)</p><p><b>Conditionnement</b> : 30 comprimé (nombre d'UCD)</p><p><b>Conditionnement primaire</b> : film</p><p><b>Liste</b> : LISTE 2</p><p><b>Agrément aux collectivités</b> : Agréé</p><p><b>Sérialisable</b> : Oui</p><p><b>Générique</b> : Princeps</p><p><b>Autorisation</b> : AMM</p><p><b>Conditionnement unitaire</b> : Non connu</p><p><b>Date d'application</b> : 01/02/2017 - <b>Prix public TTC</b> :  3,28 €</p><p><table><caption><b>Historique des Prix et taux de remboursement</b></caption><thead><tr><th>Date d'application</th><th>Prix public TTC</th><th>Prix fab. HT</th><th>Taux PEC</th></tr></thead><tbody><tr><td>01/02/2017</td><td> 3,28 €</td><td> 2,71 €</td><td>65</td></tr><tr><td>01/01/2016</td><td> 3,74 €</td><td> 3,07 €</td><td>65</td></tr><tr><td>02/03/2015</td><td> 4,03 €</td><td> 3,07 €</td><td>65</td></tr><tr><td>01/01/2015</td><td> 5,12 €</td><td> 3,92 €</td><td>65</td></tr><tr><td>01/01/2012</td><td> 5,89 €</td><td> 3,92 €</td><td>65</td></tr><tr><td>07/03/2008</td><td> 5,99 €</td><td> 3,92 €</td><td>65</td></tr></tbody></table></p><p>-</p><p><b>Code CIP</b> : 3400937233484</p><p><b>Libellé ANSM</b> : plaquette(s) PVC-Aluminium de 90 comprimé(s)</p><p><b>Conditionnement</b> : 90 comprimé (nombre d'UCD)</p><p><b>Conditionnement primaire</b> : plaquette</p><p><b>Liste</b> : LISTE 2</p><p><b>Agrément aux collectivités</b> : Agréé</p><p><b>Sérialisable</b> : Oui</p><p><b>Générique</b> : Princeps</p><p><b>Autorisation</b> : AMM</p><p><b>Conditionnement unitaire</b> : Non connu</p><p><b>Date d'application</b> : 01/02/2017 - <b>Prix public TTC</b> :  8,97 €</p><p><table><caption><b>Historique des Prix et taux de remboursement</b></caption><thead><tr><th>Date d'application</th><th>Prix public TTC</th><th>Prix fab. HT</th><th>Taux PEC</th></tr></thead><tbody><tr><td>01/02/2017</td><td> 8,97 €</td><td> 7,72 €</td><td>65</td></tr><tr><td>01/01/2016</td><td> 10,35 €</td><td> 8,75 €</td><td>65</td></tr><tr><td>02/03/2015</td><td> 11,11 €</td><td> 8,75 €</td><td>65</td></tr><tr><td>01/01/2015</td><td> 14,35 €</td><td> 11,17 €</td><td>65</td></tr><tr><td>01/07/2012</td><td> 16,45 €</td><td> 11,17 €</td><td>65</td></tr><tr><td>01/01/2012</td><td> 15,68 €</td><td> 11,17 €</td><td>65</td></tr><tr><td>15/03/2009</td><td> 16,06 €</td><td> 11,17 €</td><td>65</td></tr></tbody></table></p><p>-</p><p><b>Code CIP</b> : 3400955345688</p><p><b>Libellé ANSM</b> : plaquette(s) PVC-Aluminium de 100 comprimé(s)</p><p><b>Conditionnement</b> : 100 comprimé (nombre d'UCD)</p><p><b>Conditionnement primaire</b> : plaquette</p><p><b>Liste</b> : LISTE 2</p><p><b>Agrément aux collectivités</b> : Agréé</p><p><b>Sérialisable</b> : Oui</p><p><b>Générique</b> : Princeps</p><p><b>Autorisation</b> : AMM</p><p><b>Conditionnement unitaire</b> : Oui</p><p>-</p><p><table><tbody><tr><td><b>Indications</b></td><td/></tr><tr><td><p><b>Code CIO : 2349</b> - Hypertension artérielle</p></td><td/></tr><tr><td><p><b>Code CIO : 8572</b> - Œdèmes d'origine rénale</p></td><td/></tr><tr><td><p><b>Code CIO : 8571</b> - Œdèmes d'origine cardiaque</p></td><td/></tr></tbody></table></p></div>"
+      },
+      "extension": [ {
+        "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingR5",
+        "extension": [ {
+          "url": "identifier",
+          "valueIdentifier": {
+            "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc_CIP",
+            "value": "3400935125514"
+          }
+        }, {
+          "url": "quantity",
+          "valueQuantity": {
+            "value": 1,
+            "unit": "CIP",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }, {
+          "url": "designation",
+          "valueString": "film(s) PVC-Aluminium de 30 comprimé(s)"
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/PackagingCharacteristic",
+                "code": "Conditionnement_primaire"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhConditionnement",
+                "code": "7",
+                "display": "film"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Code_liste"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhListe",
+                "code": "2",
+                "display": "LISTE 2"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Code_agrément"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhAgrColl",
+                "code": "1",
+                "display": "Agréé"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Sérialisation"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Générique"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhGenerique",
+                "code": "1",
+                "display": "Princeps"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Code_autorisation"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhAutorisation",
+                "code": "1",
+                "display": "AMM"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "EstConditionnement_unitaire"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhBool4e",
+                "code": "3",
+                "display": "Non connu"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhConditionnement",
+                "code": "cpr",
+                "display": "comprimé"
+              } ]
+            }
+          }, {
+            "url": "quantity",
+            "valueQuantity": {
+              "value": 30,
+              "unit": "cpr",
+              "system": "http://unitsofmeasure.org",
+              "code": "1"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                  "code": "estNombre_UCD"
+                } ]
+              }
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2017-02-01"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 3.28,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 2.71,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2016-01-01"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 3.74,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 3.07,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2015-03-02"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 4.03,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 3.07,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2015-01-01"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 5.12,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 3.92,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2012-01-01"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 5.89,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 3.92,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2008-03-07"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 5.99,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 3.92,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        } ]
+      }, {
+        "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingR5",
+        "extension": [ {
+          "url": "identifier",
+          "valueIdentifier": {
+            "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc_CIP",
+            "value": "3400937233484"
+          }
+        }, {
+          "url": "quantity",
+          "valueQuantity": {
+            "value": 1,
+            "unit": "CIP",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }, {
+          "url": "designation",
+          "valueString": "plaquette(s) PVC-Aluminium de 90 comprimé(s)"
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/PackagingCharacteristic",
+                "code": "Conditionnement_primaire"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhConditionnement",
+                "code": "13",
+                "display": "plaquette"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Code_liste"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhListe",
+                "code": "2",
+                "display": "LISTE 2"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Code_agrément"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhAgrColl",
+                "code": "1",
+                "display": "Agréé"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Sérialisation"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Générique"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhGenerique",
+                "code": "1",
+                "display": "Princeps"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Code_autorisation"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhAutorisation",
+                "code": "1",
+                "display": "AMM"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "EstConditionnement_unitaire"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhBool4e",
+                "code": "3",
+                "display": "Non connu"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhConditionnement",
+                "code": "cpr",
+                "display": "comprimé"
+              } ]
+            }
+          }, {
+            "url": "quantity",
+            "valueQuantity": {
+              "value": 90,
+              "unit": "cpr",
+              "system": "http://unitsofmeasure.org",
+              "code": "1"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                  "code": "estNombre_UCD"
+                } ]
+              }
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2017-02-01"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 8.97,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 7.72,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2016-01-01"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 10.35,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 8.75,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2015-03-02"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 11.11,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 8.75,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2015-01-01"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 14.35,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 11.17,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2012-07-01"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 16.45,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 11.17,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2012-01-01"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 15.68,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 11.17,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostR5",
+          "extension": [ {
+            "url": "effectiveDate",
+            "valueDate": "2009-03-15"
+          }, {
+            "url": "type",
+            "valueCodeableConcept": {
+              "text": "Prix public"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix public TTC"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 16.06,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Prix fabricant HT"
+              }
+            }, {
+              "url": "value",
+              "valueMoney": {
+                "value": 11.17,
+                "currency": "EUR"
+              }
+            } ]
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgeCostInformationR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "text": "Taux PEC"
+              }
+            }, {
+              "url": "value",
+              "valueDecimal": 65
+            } ]
+          } ]
+        } ]
+      }, {
+        "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingR5",
+        "extension": [ {
+          "url": "identifier",
+          "valueIdentifier": {
+            "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc_CIP",
+            "value": "3400955345688"
+          }
+        }, {
+          "url": "quantity",
+          "valueQuantity": {
+            "value": 1,
+            "unit": "CIP",
+            "system": "http://unitsofmeasure.org",
+            "code": "1"
+          }
+        }, {
+          "url": "designation",
+          "valueString": "plaquette(s) PVC-Aluminium de 100 comprimé(s)"
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/PackagingCharacteristic",
+                "code": "Conditionnement_primaire"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhConditionnement",
+                "code": "13",
+                "display": "plaquette"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Code_liste"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhListe",
+                "code": "2",
+                "display": "LISTE 2"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Code_agrément"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhAgrColl",
+                "code": "1",
+                "display": "Agréé"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Sérialisation"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueBoolean": true
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Générique"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhGenerique",
+                "code": "1",
+                "display": "Princeps"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "Code_autorisation"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhAutorisation",
+                "code": "1",
+                "display": "AMM"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                "code": "EstConditionnement_unitaire"
+              } ]
+            }
+          }, {
+            "url": "value",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhBool4e",
+                "code": "1",
+                "display": "Oui"
+              } ]
+            }
+          } ]
+        }, {
+          "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingR5",
+          "extension": [ {
+            "url": "type",
+            "valueCodeableConcept": {
+              "coding": [ {
+                "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhConditionnement",
+                "code": "cpr",
+                "display": "comprimé"
+              } ]
+            }
+          }, {
+            "url": "quantity",
+            "valueQuantity": {
+              "value": 100,
+              "unit": "cpr",
+              "system": "http://unitsofmeasure.org",
+              "code": "1"
+            }
+          }, {
+            "url": "http://phast.fr/fhir/StructureDefinition/Extension/Pharmacy/SIPhMedicationKnowledgePackagingCharacteristicR5",
+            "extension": [ {
+              "url": "type",
+              "valueCodeableConcept": {
+                "coding": [ {
+                  "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/SIPhPackagingCharacteristic",
+                  "code": "estNombre_UCD"
+                } ]
+              }
+            } ]
+          } ]
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc_UCD",
+          "code": "3400890020930",
+          "display": "ALDACTAZINE, cpr séc"
+        }, {
+          "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/CIOdc_CIS",
+          "code": "69724251",
+          "display": "ALDACTAZINE 25 mg/15 mg, comprimé sécable"
+        } ],
+        "text": "SPIRONOLACTONE+ALTIZIDE 25 mg+15 mg (ALDACTAZINE), cpr séc"
+      },
+      "status": "active",
+      "medicineClassification": [ {
+        "type": {
+          "text": "ATC"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://www.whocc.no/atc",
+            "code": "C03EA04",
+            "display": "ALTIZIDE ET EPARGNEURS POTASSIQUES"
+          } ],
+          "text": "ALTIZIDE ET EPARGNEURS POTASSIQUES"
+        } ]
+      }, {
+        "type": {
+          "text": "ATC"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://www.whocc.no/atc",
+            "code": "C03EA",
+            "display": "DIURETIQUES LOW-CEILING ET EPARGNEURS POTASSIQUES"
+          } ],
+          "text": "DIURETIQUES LOW-CEILING ET EPARGNEURS POTASSIQUES"
+        } ]
+      }, {
+        "type": {
+          "text": "ATC"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://www.whocc.no/atc",
+            "code": "C03E",
+            "display": "DIURETIQUES ET EPARGNEURS POTASSIQUES EN ASSOCIATION"
+          } ],
+          "text": "DIURETIQUES ET EPARGNEURS POTASSIQUES EN ASSOCIATION"
+        } ]
+      }, {
+        "type": {
+          "text": "ATC"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://www.whocc.no/atc",
+            "code": "C03",
+            "display": "DIURETIQUES"
+          } ],
+          "text": "DIURETIQUES"
+        } ]
+      }, {
+        "type": {
+          "text": "ATC"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://www.whocc.no/atc",
+            "code": "C",
+            "display": "SYSTEME CARDIOVASCULAIRE"
+          } ],
+          "text": "SYSTEME CARDIOVASCULAIRE"
+        } ]
+      }, {
+        "type": {
+          "text": "DC"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/DC",
+            "code": "1000045",
+            "display": "SPIRONOLACTONE+ALTIZIDE"
+          } ],
+          "text": "SPIRONOLACTONE+ALTIZIDE"
+        } ]
+      }, {
+        "type": {
+          "text": "ISO IDMP PhPID L2"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/DC",
+            "code": "1000046",
+            "display": "SPIRONOLACTONE+ALTIZIDE 25 mg+15 mg"
+          } ],
+          "text": "SPIRONOLACTONE+ALTIZIDE 25 mg+15 mg"
+        } ]
+      }, {
+        "type": {
+          "text": "ISO IDMP PhPID L3"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/DC",
+            "code": "1000047",
+            "display": "SPIRONOLACTONE+ALTIZIDE Comprimé"
+          } ],
+          "text": "SPIRONOLACTONE+ALTIZIDE Comprimé"
+        } ]
+      }, {
+        "type": {
+          "text": "ISO IDMP PhPID L4"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/DC",
+            "code": "1000048",
+            "display": "SPIRONOLACTONE+ALTIZIDE 25 mg+15 mg Comprimé"
+          } ],
+          "text": "SPIRONOLACTONE+ALTIZIDE 25 mg+15 mg Comprimé"
+        } ]
+      }, {
+        "type": {
+          "text": "Médicament virtuel"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/DC",
+            "code": "1000049",
+            "display": "SPIRONOLACTONE+ALTIZIDE 25 mg+15 mg Comprimé"
+          } ],
+          "text": "SPIRONOLACTONE+ALTIZIDE 25 mg+15 mg Comprimé"
+        } ]
+      }, {
+        "type": {
+          "text": "Nomenclature marchés (NCHFS)"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/NCHFS",
+            "code": "18.03",
+            "display": "SPECIALITES PHARMACEUTIQUES AVEC AMM : SYSTEME CARDIOVASCULAIRE"
+          } ],
+          "text": "SPECIALITES PHARMACEUTIQUES AVEC AMM : SYSTEME CARDIOVASCULAIRE"
+        } ]
+      }, {
+        "type": {
+          "text": "Nomenclature achats"
+        },
+        "classification": [ {
+          "coding": [ {
+            "system": "http://phast.fr/fhir/CodeSystem/Pharmacy/AchatS",
+            "code": "MC03EA04",
+            "display": "ALTIZIDE ET EPARGNEURS POTASSIQUES"
+          } ],
+          "text": "ALTIZIDE ET EPARGNEURS POTASSIQUES"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

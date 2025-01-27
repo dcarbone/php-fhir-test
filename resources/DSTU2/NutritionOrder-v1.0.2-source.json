@@ -1,0 +1,141 @@
+{
+  "resourceType": "Bundle",
+  "id": "df79b285-f4ce-402c-b03a-d5638bca6a12",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:19:25.768+00:00"
+  },
+  "type": "searchset",
+  "total": 6,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/NutritionOrder?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=df79b285-f4ce-402c-b03a-d5638bca6a12&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/NutritionOrder/173001",
+    "resource": {
+      "resourceType": "NutritionOrder",
+      "id": "173001",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-05-17T09:46:56.486+00:00"
+      },
+      "status": "cancelled",
+      "foodPreferenceModifier": [ {
+        "coding": [ {
+          "system": "https://www.hl7.org/fhir/dstu2/valueset-encounter-diet.html",
+          "code": "vegetarian"
+        } ]
+      } ],
+      "excludeFoodModifier": [ {
+        "coding": [ {
+          "system": "https://www.hl7.org/fhir/dstu2/valueset-food-type.html",
+          "code": "4700006"
+        } ]
+      } ],
+      "oralDiet": {
+        "type": [ {
+          "coding": [ {
+            "code": "38903004"
+          } ]
+        } ],
+        "schedule": [ {
+          "repeat": {
+            "durationUnits": "min",
+            "periodUnits": "min",
+            "when": "WAKE"
+          },
+          "code": {
+            "coding": [ {
+              "code": "QOD"
+            } ]
+          }
+        } ]
+      },
+      "supplement": [ {
+        "type": {
+          "coding": [ {
+            "system": "https://www.hl7.org/fhir/dstu2/valueset-supplement-type.html",
+            "code": "442901000124106"
+          } ]
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/NutritionOrder/173010",
+    "resource": {
+      "resourceType": "NutritionOrder",
+      "id": "173010",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-05-17T15:02:58.889+00:00"
+      },
+      "patient": {
+        "reference": "Patient/130"
+      },
+      "dateTime": "2007-08-23T14:04:00",
+      "status": "draft"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/NutritionOrder/173011",
+    "resource": {
+      "resourceType": "NutritionOrder",
+      "id": "173011",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-05-17T15:21:20.133+00:00"
+      },
+      "patient": {
+        "reference": "Patient/130"
+      },
+      "dateTime": "2007-08-23T14:04:00",
+      "status": "draft"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/NutritionOrder/173143",
+    "resource": {
+      "resourceType": "NutritionOrder",
+      "id": "173143",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-05-21T12:23:37.178+00:00"
+      },
+      "patient": {
+        "reference": "Patient/130"
+      },
+      "dateTime": "2007-08-23T14:04:00"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/NutritionOrder/266160",
+    "resource": {
+      "resourceType": "NutritionOrder",
+      "id": "266160",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-12-17T06:55:19.988+00:00"
+      },
+      "patient": {
+        "reference": "Patient/example",
+        "display": "Peter Chalmers"
+      },
+      "dateTime": "2014-09-17"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

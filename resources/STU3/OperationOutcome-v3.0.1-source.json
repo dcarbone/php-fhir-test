@@ -1,0 +1,43 @@
+{
+  "resourceType": "Bundle",
+  "id": "d46fd2e3-9426-4f18-9ba9-885cfdb9d0b2",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:03:58.455+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/OperationOutcome?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=d46fd2e3-9426-4f18-9ba9-885cfdb9d0b2&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/OperationOutcome/2022367",
+    "resource": {
+      "resourceType": "OperationOutcome",
+      "id": "2022367",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-07-31T17:56:44.303+00:00"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h1>Operation Outcome</h1><table border=\"0\"><tr><td style=\"font-weight: bold;\">ERROR</td><td>[]</td><td></td></tr></table></div>"
+      },
+      "issue": [ {
+        "severity": "error",
+        "details": {
+          "coding": [ {
+            "code": "500",
+            "display": "Internal Server Error"
+          } ],
+          "text": "Internal Server Error"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

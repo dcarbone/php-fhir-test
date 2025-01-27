@@ -1,0 +1,56 @@
+{
+  "resourceType": "Bundle",
+  "id": "19137bbb-4f08-4d41-800c-ff3e33da0d2c",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:04:42.455+00:00"
+  },
+  "type": "searchset",
+  "total": 2,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/ProcessRequest?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=19137bbb-4f08-4d41-800c-ff3e33da0d2c&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/ProcessRequest/2707399",
+    "resource": {
+      "resourceType": "ProcessRequest",
+      "id": "2707399",
+      "meta": {
+        "extension": [ {
+          "url": "http://hapifhir.io/fhir/StructureDefinition/resource-meta-source",
+          "valueUri": "#b2nzCxV4Nr0vXctb"
+        } ],
+        "versionId": "1",
+        "lastUpdated": "2020-03-22T15:17:21.692+00:00"
+      },
+      "status": "active",
+      "target": {
+        "reference": "Organization/2707344",
+        "display": "Charlton Family Practice"
+      },
+      "created": "2020-02-15",
+      "provider": {
+        "reference": "Practitioner/2707359",
+        "display": "Dr. Maria Potter"
+      },
+      "organization": {
+        "reference": "Organization/2707347",
+        "display": "Karolinska Universitetsjukhuset"
+      },
+      "request": {
+        "reference": "Patient/2707346",
+        "display": "Past Medical History and Current Medication list of Mrs Dorothy Mayer"
+      },
+      "response": {
+        "reference": "Composition/2707398",
+        "display": "Past Medical History and Current Medication list of Mrs Dorothy Mayer"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

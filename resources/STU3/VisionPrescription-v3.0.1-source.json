@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "d3729aaf-76d0-4e95-be12-33e14202ff3d",
+  "meta": {
+    "lastUpdated": "2021-10-22T01:26:14.468+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "http://hapi.fhir.org/baseDstu3/VisionPrescription/?_count=1&_format=json"
+  } ]
+}

@@ -1,0 +1,133 @@
+{
+  "resourceType": "Bundle",
+  "id": "13b2e0cb-876b-4dac-9a42-c55e9f96f029",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:21:43.768+00:00"
+  },
+  "type": "searchset",
+  "total": 5,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/SearchParameter?_count=5&_format=json"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/SearchParameter/261734",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "261734",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-07-15T16:49:39.211+00:00"
+      },
+      "name": "Issed Date",
+      "status": "active",
+      "code": "issued",
+      "base": "Condition",
+      "type": "date",
+      "xpath": "Condition.issued",
+      "xpathUsage": "normal"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/SearchParameter/261735",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "261735",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-07-15T16:56:40.784+00:00"
+      },
+      "url": "http://hl7.org/fhir/SearchParameter/issued",
+      "name": "Issued Date",
+      "status": "draft",
+      "experimental": false,
+      "publisher": "Health Level Seven International (FHIR Infrastructure)",
+      "contact": [ {
+        "name": "[string]",
+        "telecom": [ {
+          "fhir_comments": [ "   0..1 Name of a individual to contact   " ],
+          "system": "other",
+          "value": "http://hl7.org/fhir"
+        } ]
+      } ],
+      "date": "2013-10-23",
+      "requirements": "Need to search by identifier for various infrastructural cases - mainly retrieving packages, and matching as part of a chain",
+      "_requirements": {
+        "fhir_comments": [ "    this is the canonical definition for the _id search parameter    " ]
+      },
+      "code": "issued",
+      "base": "Observation",
+      "type": "date",
+      "description": "Search by resource identifier - e.g. same as the read interaction, but can return included resources",
+      "xpath": "Observation.issued",
+      "xpathUsage": "normal"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/SearchParameter/261736",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "261736",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-07-15T16:59:21.532+00:00"
+      },
+      "name": "Issued Date",
+      "status": "active",
+      "code": "issued",
+      "base": "Condition",
+      "type": "date",
+      "xpath": "Condition.issued",
+      "xpathUsage": "normal"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/SearchParameter/261737",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "261737",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2020-07-15T17:14:01.988+00:00"
+      },
+      "name": "Issued Date",
+      "status": "active",
+      "code": "issuedDate",
+      "base": "Observation",
+      "type": "datetime",
+      "xpath": "Observation.issued",
+      "xpathUsage": "normal"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/SearchParameter/future-appointment-count",
+    "resource": {
+      "resourceType": "SearchParameter",
+      "id": "future-appointment-count",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-08-09T20:50:48.429+00:00"
+      },
+      "url": "http://integer",
+      "name": "Future Appointment Count",
+      "status": "active",
+      "code": "future-appointment-count",
+      "base": "Patient",
+      "type": "number",
+      "description": "Count of future appointments for the patient",
+      "xpath": "Patient.extension('http://integer')",
+      "xpathUsage": "normal"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

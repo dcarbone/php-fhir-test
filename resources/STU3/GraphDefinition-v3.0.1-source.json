@@ -1,0 +1,43 @@
+{
+  "resourceType": "Bundle",
+  "id": "1b1710ca-c195-4327-bc9d-d50cea7524b5",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:02:06.146+00:00"
+  },
+  "type": "searchset",
+  "total": 3,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/GraphDefinition?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=1b1710ca-c195-4327-bc9d-d50cea7524b5&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/GraphDefinition/1987292",
+    "resource": {
+      "resourceType": "GraphDefinition",
+      "id": "1987292",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-07-19T04:38:06.086+00:00"
+      },
+      "start": "ProcedureRequest",
+      "link": [ {
+        "path": "*",
+        "target": [ {
+          "type": "Resource",
+          "link": [ {
+            "path": "*",
+            "target": [ {
+              "type": "Resource"
+            } ]
+          } ]
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

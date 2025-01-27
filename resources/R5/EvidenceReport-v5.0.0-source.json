@@ -1,0 +1,13 @@
+{
+  "resourceType": "Bundle",
+  "id": "242a99d1-214e-4791-a242-55817eb9c780",
+  "meta": {
+    "lastUpdated": "2024-05-02T18:29:01.627+00:00"
+  },
+  "type": "searchset",
+  "total": 0,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseR5/EvidenceReport?_count=1&_format=json"
+  } ]
+}

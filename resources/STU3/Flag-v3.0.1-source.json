@@ -1,0 +1,47 @@
+{
+  "resourceType": "Bundle",
+  "id": "d8143425-776e-4916-9394-cece43bd8615",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:01:58.146+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/Flag?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=d8143425-776e-4916-9394-cece43bd8615&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/Flag/503627",
+    "resource": {
+      "resourceType": "Flag",
+      "id": "503627",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-11-16T11:44:21.358+00:00",
+        "profile": [ "https://fhir.nhs.uk/STU3/StructureDefinition/EOL-CPRStatus-Flag-1" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/flag-detail",
+        "valueReference": {
+          "reference": "a1f701a4-0959-4992-b7e3-1c6918462f7f"
+        }
+      } ],
+      "status": "active",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "450475007",
+          "display": "For cardiopulmonary resuscitation (finding)"
+        } ]
+      },
+      "period": {
+        "start": "2018-08-01"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

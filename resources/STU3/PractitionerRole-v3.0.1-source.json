@@ -1,0 +1,42 @@
+{
+  "resourceType": "Bundle",
+  "id": "3cec37d3-5753-4c65-9a2b-009417a87c2c",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:04:26.453+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/PractitionerRole?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=3cec37d3-5753-4c65-9a2b-009417a87c2c&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/PractitionerRole/22286",
+    "resource": {
+      "resourceType": "PractitionerRole",
+      "id": "22286",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-01T06:18:35.977+00:00"
+      },
+      "practitioner": {
+        "reference": "Practitioner/22290"
+      },
+      "organization": {
+        "reference": "Organization/15558"
+      },
+      "code": [ {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/practitioner-role",
+          "code": "doctor",
+          "display": "Doctor"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

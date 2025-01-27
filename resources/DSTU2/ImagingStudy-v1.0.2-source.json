@@ -1,0 +1,150 @@
+{
+  "resourceType": "Bundle",
+  "id": "81304a69-70b6-4cdf-8c94-a2f1deaf6965",
+  "meta": {
+    "lastUpdated": "2024-08-22T01:18:01.770+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu2/ImagingStudy?_count=5&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu2?_getpages=81304a69-70b6-4cdf-8c94-a2f1deaf6965&_getpagesoffset=5&_count=5&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ImagingStudy/165952",
+    "resource": {
+      "resourceType": "ImagingStudy",
+      "id": "165952",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-15T10:53:39.649+00:00"
+      },
+      "text": {
+        "status": "generated"
+      },
+      "started": "2011-01-01T11:01:20+03:00",
+      "patient": {
+        "reference": "Patient/130"
+      },
+      "uid": "urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045",
+      "numberOfSeries": 1,
+      "numberOfInstances": 1,
+      "series": [ {
+        "number": 3,
+        "modality": {
+          "system": "http://dicom.nema.org/resources/ontology/DCM",
+          "code": "CT"
+        },
+        "uid": "urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045",
+        "description": "CT Surview 180",
+        "numberOfInstances": 1,
+        "bodySite": {
+          "system": "http://snomed.info/sct",
+          "code": "67734004",
+          "display": "Upper Trunk Structure"
+        },
+        "instance": [ {
+          "number": 1,
+          "uid": "urn:oid:2.16.124.113543.6003.189642796.63084.16748.2599092903",
+          "sopClass": "urn:oid:1.2.840.10008.5.1.4.1.1.2"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ImagingStudy/165953",
+    "resource": {
+      "resourceType": "ImagingStudy",
+      "id": "165953",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-12-15T11:59:13.221+00:00"
+      },
+      "text": {
+        "status": "generated"
+      },
+      "started": "2011-01-01T11:01:20+03:00",
+      "patient": {
+        "reference": "Patient/130"
+      },
+      "uid": "UN",
+      "numberOfSeries": 0,
+      "numberOfInstances": 0,
+      "series": [ {
+        "number": 0,
+        "modality": {
+          "system": "UN",
+          "code": "CT"
+        },
+        "uid": "UN",
+        "description": "CT Surview 180",
+        "numberOfInstances": 0,
+        "bodySite": {
+          "system": "http://snomed.info/sct",
+          "code": "67734004",
+          "display": "Upper Trunk Structure"
+        },
+        "instance": [ {
+          "number": 0,
+          "uid": "UN",
+          "sopClass": "UN"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ImagingStudy/169024",
+    "resource": {
+      "resourceType": "ImagingStudy",
+      "id": "169024",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-03-30T01:35:35.295+00:00"
+      },
+      "uid": "asdasdasdas"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ImagingStudy/172827",
+    "resource": {
+      "resourceType": "ImagingStudy",
+      "id": "172827",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-05-14T07:14:27.212+00:00"
+      },
+      "started": "2007-08-23T14:04:00",
+      "numberOfSeries": 0,
+      "numberOfInstances": 0
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "https://hapi.fhir.org/baseDstu2/ImagingStudy/172830",
+    "resource": {
+      "resourceType": "ImagingStudy",
+      "id": "172830",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-05-14T07:29:11.947+00:00"
+      },
+      "patient": {
+        "reference": "Patient/130"
+      },
+      "numberOfSeries": 0,
+      "numberOfInstances": 0
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

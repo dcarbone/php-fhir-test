@@ -1,0 +1,35 @@
+{
+  "resourceType": "Bundle",
+  "id": "b3d1bc6c-0245-4ac5-8057-eaaf74fbe0ff",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:02:14.149+00:00"
+  },
+  "type": "searchset",
+  "total": 1,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/GuidanceResponse?_count=1&_format=json"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/GuidanceResponse/2843405",
+    "resource": {
+      "resourceType": "GuidanceResponse",
+      "id": "2843405",
+      "meta": {
+        "extension": [ {
+          "url": "http://hapifhir.io/fhir/StructureDefinition/resource-meta-source",
+          "valueUri": "#Sl2ucs43XMjdi6rC"
+        } ],
+        "versionId": "2",
+        "lastUpdated": "2023-12-04T04:54:02.548+00:00"
+      },
+      "module": {
+        "reference": "ServiceDefinition/example1"
+      },
+      "status": "data-required"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

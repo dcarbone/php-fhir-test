@@ -1,0 +1,29 @@
+{
+  "resourceType": "Bundle",
+  "id": "7d4b06f3-ff7c-45ee-a69e-2e42d9aacfbe",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:39:46.603+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/CareTeam?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=7d4b06f3-ff7c-45ee-a69e-2e42d9aacfbe&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/CareTeam/id1538513051618",
+    "resource": {
+      "resourceType": "CareTeam",
+      "id": "id1538513051618",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2018-10-02T20:59:30.134+00:00"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

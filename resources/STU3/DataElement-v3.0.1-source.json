@@ -1,0 +1,35 @@
+{
+  "resourceType": "Bundle",
+  "id": "d555c5b4-32c2-437d-8a55-e81671d2460d",
+  "meta": {
+    "lastUpdated": "2024-05-03T16:00:38.147+00:00"
+  },
+  "type": "searchset",
+  "total": 7,
+  "link": [ {
+    "relation": "self",
+    "url": "https://hapi.fhir.org/baseDstu3/DataElement?_count=1&_format=json"
+  }, {
+    "relation": "next",
+    "url": "https://hapi.fhir.org/baseDstu3?_getpages=d555c5b4-32c2-437d-8a55-e81671d2460d&_getpagesoffset=1&_count=1&_format=json&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "https://hapi.fhir.org/baseDstu3/DataElement/1693047",
+    "resource": {
+      "resourceType": "DataElement",
+      "id": "1693047",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2019-03-24T13:42:20.726+00:00"
+      },
+      "element": [ {
+        "path": "1",
+        "definition": "Date when patient arrive to the hospital, written in DDMMYY, “140109”.",
+        "maxLength": 6
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}
