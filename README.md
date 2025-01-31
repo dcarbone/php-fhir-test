@@ -47,9 +47,15 @@ the port bound on your host by changing the final `:8080` segment in the value p
 
 # Supported APIs
 
-| Route                                       | Parameters | Description                                                           |
-|---------------------------------------------|------------|-----------------------------------------------------------------------|
-| `GET /`                                     | -          | List available FHIR versions.                                         |
-| `GET /$VERSION`                             | -          | List available resources for FHIR version.                            |
-| `GET /$VERSION/$RESOURCE_TYPE`              | `_count`   | Retrieve`Bundle` with one or more resources for a particular version. |
-| `GET /$VERSION/$RESOURCE_TYPE/$RESOURCE_ID` | -          | Retrieve a sepcific resource.                                         |
+| Route                                       | Parameters                             | Description                                                           |
+|---------------------------------------------|----------------------------------------|-----------------------------------------------------------------------|
+| `GET /`                                     | -                                      | List available FHIR versions.                                         |
+| `GET /$VERSION`                             | -                                      | List available resources for FHIR version.                            |
+| `GET /$VERSION/$RESOURCE_TYPE`              | `_count=[0,...]`, `_format=[xml,json]` | Retrieve`Bundle` with one or more resources for a particular version. |
+| `GET /$VERSION/$RESOURCE_TYPE/$RESOURCE_ID` | `_format=[xml,json]`                   | Retrieve a specific resource.                                         |
+
+### Note on XML Format
+
+The XML formatting provided by this server is a work in progress, and may not be 100% compliant.
+
+Opening an issue with examples of errs is welcome!
