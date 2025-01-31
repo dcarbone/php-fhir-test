@@ -88,17 +88,17 @@ func buildArrayXMLStack(res Resource, jd *json.Decoder, elName string) ([]any, e
 				el := &xml.StartElement{
 					Name: xml.Name{Local: elName},
 				}
-				subStack, err := buildObjectXMLStack(res, jd, el)
+				subStack, resourceType, err := buildObjectXMLStack(res, jd, el)
 				if err != nil {
 					return nil, err
 				}
 				stack = append(stack, el)
 				if "contained" == elName {
-					stack = append(stack, xml.StartElement{Name: xml.Name{Local: res.ResourceType}})
+					stack = append(stack, xml.StartElement{Name: xml.Name{Local: resourceType}})
 				}
 				stack = append(stack, subStack...)
 				if "contained" == elName {
-					stack = append(stack, xml.EndElement{Name: xml.Name{Local: res.ResourceType}})
+					stack = append(stack, xml.EndElement{Name: xml.Name{Local: resourceType}})
 				}
 				stack = append(stack, el.End())
 			} else {
@@ -135,18 +135,19 @@ func buildArrayXMLStack(res Resource, jd *json.Decoder, elName string) ([]any, e
 	return stack, nil
 }
 
-func buildObjectXMLStack(res Resource, jd *json.Decoder, el *xml.StartElement) ([]any, error) {
+func buildObjectXMLStack(res Resource, jd *json.Decoder, el *xml.StartElement) ([]any, string, error) {
 	var (
-		tok     json.Token
-		lastKey string
-		stack   []any
-		err     error
+		tok          json.Token
+		lastKey      string
+		resourceType string
+		stack        []any
+		err          error
 	)
 
 	for jd.More() {
 		tok, err = jd.Token()
 		if err != nil {
-			return nil, err
+			return nil, resourceType, err
 		}
 
 		switch tv := tok.(type) {
@@ -155,9 +156,9 @@ func buildObjectXMLStack(res Resource, jd *json.Decoder, el *xml.StartElement) (
 		case json.Delim:
 			if tv == '{' {
 				child := &xml.StartElement{Name: xml.Name{Local: lastKey}}
-				subStack, err := buildObjectXMLStack(res, jd, child)
+				subStack, resourceType, err := buildObjectXMLStack(res, jd, child)
 				if err != nil {
-					return nil, err
+					return nil, resourceType, err
 				}
 				stack = append(stack, child)
 				stack = append(stack, subStack...)
@@ -165,11 +166,11 @@ func buildObjectXMLStack(res Resource, jd *json.Decoder, el *xml.StartElement) (
 			} else if tv == '[' {
 				subStack, err := buildArrayXMLStack(res, jd, lastKey)
 				if err != nil {
-					return nil, err
+					return nil, resourceType, err
 				}
 				stack = append(stack, subStack...)
 			} else {
-				return nil, fmt.Errorf("unexpected delimiter token seen: %q", tv)
+				return nil, resourceType, fmt.Errorf("unexpected delimiter token seen: %q", tv)
 			}
 			lastKey = ""
 
@@ -177,7 +178,7 @@ func buildObjectXMLStack(res Resource, jd *json.Decoder, el *xml.StartElement) (
 		case string, json.Number, bool, nil:
 			strVal, err := encodeValueToString(tv)
 			if err != nil {
-				return nil, err
+				return nil, resourceType, err
 			}
 			if lastKey == "" {
 				lastKey = strVal
@@ -186,12 +187,13 @@ func buildObjectXMLStack(res Resource, jd *json.Decoder, el *xml.StartElement) (
 
 			switch lastKey {
 			case "resourceType":
+				resourceType = strVal
 				// skip
 
 			case "div":
 				subStack, err := buildXHTMLStack(strVal)
 				if err != nil {
-					return nil, err
+					return nil, resourceType, err
 				}
 				stack = append(stack, subStack...)
 
@@ -228,17 +230,17 @@ func buildObjectXMLStack(res Resource, jd *json.Decoder, el *xml.StartElement) (
 			lastKey = ""
 
 		default:
-			return nil, fmt.Errorf("unexpected token seen in object %q: %[2]T (%[2]v)", el.Name.Local, tok)
+			return nil, resourceType, fmt.Errorf("unexpected token seen in object %q: %[2]T (%[2]v)", el.Name.Local, tok)
 		}
 	}
 
 	if tok, err = jd.Token(); err != nil {
-		return nil, fmt.Errorf("error locating ending object token for %q: %w", el.Name.Local, err)
+		return nil, resourceType, fmt.Errorf("error locating ending object token for %q: %w", el.Name.Local, err)
 	} else if delim, ok := tok.(json.Delim); !ok || delim != '}' {
-		return nil, fmt.Errorf("expected closing object token for key %q, saw %[2]T (%[2]v)", lastKey, tok)
+		return nil, resourceType, fmt.Errorf("expected closing object token for key %q, saw %[2]T (%[2]v)", lastKey, tok)
 	}
 
-	return stack, nil
+	return stack, resourceType, nil
 }
 
 func encodeXMLStack(xe *xml.Encoder, stack []any) error {
