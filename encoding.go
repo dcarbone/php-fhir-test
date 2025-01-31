@@ -106,8 +106,14 @@ func buildArrayXMLStack(jd *json.Decoder, elName string) ([]any, error) {
 			}
 			el := xml.StartElement{
 				Name: xml.Name{Local: elName},
+				Attr: []xml.Attr{
+					{
+						Name:  xml.Name{Local: "value"},
+						Value: strVal,
+					},
+				},
 			}
-			stack = append(stack, el, xml.CharData(strVal), el.End())
+			stack = append(stack, el, el.End())
 
 		default:
 			return nil, fmt.Errorf("unexpected token seen in array: %[1]T (%[1]v)", tok)
@@ -173,7 +179,6 @@ func buildObjectXMLStack(jd *json.Decoder, el *xml.StartElement) ([]any, error) 
 			}
 
 			switch lastKey {
-
 			case "resourceType":
 				// skip
 
@@ -183,6 +188,24 @@ func buildObjectXMLStack(jd *json.Decoder, el *xml.StartElement) ([]any, error) 
 					return nil, err
 				}
 				stack = append(stack, subStack...)
+
+			case "url":
+				switch el.Name.Local {
+				case "extension", "modifierExtension":
+					el.Attr = append(el.Attr, xml.Attr{Name: xml.Name{Local: "url"}, Value: strVal})
+
+				default:
+					el := xml.StartElement{
+						Name: xml.Name{Local: lastKey},
+						Attr: []xml.Attr{
+							{
+								Name:  xml.Name{Local: "value"},
+								Value: strVal,
+							},
+						},
+					}
+					stack = append(stack, el, el.End())
+				}
 
 			default:
 				el := xml.StartElement{
