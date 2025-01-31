@@ -77,7 +77,7 @@ func (r Resource) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
 
 	// skip past first token
 	_, _ = jd.Token()
-	stack, err := buildObjectXMLStack(jd, el)
+	stack, err := buildObjectXMLStack(r, jd, el)
 	if err != nil {
 		return err
 	}

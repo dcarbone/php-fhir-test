@@ -69,7 +69,7 @@ func encodeValueToString(v any) (string, error) {
 	}
 }
 
-func buildArrayXMLStack(jd *json.Decoder, elName string) ([]any, error) {
+func buildArrayXMLStack(res Resource, jd *json.Decoder, elName string) ([]any, error) {
 	var (
 		tok   json.Token
 		stack []any
@@ -88,12 +88,18 @@ func buildArrayXMLStack(jd *json.Decoder, elName string) ([]any, error) {
 				el := &xml.StartElement{
 					Name: xml.Name{Local: elName},
 				}
-				subStack, err := buildObjectXMLStack(jd, el)
+				subStack, err := buildObjectXMLStack(res, jd, el)
 				if err != nil {
 					return nil, err
 				}
 				stack = append(stack, el)
+				if "contained" == elName {
+					stack = append(stack, xml.StartElement{Name: xml.Name{Local: res.ResourceType}})
+				}
 				stack = append(stack, subStack...)
+				if "contained" == elName {
+					stack = append(stack, xml.EndElement{Name: xml.Name{Local: res.ResourceType}})
+				}
 				stack = append(stack, el.End())
 			} else {
 				return nil, fmt.Errorf("unexpected token seen in array %q: %[2]T (%[2]v", elName, tv)
@@ -129,7 +135,7 @@ func buildArrayXMLStack(jd *json.Decoder, elName string) ([]any, error) {
 	return stack, nil
 }
 
-func buildObjectXMLStack(jd *json.Decoder, el *xml.StartElement) ([]any, error) {
+func buildObjectXMLStack(res Resource, jd *json.Decoder, el *xml.StartElement) ([]any, error) {
 	var (
 		tok     json.Token
 		lastKey string
@@ -149,7 +155,7 @@ func buildObjectXMLStack(jd *json.Decoder, el *xml.StartElement) ([]any, error) 
 		case json.Delim:
 			if tv == '{' {
 				child := &xml.StartElement{Name: xml.Name{Local: lastKey}}
-				subStack, err := buildObjectXMLStack(jd, child)
+				subStack, err := buildObjectXMLStack(res, jd, child)
 				if err != nil {
 					return nil, err
 				}
@@ -157,7 +163,7 @@ func buildObjectXMLStack(jd *json.Decoder, el *xml.StartElement) ([]any, error) 
 				stack = append(stack, subStack...)
 				stack = append(stack, child.End())
 			} else if tv == '[' {
-				subStack, err := buildArrayXMLStack(jd, lastKey)
+				subStack, err := buildArrayXMLStack(res, jd, lastKey)
 				if err != nil {
 					return nil, err
 				}
