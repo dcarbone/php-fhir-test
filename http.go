@@ -36,6 +36,7 @@ func respondInKind(log *slog.Logger, rp RequestParams, w http.ResponseWriter, da
 
 		// init xml encoder
 		xe := xml.NewEncoder(w)
+		defer func() { _ = xe.Close() }()
 
 		if err = xe.Encode(data); err != nil {
 			log.Error("Error during XML encode", "data", fmt.Sprintf("%T", data), "error", err)
