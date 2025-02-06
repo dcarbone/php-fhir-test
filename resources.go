@@ -12,6 +12,7 @@ import (
 	"io"
 	"log/slog"
 	"path/filepath"
+	"slices"
 	"strings"
 )
 
@@ -32,7 +33,28 @@ var (
 	resourceMap = make(map[string]map[string][]*Resource)
 )
 
+func versionList() []string {
+	out := make([]string, len(resourceMap))
+	i := 0
+	for v := range resourceMap {
+		out[i] = v
+		i++
+	}
+	slices.Sort(out)
+	return out
+}
+
+func versionResourceList(fv string) []string {
+	out := make([]string, 0)
+	for v := range resourceMap[fv] {
+		out = append(out, v)
+	}
+	slices.Sort(out)
+	return out
+}
+
 type Resource struct {
+	FHIRVersion  string `json:"-"`
 	ResourceType string
 	ID           string
 	Data         []byte
@@ -157,6 +179,7 @@ func parseResources(ctx context.Context, tr *tar.Reader, th *tar.Header, fv stri
 		if res.ResourceType == "" {
 			return fmt.Errorf("resource %d in file %q has no resourceType value", i, th.Name)
 		}
+		res.FHIRVersion = fv
 		if _, ok := resourceMap[fv][res.ResourceType]; !ok {
 			resourceMap[fv][res.ResourceType] = make([]*Resource, 0)
 		}
@@ -171,6 +194,11 @@ func extractResources(ctx context.Context, log *slog.Logger) error {
 	)
 
 	log.Info("Extracting FHIR resources...")
+
+	defer func() {
+		// zero out the resources tar, free up some memory
+		resourcesTar = nil
+	}()
 
 	gr, err := gzip.NewReader(bytes.NewReader(resourcesTar))
 	if err != nil {

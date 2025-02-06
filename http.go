@@ -3,9 +3,15 @@ package main
 import (
 	"encoding/json"
 	"encoding/xml"
+	"errors"
 	"fmt"
 	"log/slog"
 	"net/http"
+	"strconv"
+)
+
+var (
+	errInvalidFormat = errors.New("invalid format")
 )
 
 type RequestParams struct {
@@ -13,19 +19,57 @@ type RequestParams struct {
 	Count  int
 }
 
-func respondInKind(log *slog.Logger, rp RequestParams, w http.ResponseWriter, data any) {
-	var err error
+func parseRequestParams(r *http.Request) (RequestParams, error) {
+	var (
+		rp  RequestParams
+		err error
+	)
+
+	format := r.URL.Query().Get("_format")
+	switch format {
+	case "json", "xml":
+		rp.Format = format
+	case "":
+		rp.Format = "json"
+	default:
+		return rp, fmt.Errorf("%w: %s", errInvalidFormat, format)
+	}
+
+	countstr := r.URL.Query().Get("_count")
+	if countstr != "" {
+		if rp.Count, err = strconv.Atoi(countstr); err != nil {
+			return rp, fmt.Errorf("invalid value provided to _count: %s", countstr)
+		}
+	}
+
+	return rp, nil
+}
+
+func respondInKind(log *slog.Logger, rp RequestParams, w http.ResponseWriter, fv string, data any) {
+	var (
+		contentTypeFmt string
+		err            error
+	)
+
+	switch fv {
+	case "DSTU1", "R1", "DSTU2", "R2":
+		contentTypeFmt = "%s+fhir"
+	case "STU3", "R3", "R4", "R4B", "R5":
+		contentTypeFmt = "fhir+%s"
+	default:
+		contentTypeFmt = "fhir+%s"
+	}
 
 	switch rp.Format {
 	case "", "json":
-		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.Header().Set("Content-Type", fmt.Sprintf("application/"+contentTypeFmt, "json"))
 		if err = json.NewEncoder(w).Encode(data); err != nil {
 			log.Error("Error during JSON encode", "data", fmt.Sprintf("%T", data), "error", err)
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 		}
 
 	case "xml":
-		w.Header().Set("Content-Type", "application/xml; charset=utf-8")
+		w.Header().Set("Content-Type", fmt.Sprintf("application/"+contentTypeFmt, "xml"))
 
 		// write header
 		if _, err = w.Write([]byte(xml.Header)); err != nil {
@@ -49,7 +93,7 @@ func respondInKind(log *slog.Logger, rp RequestParams, w http.ResponseWriter, da
 	}
 }
 
-func logMiddlewareHandler(log *slog.Logger, hdl http.HandlerFunc) http.HandlerFunc {
+func logRequestMiddleware(log *slog.Logger, hdl http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		log.Info("Processing request...", "method", r.Method, "url", r.URL)
 		hdl(w, r)
@@ -57,7 +101,7 @@ func logMiddlewareHandler(log *slog.Logger, hdl http.HandlerFunc) http.HandlerFu
 }
 
 func versionListHandler(log *slog.Logger) http.HandlerFunc {
-	return logMiddlewareHandler(log, func(w http.ResponseWriter, r *http.Request) {
+	return logRequestMiddleware(log, func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path != "" && r.URL.Path != "/" {
 			http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
 			return
@@ -71,7 +115,7 @@ func versionListHandler(log *slog.Logger) http.HandlerFunc {
 }
 
 func versionResourceListHandler(log *slog.Logger, fv string) http.HandlerFunc {
-	return logMiddlewareHandler(log, func(w http.ResponseWriter, r *http.Request) {
+	return logRequestMiddleware(log, func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path != fmt.Sprintf("/%s", fv) && r.URL.Path != fmt.Sprintf("/%s/", fv) {
 			http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
 			return
@@ -85,11 +129,16 @@ func versionResourceListHandler(log *slog.Logger, fv string) http.HandlerFunc {
 }
 
 func resourceBundleHandler(log *slog.Logger, fv, resType string) http.HandlerFunc {
-	return logMiddlewareHandler(log, func(w http.ResponseWriter, r *http.Request) {
+	return logRequestMiddleware(log, func(w http.ResponseWriter, r *http.Request) {
 		rp, err := parseRequestParams(r)
 		if err != nil {
-			log.Error("Error parsing query params", "err", err)
-			http.Error(w, err.Error(), http.StatusBadRequest)
+			if errors.Is(err, errInvalidFormat) {
+				log.Error("Invalid format requested", "format", rp.Format, "err", err)
+				http.Error(w, err.Error(), http.StatusUnsupportedMediaType)
+			} else {
+				log.Error("Error parsing query params", "err", err)
+				http.Error(w, err.Error(), http.StatusBadRequest)
+			}
 			return
 		} else if rp.Count < 0 {
 			http.Error(w, fmt.Sprintf("_count must be non-negative, saw %d", rp.Count), http.StatusBadRequest)
@@ -109,12 +158,12 @@ func resourceBundleHandler(log *slog.Logger, fv, resType string) http.HandlerFun
 			out.Entry[i] = BundleEntry{Resource: resourceMap[fv][resType][i]}
 		}
 
-		respondInKind(log, rp, w, out)
+		respondInKind(log, rp, w, fv, out)
 	})
 }
 
 func resourceHandler(log *slog.Logger, fv, resType string, i int) http.HandlerFunc {
-	return logMiddlewareHandler(log, func(w http.ResponseWriter, r *http.Request) {
+	return logRequestMiddleware(log, func(w http.ResponseWriter, r *http.Request) {
 		rp, err := parseRequestParams(r)
 		if err != nil {
 			log.Error("Error parsing query params", "err", err)
@@ -126,7 +175,7 @@ func resourceHandler(log *slog.Logger, fv, resType string, i int) http.HandlerFu
 			return
 		}
 
-		respondInKind(log, rp, w, resourceMap[fv][resType][i])
+		respondInKind(log, rp, w, fv, resourceMap[fv][resType][i])
 	})
 }
 

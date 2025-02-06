@@ -8,6 +8,8 @@ import (
 	"log/slog"
 	"os"
 	"os/signal"
+	"path/filepath"
+	"strings"
 	"syscall"
 )
 
@@ -24,7 +26,24 @@ func main() {
 	ctx, cancel := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer cancel()
 
-	log := slog.New(slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{AddSource: true, Level: slog.LevelDebug}))
+	log := slog.New(slog.NewTextHandler(
+		os.Stdout,
+		&slog.HandlerOptions{
+			AddSource: true,
+			Level:     slog.LevelDebug,
+			ReplaceAttr: func(_ []string, a slog.Attr) slog.Attr {
+				if a.Key != "source" {
+					return a
+				}
+				return slog.Attr{
+					Key: a.Key,
+					Value: slog.StringValue(
+						strings.Replace(filepath.Base(strings.Trim(a.Value.String(), "{}")), " ", ":", 1),
+					),
+				}
+			},
+		},
+	))
 
 	fg.StringVar(&bindAddr, "bind", bindAddr, "Address, including port, to bind.")
 	if err := fg.Parse(os.Args[1:]); err != nil {
