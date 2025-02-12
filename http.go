@@ -146,8 +146,8 @@ func resourceBundleHandler(log *slog.Logger, fv, resType string) http.HandlerFun
 		}
 
 		cnt := rp.Count
-		if cnt == 0 {
-			cnt = len(resourceMap[fv][resType])
+		if l := len(resourceMap[fv][resType]); cnt == 0 || cnt > l {
+			cnt = l
 		}
 
 		out := Bundle{
