@@ -19,7 +19,7 @@ import (
 var (
 	/*
 		{
-			"fhirVersion" {
+			"FHIRVersion" {
 				"resourceType": [
 					{
 						...
