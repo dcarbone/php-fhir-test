@@ -82,7 +82,7 @@ hdrLoop:
 		return format, fhirVersionFromString(vstr)
 	}
 
-	return "", fhirVersionUnknown
+	return SerializeFormatUnknown, fhirVersionUnknown
 }
 
 func parseQueryFormatParam(r *http.Request) SerializeFormat {
