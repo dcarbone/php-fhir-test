@@ -39,3 +39,10 @@ jobs:
           sbom: true
           provenance: 'mode=max'
           tags: 'dancarbone/php-fhir-test-server:latest'
+
+      - name: 'Update dockerhub description'
+        uses: 'peter-evans/dockerhub-description@v4'
+        with:
+          username: 'dancarbone'
+          password: '${{ secrets.DOCKERHUB_TOKEN }}'
+          repository: 'dancarbone/php-fhir-test-server'
