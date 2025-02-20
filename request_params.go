@@ -89,7 +89,7 @@ func parseQueryFormatParam(r *http.Request) SerializeFormat {
 	return SerializeFormat(strings.ToLower(r.URL.Query().Get("_format")))
 }
 
-func middlewareParseRequestParams(next http.HandlerFunc) http.HandlerFunc {
+func middlewareParseRequestParams(ignoreCount bool, next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var (
 			rp                 RequestParams
@@ -139,17 +139,19 @@ func middlewareParseRequestParams(next http.HandlerFunc) http.HandlerFunc {
 			}
 		}
 
-		// parse _count param, if found
-		countstr := r.URL.Query().Get("_count")
-		if countstr != "" {
-			if rp.Count, err = strconv.Atoi(countstr); err != nil {
-				log.Error("Cannot parse _count query param", "_count", countstr, "err", err)
-				http.Error(w, fmt.Sprintf("_count query param value %q not parseable as int: %v", countstr, err), http.StatusBadRequest)
-				return
-			} else if rp.Count < 0 {
-				log.Error("Negative _count query param value seen", "_count", rp.Count)
-				http.Error(w, "_count query param value must be >= 0", http.StatusBadRequest)
-				return
+		if !ignoreCount {
+			// parse _count param, if found
+			countstr := r.URL.Query().Get("_count")
+			if countstr != "" {
+				if rp.Count, err = strconv.Atoi(countstr); err != nil {
+					log.Error("Cannot parse _count query param", "_count", countstr, "err", err)
+					http.Error(w, fmt.Sprintf("_count query param value %q not parseable as int: %v", countstr, err), http.StatusBadRequest)
+					return
+				} else if rp.Count < 0 {
+					log.Error("Negative _count query param value seen", "_count", rp.Count)
+					http.Error(w, "_count query param value must be >= 0", http.StatusBadRequest)
+					return
+				}
 			}
 		}
 

@@ -8,8 +8,6 @@ import (
 	"fmt"
 	"log/slog"
 	"net/http"
-	"strconv"
-	"strings"
 	"sync/atomic"
 )
 
@@ -115,23 +113,9 @@ func handlerGetVersionResourceList(log *slog.Logger, fv string) http.HandlerFunc
 	})
 }
 
-func handlerGetResourceBundle(log *slog.Logger, fv, resType string) http.HandlerFunc {
-	return middlewareEmbedLogger(log, func(w http.ResponseWriter, r *http.Request) {
-		rp, err := middlewareParseRequestParams(r)
-		if err != nil {
-			if errors.Is(err, errInvalidFormat) {
-				log.Error("Invalid format requested", "format", rp.Format, "err", err)
-				http.Error(w, err.Error(), http.StatusUnsupportedMediaType)
-			} else {
-				log.Error("Error parsing query params", "err", err)
-				http.Error(w, err.Error(), http.StatusBadRequest)
-			}
-			return
-		} else if rp.Count < 0 {
-			http.Error(w, fmt.Sprintf("_count must be non-negative, saw %d", rp.Count), http.StatusBadRequest)
-			return
-		}
-
+func handlerGetResourceBundle(fv FHIRVersion, resType string) http.HandlerFunc {
+	return middlewareParseRequestParams(false, func(w http.ResponseWriter, r *http.Request) {
+		rp := getRequestParams(r)
 		cnt := rp.Count
 		if l := len(resourceMap[fv][resType]); cnt == 0 || cnt > l {
 			cnt = l
@@ -145,7 +129,7 @@ func handlerGetResourceBundle(log *slog.Logger, fv, resType string) http.Handler
 			out.Entry[i] = BundleEntry{Resource: resourceMap[fv][resType][i]}
 		}
 
-		respondInKind(log, rp, w, fv, out)
+		respondInKind(rp, w, fv, out)
 	})
 }
 
