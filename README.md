@@ -10,6 +10,7 @@ project. All other use cases are unsupported.
   * [Building and Running Binary](#building-and-running-binary)
   * [Building and Running Local Docker](#building-and-running-local-docker)
 * [Supported APIs](#supported-apis)
+    * [Note on XML Format](#note-on-xml-format)
 <!-- TOC -->
 
 # Generated Resources
@@ -59,3 +60,4 @@ the port bound on your host by changing the final `:8080` segment in the value p
 The XML formatting provided by this server is a work in progress, and may not be 100% compliant.
 
 Opening an issue with examples of errs is welcome!
+
