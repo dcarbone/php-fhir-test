@@ -40,11 +40,13 @@ jobs:
           provenance: 'mode=max'
           tags: 'dancarbone/php-fhir-test-server:latest'
 
+      - name: 'Check out code'
+        uses: 'actions/checkout@v4'
+
       - name: 'Update dockerhub description'
         uses: 'peter-evans/dockerhub-description@v4'
         with:
           username: 'dancarbone'
           password: '${{ secrets.DOCKERHUB_TOKEN }}'
           repository: 'dancarbone/php-fhir-test-server'
-          short-description: 'php-fhir test FHIR server'
-          readme-filepath: '/README.md'
+          short-description: '${{ github.event.repository.description }}'
