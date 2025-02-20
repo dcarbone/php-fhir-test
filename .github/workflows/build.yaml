@@ -47,3 +47,4 @@ jobs:
           password: '${{ secrets.DOCKERHUB_TOKEN }}'
           repository: 'dancarbone/php-fhir-test-server'
           short-description: 'php-fhir test FHIR server'
+          readme-filepath: '/README.md'
