@@ -23,11 +23,18 @@ func respondInKind(w http.ResponseWriter, r *http.Request, data any) {
 		rp  = getRequestParams(r)
 	)
 
+	log.Info("Processing response", "data", fmt.Sprintf("%T", data), "format", string(rp.AcceptFormat))
+
 	w.Header().Set("Content-Type", buildResponseContentTypeHeader(rp))
 
 	switch true {
 	case rp.AcceptFormat.IsJson():
-		if err = json.NewEncoder(w).Encode(data); err != nil {
+		je := json.NewEncoder(w)
+		if rp.Pretty {
+			je.SetIndent("", "  ")
+		}
+
+		if err = je.Encode(data); err != nil {
 			log.Error("Error during JSON encode", "data", fmt.Sprintf("%T", data), "error", err)
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 		}
@@ -43,6 +50,10 @@ func respondInKind(w http.ResponseWriter, r *http.Request, data any) {
 		// init xml encoder
 		xe := xml.NewEncoder(w)
 		defer func() { _ = xe.Close() }()
+
+		if rp.Pretty {
+			xe.Indent("", "  ")
+		}
 
 		if err = xe.Encode(data); err != nil {
 			log.Error("Error during XML encode", "data", fmt.Sprintf("%T", data), "error", err)

@@ -20,6 +20,8 @@ type RequestParams struct {
 	ContentTypeVersion FHIRVersion
 
 	Count int
+
+	Pretty bool
 }
 
 func getRequestParams(r *http.Request) RequestParams {
@@ -149,8 +151,7 @@ func middlewareParseRequestParams(next http.HandlerFunc) http.HandlerFunc {
 		}
 
 		// parse _count param, if found
-		countstr := r.URL.Query().Get("_count")
-		if countstr != "" {
+		if countstr := r.URL.Query().Get("_count"); countstr != "" {
 			if rp.Count, err = strconv.Atoi(countstr); err != nil {
 				log.Error("Cannot parse _count query param", "_count", countstr, "err", err)
 				http.Error(w, fmt.Sprintf("_count query param value %q not parseable as int: %v", countstr, err), http.StatusBadRequest)
@@ -167,6 +168,8 @@ func middlewareParseRequestParams(next http.HandlerFunc) http.HandlerFunc {
 		rp.AcceptVersion = acceptVersion
 		rp.ContentTypeFormat = contentTypeFormat
 		rp.ContentTypeVersion = contentTypeVersion
+
+		rp.Pretty = r.URL.Query().Has("_pretty") && strings.ToLower(r.URL.Query().Get("_pretty")) != "false"
 
 		// call next handler, embedding the parsed params into the request context.
 		next(w, r.WithContext(context.WithValue(r.Context(), requestParamsCtxKey, &rp)))

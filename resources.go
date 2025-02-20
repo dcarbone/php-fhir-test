@@ -33,8 +33,8 @@ var (
 	resourceMap = make(map[FHIRVersion]map[string][]*Resource)
 )
 
-func versionList() []FHIRVersion {
-	out := make([]FHIRVersion, len(resourceMap))
+func versionList() FHIRVersions {
+	out := make(FHIRVersions, len(resourceMap))
 	i := 0
 	for v := range resourceMap {
 		out[i] = v
@@ -44,13 +44,43 @@ func versionList() []FHIRVersion {
 	return out
 }
 
-func versionResourceList(fv FHIRVersion) []string {
+type FHIRVersionResourceList struct {
+	FHIRVersion FHIRVersion `json:"fhirVersion"`
+	Resources   []string    `json:"resources"`
+}
+
+func (r FHIRVersionResourceList) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
+	if err := xe.Encode(r.FHIRVersion); err != nil {
+		return err
+	}
+	el := xml.StartElement{Name: xml.Name{Local: "Resources"}}
+	if err := xe.EncodeToken(el); err != nil {
+		return err
+	}
+	for _, rsc := range r.Resources {
+		el := xml.StartElement{
+			Name: xml.Name{Local: "Resource"},
+			Attr: []xml.Attr{
+				{
+					Name:  xml.Name{Local: "value"},
+					Value: rsc,
+				},
+			},
+		}
+		if err := xe.EncodeElement("", el); err != nil {
+			return err
+		}
+	}
+	return xe.EncodeToken(el.End())
+}
+
+func versionResourceList(fv FHIRVersion) FHIRVersionResourceList {
 	out := make([]string, 0)
 	for v := range resourceMap[fv] {
 		out = append(out, v)
 	}
 	slices.Sort(out)
-	return out
+	return FHIRVersionResourceList{FHIRVersion: fv, Resources: out}
 }
 
 type Resource struct {

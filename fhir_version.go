@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/xml"
 	"strings"
 
 	"golang.org/x/mod/semver"
@@ -25,8 +26,17 @@ func (fv FHIRVersion) String() string {
 	return string(fv)
 }
 
-func (fv FHIRVersion) MarshalJSON() ([]byte, error) {
-	return []byte(fv), nil
+func (fv FHIRVersion) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
+	el := xml.StartElement{
+		Name: xml.Name{Local: "FHIRVersion"},
+		Attr: []xml.Attr{
+			{
+				Name:  xml.Name{Local: "value"},
+				Value: string(fv),
+			},
+		},
+	}
+	return xe.EncodeElement("", el)
 }
 
 func (fv FHIRVersion) SemanticVersion() string {
@@ -110,4 +120,21 @@ func fhirVersionSortFunc(asc bool) func(a, b FHIRVersion) int {
 			return -d
 		}
 	}
+}
+
+type FHIRVersions []FHIRVersion
+
+func (fvs FHIRVersions) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
+	el := xml.StartElement{
+		Name: xml.Name{Local: "FHIRVersions"},
+	}
+	if err := xe.EncodeToken(el); err != nil {
+		return err
+	}
+	for _, fv := range fvs {
+		if err := xe.Encode(fv); err != nil {
+			return err
+		}
+	}
+	return xe.EncodeToken(el.End())
 }

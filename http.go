@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"errors"
 	"fmt"
 	"log/slog"
 	"net/http"
@@ -14,8 +13,6 @@ type (
 )
 
 var (
-	errInvalidFormat = errors.New("invalid format")
-
 	requestIdSource atomic.Uint64
 
 	loggerCtxKey loggerCtxKeyT
