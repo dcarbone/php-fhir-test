@@ -30,21 +30,21 @@ var (
 			}
 		}
 	*/
-	resourceMap = make(map[string]map[string][]*Resource)
+	resourceMap = make(map[FHIRVersion]map[string][]*Resource)
 )
 
-func versionList() []string {
-	out := make([]string, len(resourceMap))
+func versionList() []FHIRVersion {
+	out := make([]FHIRVersion, len(resourceMap))
 	i := 0
 	for v := range resourceMap {
 		out[i] = v
 		i++
 	}
-	slices.Sort(out)
+	slices.SortFunc(out, fhirVersionSortFunc(true))
 	return out
 }
 
-func versionResourceList(fv string) []string {
+func versionResourceList(fv FHIRVersion) []string {
 	out := make([]string, 0)
 	for v := range resourceMap[fv] {
 		out = append(out, v)
@@ -54,7 +54,7 @@ func versionResourceList(fv string) []string {
 }
 
 type Resource struct {
-	FHIRVersion  string `json:"-"`
+	FHIRVersion  FHIRVersion `json:"-"`
 	ResourceType string
 	ID           string
 	Data         []byte
@@ -164,7 +164,7 @@ func (b Bundle) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
 	return xe.EncodeToken(el.End())
 }
 
-func parseResources(ctx context.Context, tr *tar.Reader, th *tar.Header, fv string) error {
+func parseResources(ctx context.Context, tr *tar.Reader, th *tar.Header, fv FHIRVersion) error {
 	dec := json.NewDecoder(tr)
 
 	i := 0
@@ -172,25 +172,25 @@ func parseResources(ctx context.Context, tr *tar.Reader, th *tar.Header, fv stri
 		if err := ctx.Err(); err != nil {
 			return err
 		}
-		res := new(Resource)
-		if err := dec.Decode(res); err != nil {
+		rsc := new(Resource)
+		if err := dec.Decode(rsc); err != nil {
 			return fmt.Errorf("error decoding resource %d in file %q: %w", i, th.Name, err)
 		}
-		if res.ResourceType == "" {
+		if rsc.ResourceType == "" {
 			return fmt.Errorf("resource %d in file %q has no resourceType value", i, th.Name)
 		}
-		res.FHIRVersion = fv
-		if _, ok := resourceMap[fv][res.ResourceType]; !ok {
-			resourceMap[fv][res.ResourceType] = make([]*Resource, 0)
+		rsc.FHIRVersion = fv
+		if _, ok := resourceMap[fv][rsc.ResourceType]; !ok {
+			resourceMap[fv][rsc.ResourceType] = make([]*Resource, 0)
 		}
-		resourceMap[fv][res.ResourceType] = append(resourceMap[fv][res.ResourceType], res)
+		resourceMap[fv][rsc.ResourceType] = append(resourceMap[fv][rsc.ResourceType], rsc)
 	}
 	return nil
 }
 
 func extractResources(ctx context.Context, log *slog.Logger) error {
 	var (
-		fv string
+		fv FHIRVersion
 	)
 
 	log.Info("Extracting FHIR resources...")
@@ -229,7 +229,7 @@ func extractResources(ctx context.Context, log *slog.Logger) error {
 		switch th.Typeflag {
 		case tar.TypeDir:
 			log.Info("Found directory", "dir", name)
-			fv = strings.ToUpper(filepath.Base(name))
+			fv = fhirVersionFromString(filepath.Base(name))
 			if _, ok := resourceMap[fv]; !ok {
 				resourceMap[fv] = make(map[string][]*Resource)
 			}

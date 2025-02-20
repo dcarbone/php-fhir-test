@@ -62,11 +62,6 @@ hdrLoop:
 		// strip prefix
 		ctyp = strings.TrimPrefix(ctyp, "application/")
 
-		// handle "application/json" and "application/xml"
-		if ctyp == "xml" || ctyp == "json" {
-			ctyp = fmt.Sprintf("fhir+%s", ctyp)
-		}
-
 		// check if remaining value is valid.
 		format := SerializeFormat(ctyp)
 		if !format.Valid() {
@@ -75,21 +70,21 @@ hdrLoop:
 
 		// if version is empty, move on.
 		if vstr == "" {
-			return format, fhirVersionUnknown
+			return format, FHIRVersionUnknown
 		}
 
 		// otherwise, set fhir version and move on.
 		return format, fhirVersionFromString(vstr)
 	}
 
-	return SerializeFormatUnknown, fhirVersionUnknown
+	return SerializeFormatUnknown, FHIRVersionUnknown
 }
 
 func parseQueryFormatParam(r *http.Request) SerializeFormat {
 	return SerializeFormat(strings.ToLower(r.URL.Query().Get("_format")))
 }
 
-func middlewareParseRequestParams(ignoreCount bool, next http.HandlerFunc) http.HandlerFunc {
+func middlewareParseRequestParams(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var (
 			rp                 RequestParams
@@ -137,21 +132,33 @@ func middlewareParseRequestParams(ignoreCount bool, next http.HandlerFunc) http.
 					return
 				}
 			}
+
+			// we require the content type serialize format to be set.
+			if contentTypeFormat == SerializeFormatUnknown {
+				log.Error("Unable to determine content type format")
+				http.Error(w, "must provide valid _format query parameter or Content-Type value", http.StatusUnprocessableEntity)
+				return
+			}
 		}
 
-		if !ignoreCount {
-			// parse _count param, if found
-			countstr := r.URL.Query().Get("_count")
-			if countstr != "" {
-				if rp.Count, err = strconv.Atoi(countstr); err != nil {
-					log.Error("Cannot parse _count query param", "_count", countstr, "err", err)
-					http.Error(w, fmt.Sprintf("_count query param value %q not parseable as int: %v", countstr, err), http.StatusBadRequest)
-					return
-				} else if rp.Count < 0 {
-					log.Error("Negative _count query param value seen", "_count", rp.Count)
-					http.Error(w, "_count query param value must be >= 0", http.StatusBadRequest)
-					return
-				}
+		// we require an accept serialize format to be set.
+		if acceptFormat == SerializeFormatUnknown {
+			log.Error("Unable to determine desired response format")
+			http.Error(w, "must provide valid _format query parameter or Accept header value", http.StatusBadRequest)
+			return
+		}
+
+		// parse _count param, if found
+		countstr := r.URL.Query().Get("_count")
+		if countstr != "" {
+			if rp.Count, err = strconv.Atoi(countstr); err != nil {
+				log.Error("Cannot parse _count query param", "_count", countstr, "err", err)
+				http.Error(w, fmt.Sprintf("_count query param value %q not parseable as int: %v", countstr, err), http.StatusBadRequest)
+				return
+			} else if rp.Count < 0 {
+				log.Error("Negative _count query param value seen", "_count", rp.Count)
+				http.Error(w, "_count query param value must be >= 0", http.StatusBadRequest)
+				return
 			}
 		}
 
