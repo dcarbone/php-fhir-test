@@ -1,50 +1,56 @@
 package main
 
 import (
+	"encoding/json"
 	"encoding/xml"
 	"strings"
 
 	"golang.org/x/mod/semver"
 )
 
-type FHIRVersion string
+type FHIRVersion int
 
 const (
-	FHIRVersionUnknown FHIRVersion = ""
+	FHIRVersionUnknown FHIRVersion = iota
 
-	FHIRVersionDSTU1 FHIRVersion = "DSTU1"
-	FHIRVersionDSTU2 FHIRVersion = "DSTU2"
-	FHIRVersionSTU3  FHIRVersion = "STU3"
-	FHIRVersionR4    FHIRVersion = "R4"
-	FHIRVersionR4B   FHIRVersion = "R4B"
-	FHIRVersionR5    FHIRVersion = "R5"
+	FHIRVersionDSTU1
+	FHIRVersionDSTU2
+	FHIRVersionSTU3
+	FHIRVersionR4
+	FHIRVersionR4B
+	FHIRVersionR5
 
-	FHIRVersionMock FHIRVersion = "mock"
+	// FHIRVersionMock is used as a fallback for all non-empty versions.  It must always have the highest enum value.
+	FHIRVersionMock
 )
 
 func (fv FHIRVersion) String() string {
-	return string(fv)
-}
+	switch fv {
+	case FHIRVersionUnknown:
+		return ""
 
-func (fv FHIRVersion) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
-	el := xml.StartElement{
-		Name: xml.Name{Local: "FHIRVersion"},
-		Attr: []xml.Attr{
-			{
-				Name:  xml.Name{Local: "value"},
-				Value: string(fv),
-			},
-		},
+	case FHIRVersionDSTU1:
+		return "DSTU1"
+	case FHIRVersionDSTU2:
+		return "DSTU2"
+	case FHIRVersionSTU3:
+		return "STU3"
+	case FHIRVersionR4:
+		return "R4"
+	case FHIRVersionR4B:
+		return "R4B"
+	case FHIRVersionR5:
+		return "R5"
+
+	default:
+		return "mock"
 	}
-	return xe.EncodeElement("", el)
 }
 
 func (fv FHIRVersion) SemanticVersion() string {
 	switch fv {
 	case FHIRVersionUnknown:
 		return ""
-	case FHIRVersionMock:
-		return "v99.99.99"
 
 	case FHIRVersionDSTU1:
 		return "v0.0.82"
@@ -60,7 +66,7 @@ func (fv FHIRVersion) SemanticVersion() string {
 		return "v5.0.0"
 
 	default:
-		// todo: should this cause an error?
+		// mock
 		return "v99.99.99"
 	}
 }
@@ -69,8 +75,6 @@ func (fv FHIRVersion) ShortVersion() string {
 	switch fv {
 	case FHIRVersionUnknown:
 		return ""
-	case FHIRVersionMock:
-		return "v99.99"
 
 	case FHIRVersionDSTU1:
 		return "v0.0"
@@ -86,24 +90,45 @@ func (fv FHIRVersion) ShortVersion() string {
 		return "v5.0"
 
 	default:
+		// mock
 		return "v99.99"
 	}
+}
+
+func (fv FHIRVersion) MarshalJSON() ([]byte, error) {
+	return json.Marshal(fv.String())
+}
+
+func (fv FHIRVersion) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
+	el := xml.StartElement{
+		Name: xml.Name{Local: "FHIRVersion"},
+		Attr: []xml.Attr{
+			{
+				Name:  xml.Name{Local: "value"},
+				Value: fv.String(),
+			},
+		},
+	}
+	return xe.EncodeElement("", el)
 }
 
 func fhirVersionFromString(fv string) FHIRVersion {
 	fv = strings.ToUpper(fv)
 	switch true {
-	case fv == string(FHIRVersionDSTU1) || semver.Compare(fv, "v1.0.0") == 1:
+	case fv == "":
+		return FHIRVersionUnknown
+
+	case fv == FHIRVersionDSTU1.String() || semver.Compare(fv, "v1.0.0") == 1:
 		return FHIRVersionDSTU1
-	case fv == string(FHIRVersionDSTU2) || semver.Compare(fv, "v1.0.0") >= 0 && semver.Compare(fv, "v3.0.0") == 1:
+	case fv == FHIRVersionDSTU2.String() || semver.Compare(fv, "v1.0.0") >= 0 && semver.Compare(fv, "v3.0.0") == 1:
 		return FHIRVersionDSTU2
-	case fv == string(FHIRVersionSTU3) || semver.Compare(fv, "v3.0.0") >= 0 && semver.Compare(fv, "v4.0.0") == 1:
+	case fv == FHIRVersionSTU3.String() || semver.Compare(fv, "v3.0.0") >= 0 && semver.Compare(fv, "v4.0.0") == 1:
 		return FHIRVersionSTU3
-	case fv == string(FHIRVersionR4) || semver.Compare(fv, "v4.0.0") >= 0 && semver.Compare(fv, "v4.3.0") == 1:
+	case fv == FHIRVersionR4.String() || semver.Compare(fv, "v4.0.0") >= 0 && semver.Compare(fv, "v4.3.0") == 1:
 		return FHIRVersionR4
-	case fv == string(FHIRVersionR4B) || semver.Compare(fv, "v4.3.0") >= 0 && semver.Compare(fv, "v5.0.0") == 1:
+	case fv == FHIRVersionR4B.String() || semver.Compare(fv, "v4.3.0") >= 0 && semver.Compare(fv, "v5.0.0") == 1:
 		return FHIRVersionR4B
-	case fv == string(FHIRVersionR5) || semver.Compare(fv, "v5.0.0") >= 0 && semver.Compare(fv, "v6.0.0") == 1:
+	case fv == FHIRVersionR5.String() || semver.Compare(fv, "v5.0.0") >= 0 && semver.Compare(fv, "v6.0.0") == 1:
 		return FHIRVersionR5
 
 	default:
@@ -111,7 +136,18 @@ func fhirVersionFromString(fv string) FHIRVersion {
 	}
 }
 
-func fhirVersionSortFunc(asc bool) func(a, b FHIRVersion) int {
+func fhirVersionNameSortFunc(asc bool) func(a, b FHIRVersion) int {
+	return func(a, b FHIRVersion) int {
+		d := strings.Compare(a.String(), b.String())
+		if d == 0 || asc {
+			return d
+		} else {
+			return -d
+		}
+	}
+}
+
+func fhirVersionSemanticSortFunc(asc bool) func(a, b FHIRVersion) int {
 	return func(a, b FHIRVersion) int {
 		d := semver.Compare(a.SemanticVersion(), b.SemanticVersion())
 		if d == 0 || asc {
@@ -123,6 +159,14 @@ func fhirVersionSortFunc(asc bool) func(a, b FHIRVersion) int {
 }
 
 type FHIRVersions []FHIRVersion
+
+func (fvs FHIRVersions) MarshalJSON() ([]byte, error) {
+	out := make([]string, len(fvs))
+	for i, fv := range fvs {
+		out[i] = fv.String()
+	}
+	return json.Marshal(out)
+}
 
 func (fvs FHIRVersions) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
 	el := xml.StartElement{

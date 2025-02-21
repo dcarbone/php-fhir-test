@@ -13,74 +13,20 @@ import (
 	"log/slog"
 	"path/filepath"
 	"slices"
+	"sort"
 	"strings"
+	"sync"
 )
 
 var (
-	/*
-		{
-			"FHIRVersion" {
-				"resourceType": [
-					{
-						...
-					},
-					...
-				],
-				...
-			}
-		}
-	*/
-	resourceMap = make(map[FHIRVersion]map[string][]*Resource)
+	versionResourceMap map[FHIRVersion]*ResourceMap
 )
 
-func versionList() FHIRVersions {
-	out := make(FHIRVersions, len(resourceMap))
-	i := 0
-	for v := range resourceMap {
-		out[i] = v
-		i++
+func init() {
+	versionResourceMap = make(map[FHIRVersion]*ResourceMap)
+	for fv := FHIRVersionDSTU1; fv <= FHIRVersionR5; fv++ {
+		versionResourceMap[fv] = newResourceMap(fv)
 	}
-	slices.SortFunc(out, fhirVersionSortFunc(true))
-	return out
-}
-
-type FHIRVersionResourceList struct {
-	FHIRVersion FHIRVersion `json:"fhirVersion"`
-	Resources   []string    `json:"resources"`
-}
-
-func (r FHIRVersionResourceList) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
-	if err := xe.Encode(r.FHIRVersion); err != nil {
-		return err
-	}
-	el := xml.StartElement{Name: xml.Name{Local: "Resources"}}
-	if err := xe.EncodeToken(el); err != nil {
-		return err
-	}
-	for _, rsc := range r.Resources {
-		el := xml.StartElement{
-			Name: xml.Name{Local: "Resource"},
-			Attr: []xml.Attr{
-				{
-					Name:  xml.Name{Local: "value"},
-					Value: rsc,
-				},
-			},
-		}
-		if err := xe.EncodeElement("", el); err != nil {
-			return err
-		}
-	}
-	return xe.EncodeToken(el.End())
-}
-
-func versionResourceList(fv FHIRVersion) FHIRVersionResourceList {
-	out := make([]string, 0)
-	for v := range resourceMap[fv] {
-		out = append(out, v)
-	}
-	slices.Sort(out)
-	return FHIRVersionResourceList{FHIRVersion: fv, Resources: out}
 }
 
 type Resource struct {
@@ -194,7 +140,143 @@ func (b Bundle) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
 	return xe.EncodeToken(el.End())
 }
 
-func parseResources(ctx context.Context, tr *tar.Reader, th *tar.Header, fv FHIRVersion) error {
+type ResourceMap struct {
+	mu sync.RWMutex
+
+	version   FHIRVersion
+	resources map[string][]*Resource
+}
+
+func newResourceMap(fv FHIRVersion) *ResourceMap {
+	rm := &ResourceMap{
+		version:   fv,
+		resources: make(map[string][]*Resource),
+	}
+
+	return rm
+}
+
+func (rm *ResourceMap) Version() FHIRVersion {
+	return rm.version
+}
+
+func (rm *ResourceMap) resourceTypes() []string {
+	out := make([]string, len(rm.resources))
+	i := 0
+	for n := range rm.resources {
+		out[i] = n
+		i++
+	}
+	sort.Strings(out)
+	return out
+}
+
+func (rm *ResourceMap) ResourceTypes() []string {
+	rm.mu.RLock()
+	defer rm.mu.RUnlock()
+	return rm.resourceTypes()
+}
+
+func (rm *ResourceMap) GetResourcesByType(resType string, count int) []*Resource {
+	rm.mu.RLock()
+	defer rm.mu.RUnlock()
+	rscs := rm.resources[resType]
+	if l := len(rscs); count > l || count == 0 {
+		count = l
+	}
+	out := make([]*Resource, count)
+	copy(out, rscs)
+	return out
+}
+
+func (rm *ResourceMap) GetResource(rscType, rscId string) *Resource {
+	rm.mu.RLock()
+	defer rm.mu.RUnlock()
+	for _, rsc := range rm.resources[rscType] {
+		if rsc.ID == rscId {
+			return rsc
+		}
+	}
+	return nil
+}
+
+func (rm *ResourceMap) PutResource(rsc *Resource) {
+	rm.mu.Lock()
+	defer rm.mu.Unlock()
+
+	// check if this resource already exists in this map, overriding if so.
+	for i := range rm.resources[rsc.ResourceType] {
+		if rm.resources[rsc.ResourceType][i].ID == rsc.ID {
+			rm.resources[rsc.ResourceType][i] = rsc
+			return
+		}
+	}
+
+	// if we make it down here, add as new resource.
+	rm.resources[rsc.ResourceType] = append(rm.resources[rsc.ResourceType], rsc)
+}
+
+func (rm *ResourceMap) MarshalJSON() ([]byte, error) {
+	type rscMap struct {
+		FHIRVersion FHIRVersion `json:"fhirVersion"`
+		Resources   []string    `json:"resources"`
+	}
+	out := rscMap{
+		FHIRVersion: rm.version,
+		Resources:   rm.ResourceTypes(),
+	}
+	return json.Marshal(out)
+}
+
+func (rm *ResourceMap) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
+	rm.mu.RLock()
+	defer rm.mu.RUnlock()
+	fvel := xml.StartElement{
+		Name: xml.Name{Local: "FHIRVersion"},
+		Attr: []xml.Attr{
+			{
+				Name:  xml.Name{Local: "value"},
+				Value: rm.version.String(),
+			},
+		},
+	}
+	if err := xe.EncodeToken(fvel); err != nil {
+		return err
+	}
+	rscel := xml.StartElement{Name: xml.Name{Local: "Resources"}}
+	if err := xe.EncodeToken(rscel); err != nil {
+		return err
+	}
+	for _, n := range rm.resourceTypes() {
+		el := xml.StartElement{
+			Name: xml.Name{Local: "Resource"},
+			Attr: []xml.Attr{
+				{
+					Name:  xml.Name{Local: "value"},
+					Value: n,
+				},
+			},
+		}
+		if err := xe.EncodeElement("", el); err != nil {
+			return err
+		}
+	}
+	return errors.Join(
+		xe.EncodeToken(rscel.End()),
+		xe.EncodeToken(fvel.End()),
+	)
+}
+
+func versionList() FHIRVersions {
+	out := make(FHIRVersions, 0)
+	for fv := FHIRVersionDSTU1; fv <= FHIRVersionR5; fv++ {
+		out = append(out, fv)
+	}
+	slices.SortFunc(out, fhirVersionSemanticSortFunc(true))
+	return out
+}
+
+func parseSeedResources(ctx context.Context, tr *tar.Reader, th *tar.Header, fv FHIRVersion) error {
 	dec := json.NewDecoder(tr)
 
 	i := 0
@@ -210,15 +292,13 @@ func parseResources(ctx context.Context, tr *tar.Reader, th *tar.Header, fv FHIR
 			return fmt.Errorf("resource %d in file %q has no resourceType value", i, th.Name)
 		}
 		rsc.FHIRVersion = fv
-		if _, ok := resourceMap[fv][rsc.ResourceType]; !ok {
-			resourceMap[fv][rsc.ResourceType] = make([]*Resource, 0)
-		}
-		resourceMap[fv][rsc.ResourceType] = append(resourceMap[fv][rsc.ResourceType], rsc)
+		// this will panic if you did it wrong.
+		versionResourceMap[fv].PutResource(rsc)
 	}
 	return nil
 }
 
-func extractResources(ctx context.Context, log *slog.Logger) error {
+func extractSeedResources(ctx context.Context, log *slog.Logger) error {
 	var (
 		fv FHIRVersion
 	)
@@ -260,11 +340,11 @@ func extractResources(ctx context.Context, log *slog.Logger) error {
 		case tar.TypeDir:
 			log.Info("Found directory", "dir", name)
 			fv = fhirVersionFromString(filepath.Base(name))
-			if _, ok := resourceMap[fv]; !ok {
-				resourceMap[fv] = make(map[string][]*Resource)
+			if fv == FHIRVersionUnknown || fv == FHIRVersionMock {
+				panic(fmt.Sprintf("Cannot seed resources from unnknown FHIR version %q", filepath.Base(name)))
 			}
 		case tar.TypeReg:
-			if err = parseResources(ctx, tr, th, fv); err != nil {
+			if err = parseSeedResources(ctx, tr, th, fv); err != nil {
 				return fmt.Errorf("error parsing resources from file %q in version %q: %w", name, fv, err)
 			}
 		default:

@@ -47,24 +47,22 @@ func handlerGetVersionResourceList(fv FHIRVersion) http.HandlerFunc {
 			http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
 			return
 		}
-		respondInKind(w, r, versionResourceList(fv))
+		respondInKind(w, r, versionResourceMap[fv])
 	}
 }
 
 func handlerGetResourceBundle(fv FHIRVersion, rscType string) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		rp := getRequestParams(r)
-		cnt := rp.Count
-		if l := len(resourceMap[fv][rscType]); cnt == 0 || cnt > l {
-			cnt = l
-		}
+
+		rscs := versionResourceMap[fv].GetResourcesByType(rscType, rp.Count)
 
 		out := Bundle{
 			ResourceType: "Bundle",
-			Entry:        make([]BundleEntry, cnt),
+			Entry:        make([]BundleEntry, len(rscs)),
 		}
-		for i := 0; i < cnt; i++ {
-			out.Entry[i] = BundleEntry{Resource: resourceMap[fv][rscType][i]}
+		for i, rsc := range rscs {
+			out.Entry[i] = BundleEntry{Resource: rsc}
 		}
 
 		respondInKind(w, r, out)
@@ -87,15 +85,15 @@ func handlerGetVersionResource(fv FHIRVersion, rscType string) http.HandlerFunc 
 			return
 		}
 
-		for _, rsc := range resourceMap[fv][rscType] {
-			if rsc.ID == resourceId {
-				respondInKind(w, r, rsc)
-				return
-			}
+		rsc := versionResourceMap[fv].GetResource(rscType, resourceId)
+
+		if nil != rsc {
+			respondInKind(w, r, rsc)
+			return
 		}
 
 		log.Error("Resource not found", "resource_id", resourceId)
-		http.Error(w, fmt.Sprintf("no version %q resource %q found with id %q", string(fv), rscType, resourceId), http.StatusNotFound)
+		http.Error(w, fmt.Sprintf("no version %q resource %q found with id %q", fv.String(), rscType, resourceId), http.StatusNotFound)
 	}
 }
 
@@ -110,16 +108,16 @@ func runWebserver(log *slog.Logger) error {
 
 	mux := http.NewServeMux()
 
-	for fv, resourceTypes := range resourceMap {
+	for fv, resourceMap := range versionResourceMap {
 		// get version resource list
-		addHandler(log, mux, fmt.Sprintf("GET /%s/", string(fv)), handlerGetVersionResourceList(fv))
+		addHandler(log, mux, fmt.Sprintf("GET /%s/", fv.String()), handlerGetVersionResourceList(fv))
 
-		for rscType := range resourceTypes {
+		for _, rscType := range resourceMap.ResourceTypes() {
 			// get version resource bundle
-			addHandler(log, mux, fmt.Sprintf("GET /%s/%s/", string(fv), rscType), handlerGetResourceBundle(fv, rscType))
+			addHandler(log, mux, fmt.Sprintf("GET /%s/%s/", fv.String(), rscType), handlerGetResourceBundle(fv, rscType))
 
 			// get specific version resource by id
-			addHandler(log, mux, fmt.Sprintf("GET /%s/%s/{resource_id}/", string(fv), rscType), handlerGetVersionResource(fv, rscType))
+			addHandler(log, mux, fmt.Sprintf("GET /%s/%s/{resource_id}/", fv.String(), rscType), handlerGetVersionResource(fv, rscType))
 		}
 	}
 
