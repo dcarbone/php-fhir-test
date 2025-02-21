@@ -15,7 +15,7 @@ import (
 
 var (
 	//go:embed resources.tar.gz
-	resourcesTar []byte
+	seedResourcesTarball []byte
 
 	bindAddr = "127.0.0.1:8080"
 
