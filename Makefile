@@ -11,6 +11,6 @@ build: tar
 docker-local:
 	docker buildx build \
 		--load \
-		-t dancarbone/php-fhir-test-server \
+		-t ghcr.io/dcarbone/php-fhir-test-server \
 		-f docker/Dockerfile \
 		.

@@ -54,7 +54,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	if err := extractResources(ctx, log); err != nil {
+	if err := extractSeedResources(ctx, log); err != nil {
 		if errors.Is(err, context.Canceled) {
 			log.Info("Stopping.")
 			os.Exit(0)
