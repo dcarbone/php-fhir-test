@@ -19,12 +19,13 @@ import (
 )
 
 var (
-	versionResourceMap map[FHIRVersion]*ResourceMap
+	versionResourceMapMu sync.RWMutex
+	versionResourceMap   map[FHIRVersion]*ResourceMap
 )
 
 func init() {
 	versionResourceMap = make(map[FHIRVersion]*ResourceMap)
-	for fv := FHIRVersionDSTU1; fv <= FHIRVersionR5; fv++ {
+	for fv := FHIRVersionDSTU1; fv <= FHIRVersionMock; fv++ {
 		versionResourceMap[fv] = newResourceMap(fv)
 	}
 }
@@ -268,9 +269,11 @@ func (rm *ResourceMap) MarshalXML(xe *xml.Encoder, _ xml.StartElement) error {
 }
 
 func versionList() FHIRVersions {
-	out := make(FHIRVersions, 0)
-	for fv := FHIRVersionDSTU1; fv <= FHIRVersionR5; fv++ {
-		out = append(out, fv)
+	out := make(FHIRVersions, len(versionResourceMap))
+	i := 0
+	for fv := range versionResourceMap {
+		out[i] = fv
+		i++
 	}
 	slices.SortFunc(out, fhirVersionSemanticSortFunc(true))
 	return out
@@ -299,18 +302,16 @@ func parseSeedResources(ctx context.Context, tr *tar.Reader, th *tar.Header, fv 
 }
 
 func extractSeedResources(ctx context.Context, log *slog.Logger) error {
+	versionResourceMapMu.Lock()
+	defer versionResourceMapMu.Unlock()
+
 	var (
 		fv FHIRVersion
 	)
 
-	log.Info("Extracting FHIR resources...")
+	log.Info("Seeding FHIR resources from embedded tarball...")
 
-	defer func() {
-		// zero out the resources tar, free up some memory
-		resourcesTar = nil
-	}()
-
-	gr, err := gzip.NewReader(bytes.NewReader(resourcesTar))
+	gr, err := gzip.NewReader(bytes.NewReader(seedResourcesTarball))
 	if err != nil {
 		return fmt.Errorf("error creating gzip reader: %w", err)
 	}
