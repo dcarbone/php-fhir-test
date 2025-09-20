@@ -29,6 +29,13 @@ func respondInKind(w http.ResponseWriter, r *http.Request, data any) {
 
 	switch true {
 	case rp.AcceptFormat.IsJson():
+		if b, ok := data.([]byte); ok {
+			if _, err = w.Write(b); err != nil {
+				log.Error("Error sending already encoded JSON", "err", err)
+			}
+			return
+		}
+
 		je := json.NewEncoder(w)
 		if rp.Pretty {
 			je.SetIndent("", "  ")
@@ -40,6 +47,13 @@ func respondInKind(w http.ResponseWriter, r *http.Request, data any) {
 		}
 
 	case rp.AcceptFormat.IsXml():
+		if b, ok := data.([]byte); ok {
+			if _, err = w.Write(b); err != nil {
+				log.Error("Error sending already encoded XML", "err", err)
+			}
+			return
+		}
+
 		// write header
 		if _, err = w.Write([]byte(xml.Header)); err != nil {
 			log.Error("Error writing XML lead in", "err", err)

@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"io"
 	"log/slog"
 	"net/http"
 	"sync/atomic"
@@ -41,21 +42,32 @@ func handlerGetVersionList() http.HandlerFunc {
 	}
 }
 
-func handlerGetVersionResourceList(fv FHIRVersion) http.HandlerFunc {
+func handlerGetVersionResourceTypeList(fv FHIRVersion) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path != fmt.Sprintf("/%s", fv) && r.URL.Path != fmt.Sprintf("/%s/", fv) {
 			http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
 			return
 		}
-		respondInKind(w, r, versionResourceMap[fv])
+		versionResourceMapMu.RLock()
+		rm := versionResourceMap[fv]
+		versionResourceMapMu.RUnlock()
+		respondInKind(w, r, rm)
 	}
 }
 
-func handlerGetResourceBundle(fv FHIRVersion, rscType string) http.HandlerFunc {
+func handlerGetVersionResourceBundle(fv FHIRVersion) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
+		rscType := r.PathValue("rsc_type")
 		rp := getRequestParams(r)
 
+		versionResourceMapMu.RLock()
 		rscs := versionResourceMap[fv].GetResourcesByType(rscType, rp.Count)
+		versionResourceMapMu.RUnlock()
+
+		if len(rscs) == 0 {
+			http.Error(w, fmt.Sprintf("No resources of type %q for version %q found.", rscType, fv.String()), http.StatusNotFound)
+			return
+		}
 
 		out := Bundle{
 			ResourceType: "Bundle",
@@ -69,36 +81,52 @@ func handlerGetResourceBundle(fv FHIRVersion, rscType string) http.HandlerFunc {
 	}
 }
 
-func handlerGetVersionResource(fv FHIRVersion, rscType string) http.HandlerFunc {
+func handlerGetVersionResource(fv FHIRVersion) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		log := getRequestLogger(r)
-		rp := getRequestParams(r)
-		if rp.Count != 0 {
-			http.Error(w, "_count must be zero or undefined with specific resource ID", http.StatusBadRequest)
+
+		rscType := r.PathValue("rsc_type")
+		rscId := r.PathValue("rsc_id")
+
+		versionResourceMapMu.RLock()
+		rsc := versionResourceMap[fv].GetResource(rscType, rscId)
+		versionResourceMapMu.RUnlock()
+
+		if nil == rsc {
+			log.Error("Resource not found", "rsc_id", rscId)
+			http.Error(w, fmt.Sprintf("no version %q resource %q found with id %q", fv.String(), rscType, rscId), http.StatusNotFound)
 			return
 		}
 
-		resourceId := r.PathValue("resource_id")
-		if resourceId == "" {
-			log.Error("Unable to parse resource_id param from path")
-			http.Error(w, "missing resource_id path parameter", http.StatusBadRequest)
+		respondInKind(w, r, rsc)
+	}
+}
+
+func handlerPutVersionResource(_ FHIRVersion) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		log := getRequestLogger(r)
+
+		// todo: need to do better with this impl...
+
+		if r.Body == nil {
+			log.Error("Empty body seen")
+			http.Error(w, "request body must not be empty", http.StatusBadRequest)
 			return
 		}
 
-		rsc := versionResourceMap[fv].GetResource(rscType, resourceId)
-
-		if nil != rsc {
-			respondInKind(w, r, rsc)
+		b, err := io.ReadAll(r.Body)
+		if err != nil {
+			log.Error("Error reading PUT body", "err", err)
+			http.Error(w, fmt.Sprintf("error reading request body: %v", err), http.StatusUnprocessableEntity)
 			return
 		}
 
-		log.Error("Resource not found", "resource_id", resourceId)
-		http.Error(w, fmt.Sprintf("no version %q resource %q found with id %q", fv.String(), rscType, resourceId), http.StatusNotFound)
+		respondInKind(w, r, b)
 	}
 }
 
 func addHandler(log *slog.Logger, mux *http.ServeMux, route string, hdl http.HandlerFunc) {
-	log.Info("Adding route handler", "route", route)
+	log.Debug("Adding route handler", "route", route)
 
 	mux.HandleFunc(route, middlewareEmbedLogger(log.With("route", route), middlewareParseRequestParams(hdl)))
 }
@@ -108,21 +136,20 @@ func runWebserver(log *slog.Logger) error {
 
 	mux := http.NewServeMux()
 
-	for fv, resourceMap := range versionResourceMap {
-		// get version resource list
-		addHandler(log, mux, fmt.Sprintf("GET /%s/", fv.String()), handlerGetVersionResourceList(fv))
-
-		for _, rscType := range resourceMap.ResourceTypes() {
-			// get version resource bundle
-			addHandler(log, mux, fmt.Sprintf("GET /%s/%s/", fv.String(), rscType), handlerGetResourceBundle(fv, rscType))
-
-			// get specific version resource by id
-			addHandler(log, mux, fmt.Sprintf("GET /%s/%s/{resource_id}/", fv.String(), rscType), handlerGetVersionResource(fv, rscType))
-		}
-	}
-
 	// get version list
 	addHandler(log, mux, "GET /{$}", handlerGetVersionList())
+
+	versionResourceMapMu.RLock()
+	for fv := range versionResourceMap {
+		// version read handlers
+		addHandler(log, mux, fmt.Sprintf("GET /%s/", fv.String()), handlerGetVersionResourceTypeList(fv))
+		addHandler(log, mux, fmt.Sprintf("GET /%s/{rsc_type}", fv.String()), handlerGetVersionResourceBundle(fv))
+		addHandler(log, mux, fmt.Sprintf("GET /%s/{rsc_type}/{rsc_id}", fv.String()), handlerGetVersionResource(fv))
+
+		// version write handlers
+		addHandler(log, mux, fmt.Sprintf("PUT /%s/{rsc_type}/{rsc_id}", fv.String()), handlerPutVersionResource(fv))
+	}
+	versionResourceMapMu.RUnlock()
 
 	log.Info("Webserver running", "addr", bindAddr)
 
