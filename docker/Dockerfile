@@ -5,6 +5,7 @@ LABEL org.opencontainers.image.url="https://github.com/dcarbone/php-fhir-test"
 LABEL org.opencontainers.image.source="https://github.com/dcarbone/php-fhir-test"
 LABEL org.opencontainers.image.licenses="Apache-2.0"
 LABEL org.opencontainers.image.title="PHP FHIR Test Server Build Image"
+LABEL org.opencontainers.image.description="PHP FHIR test API server"
 
 RUN apk add --update make
 
@@ -25,6 +26,7 @@ LABEL org.opencontainers.image.url="https://github.com/dcarbone/php-fhir-test"
 LABEL org.opencontainers.image.source="https://github.com/dcarbone/php-fhir-test"
 LABEL org.opencontainers.image.licenses="Apache-2.0"
 LABEL org.opencontainers.image.title="PHP FHIR Test Server Image"
+LABEL org.opencontainers.image.description="PHP FHIR test API server"
 
 COPY --from=build /app/bin/php-fhir-test-server /php-fhir-test-server
 

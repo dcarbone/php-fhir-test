@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"io"
 	"log/slog"
 	"net/http"
 	"sync/atomic"
@@ -83,11 +84,6 @@ func handlerGetVersionResourceBundle(fv FHIRVersion) http.HandlerFunc {
 func handlerGetVersionResource(fv FHIRVersion) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		log := getRequestLogger(r)
-		rp := getRequestParams(r)
-		if rp.Count != 0 {
-			http.Error(w, "_count must be zero or undefined with specific resource ID", http.StatusBadRequest)
-			return
-		}
 
 		rscType := r.PathValue("rsc_type")
 		rscId := r.PathValue("rsc_id")
@@ -103,6 +99,29 @@ func handlerGetVersionResource(fv FHIRVersion) http.HandlerFunc {
 		}
 
 		respondInKind(w, r, rsc)
+	}
+}
+
+func handlerPutVersionResource(_ FHIRVersion) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		log := getRequestLogger(r)
+
+		// todo: need to do better with this impl...
+
+		if r.Body == nil {
+			log.Error("Empty body seen")
+			http.Error(w, "request body must not be empty", http.StatusBadRequest)
+			return
+		}
+
+		b, err := io.ReadAll(r.Body)
+		if err != nil {
+			log.Error("Error reading PUT body", "err", err)
+			http.Error(w, fmt.Sprintf("error reading request body: %v", err), http.StatusUnprocessableEntity)
+			return
+		}
+
+		respondInKind(w, r, b)
 	}
 }
 
@@ -122,10 +141,13 @@ func runWebserver(log *slog.Logger) error {
 
 	versionResourceMapMu.RLock()
 	for fv := range versionResourceMap {
-		// get version resource list
+		// version read handlers
 		addHandler(log, mux, fmt.Sprintf("GET /%s/", fv.String()), handlerGetVersionResourceTypeList(fv))
 		addHandler(log, mux, fmt.Sprintf("GET /%s/{rsc_type}", fv.String()), handlerGetVersionResourceBundle(fv))
 		addHandler(log, mux, fmt.Sprintf("GET /%s/{rsc_type}/{rsc_id}", fv.String()), handlerGetVersionResource(fv))
+
+		// version write handlers
+		addHandler(log, mux, fmt.Sprintf("PUT /%s/{rsc_type}/{rsc_id}", fv.String()), handlerPutVersionResource(fv))
 	}
 	versionResourceMapMu.RUnlock()
 
