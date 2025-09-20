@@ -1,5 +1,5 @@
 module github.com/dcarbone/php-fhir-test
 
-go 1.23.3
+go 1.24.0
 
-require golang.org/x/mod v0.23.0
+require golang.org/x/mod v0.28.0
