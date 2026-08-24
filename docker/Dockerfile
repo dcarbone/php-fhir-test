@@ -1,4 +1,4 @@
-FROM golang:1.26-alpine AS build
+FROM golang:1.27-alpine AS build
 
 LABEL org.opencontainers.image.authors="Daniel Carbone<daniel.p.carbone@gmail.com>"
 LABEL org.opencontainers.image.url="https://github.com/dcarbone/php-fhir-test"
